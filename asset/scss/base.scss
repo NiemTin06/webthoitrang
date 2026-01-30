@@ -2,6 +2,5 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // npx sass --watch asset/scss:asset/css
 // npm start
-h3{
-  font-size: small;
-}
+$bg-color-1: #f9f9f9;
+$bg-color-2: #333333;
