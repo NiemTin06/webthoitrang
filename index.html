@@ -4,12 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Trang chủ </title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
+  <header id ="header"></header>
+  <main>
+    <section class="banner">
+      Banner
+    </section>
+     <section class="category">
+      <div class="container">
+        <h2 class="category__title">Danh muc san pham</h2>
+        <div class="category__list">
+          <a href="productlist.html?category=ao">
+            <div class="category__item category__item--big">
+              <img src="asset/image/aomu.jpg" alt="ao">
+              <div class="category__content">
+                <h3 class="category__name">Áo</h3>
+                <div class="category__icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+          </a>
 
-  <script src="script.js"></script>
+          </div>
+          <div class="category__item category__item--big">
+            <a href="productlist.html?category=quan">     
+              <img src="asset/image/quan.jpg" alt="giay">
+              <div class="category__content">
+                <h3 class="category__name"> Quần </h3>
+                <div class="category__icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="category__item category__item--big">
+            <a href="productlist.html?category=giay">
+            <img src="asset/image/giaythuongdinh.webp" alt="giay">
+            <div class="category__content">
+              <h3 class="category__name"> Giày  </h3>
+              <div class="category__icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="category__item category__item--big">
+            <a href="productlist.html?category=phu-kien">
+            <img src="asset/image/baloff.jpg" alt="phu kien">
+            <div class="category__content">
+              <h3 class="category__name">Phụ kiện</h3>
+              <div class="category__icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT LIST -->
+    <section class="product__list">
+      <div class="container">
+        <h2 class="inner-title">Danh sach san pham</h2>
+        <div class="row g-4 align-items-stretch"></div>
+      </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <section class="pagination text-center mt-4">
+      <span class="pagination__button" id="paginationPrev">Prev</span>
+      <span class="pagination__number" id="paginationNumber">1</span>
+      <span class="pagination__button" id="paginationNext">Next</span>
+    </section>
+  </main>
+  <footer id ="footer"></footer>
+  
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type ="module" src="asset/js/product.js"></script>
+  <script type ="module" src="asset/js/script.js"></script>
 </body>
 </html>

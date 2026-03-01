@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,39 @@
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/style.css">
 </head>
-<body>
 
-  <script src="script.js"></script>
+<body>
+  <header id="header"></header>
+      <a href="cart.html"> gio hang </a>
+    <a href="productlist.html">trang chu </a>
+  <main>
+    <article class="cart">
+      <div class="container">
+        <h1 class="cart__title">
+          Giỏ hàng của bạn
+        </h1>
+        <div class="cart__all">
+          <label>
+            Chọn tắt cả
+            <input type="checkbox">
+          </label>
+        </div>
+        <div class="cart__list"></div>
+      </div>
+    </article>
+    <section class="total">
+      <div class="container">
+        <div class="total__wrap">
+          <div class="total__price"> </div>
+          <button class="total__buy"> Mua ngay</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="asset/js/script.js"></script>
+  <script type="module" src="asset/js/drawCart.js"></script>
+  <script type="module" src="asset/js/cart.js"></script>
 </body>
+
 </html>

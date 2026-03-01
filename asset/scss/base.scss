@@ -4,3 +4,11 @@
 // npm start
 $bg-color-1: #f9f9f9;
 $bg-color-2: #333333;
+
+a {
+  text-decoration: none;  /* bỏ gạch chân */
+  color: inherit;         /* lấy màu của phần tử cha */
+}
+.breadcrumb-item.active {
+  color: var(--bs-breadcrumb-item-active-color);
+}
