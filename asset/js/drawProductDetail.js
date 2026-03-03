@@ -7,7 +7,8 @@ export const drawProductDetail = (element) =>{
   const colors = document.querySelector(".detail-product__colors");
   const sizes = document.querySelector(".detail-product__sizes");
   const breadcrumbItems = document.querySelectorAll(".breadcrumb-item");
-  breadcrumbItems[1].innerHTML = element.category_breadcrumb;
+  breadcrumbItems[1].innerHTML =`<a href="productlist.html?category=${element.category}"> ${element.category_breadcrumb} </a>`
+  
   breadcrumbItems[2].innerHTML = element.title;  
 
   title.textContent = element.title;

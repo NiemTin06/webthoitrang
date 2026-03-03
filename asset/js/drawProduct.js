@@ -49,5 +49,6 @@ export const drawProduct = () => {
       .join("");
 
     product_list.innerHTML = htmls;
+   
   });
 };

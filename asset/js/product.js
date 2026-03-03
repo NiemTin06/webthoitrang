@@ -1,10 +1,21 @@
+import { APIproduct } from "./contain.js";
 import { drawProduct } from "./drawProduct.js";
+import { fetchApi } from "./function.js";
 import { lengthProduct, params } from "./variable.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("category")) {
   params.category = urlParams.get("category");
-}
+  let api = `${APIproduct}?scategory=${params.category}`;
+  fetchApi(api)
+    .then(response => {
+      const product = response[0];
+      if (!product) {
+        return;
+      }
+     const breadcrumbItem = document.querySelector(".breadcrumb-item:nth-child(2)");
+    breadcrumbItem.innerHTML = product.category_breadcrumb
+   } ) }
 
 drawProduct();
 const pagePrev = document.querySelector("#paginationPrev")
@@ -19,6 +30,9 @@ let search = () => {
   params.title = inputSearch.value;
   drawProduct();
 } 
+
+    
+//   });
 
 if (buttonSearch && inputSearch){
   buttonSearch.addEventListener("click", () => { 
