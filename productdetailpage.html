@@ -1,83 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Trang chủ </title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="asset/css/reset.css">
-  <link rel="stylesheet" href="asset/css/base.css">
-  <link rel="stylesheet" href="asset/css/style.css">
-</head>
-<body>
-  <header id = "header"></header>
-  <main>
-    <a href="cart.html"> gio hang </a>
-    <a href="productlist.html">trang chu </a>
-  
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Trang chủ </a></li>
-        <li class="breadcrumb-item"></li>
-        <li class="breadcrumb-item active" aria-current="page"></li>
-      </ol>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="asset/css/reset.css" />
+    <link rel="stylesheet" href="asset/css/base.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main>
+      <a href="cart.html"> gio hang </a>
+      <a href="productlist.html">trang chu </a>
 
-    <article class="detail-product">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="detail-product__image">
-              <img src="https://loremflickr.com/400/400/suedejacket?lock=99" alt="">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ </a></li>
+          <li class="breadcrumb-item"></li>
+          <li class="breadcrumb-item active" aria-current="page"></li>
+        </ol>
+      </nav>
+
+      <article class="detail-product">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="detail-product__image">
+                <img
+                  src="https://loremflickr.com/400/400/suedejacket?lock=99"
+                  alt=""
+                />
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="detail-product__content">
-              <h2 class ="detail-product__title ">test</h2>
-              <div class="detail-product__price">
-               <span class ="detail-product__price--current"></span>
-               <span class ="detail-product__price--old"></span>
-              </div>
-              
-              <div class="detail-product__colors">
-              </div>
-              <div class="detail-product__sizes">
-              </div>
-              <div class="detail-product__quantity">
-                <span class="detail-product__quantity-btn detail-product__quantity-btn--down"> - </span>
-                <span class=" 
-                detail-product__number">1</span>
-                <span class="
-                detail-product__quantity-btn
-                detail-product__quantity-btn--up"> + </span>
-              </div>
-              <div class="detail-product__stock"></div>
-              <div class="detail-product__action">
-                <button class="detail-product__action--add"> Them vao gio</button>
-                <button class="detail-product__action--buy"> Mua ngay</button>
+            <div class="col">
+              <div class="detail-product__content">
+                <h2 class="detail-product__title">(Product name)</h2>
+
+                <!-- PRICE BOX -->
+                <div class="detail-product__price-box">
+                  <span class="detail-product__label">Giá:</span>
+
+                  <span class="detail-product__price--old">5.000.000</span>
+                  <span class="detail-product__price--current">3.500.000</span>
+
+                  <span class="detail-product__discount">-36%</span>
+                </div>
+
+                <!-- COLORS -->
+                <div class="detail-product__group">
+                  <span class="detail-product__group-label">Màu sắc:</span>
+                  <div class="detail-product__options">
+                    <button class="detail-product__option">Đen</button>
+                    <button class="detail-product__option">Trắng</button>
+                    <button class="detail-product__option">Hồng</button>
+                  </div>
+                </div>
+
+                <!-- SIZE -->
+                <div class="detail-product__group">
+                  <span class="detail-product__group-label">Kích thước:</span>
+                  <div class="detail-product__options">
+                    <button class="detail-product__option">S</button>
+                    <button class="detail-product__option">L</button>
+                    <button class="detail-product__option">XL</button>
+                  </div>
+                </div>
+
+                <!-- QUANTITY -->
+                <div class="detail-product__group">
+                  <span class="detail-product__group-label">Số lượng</span>
+                  <div class="detail-product__quantity">
+                    <span class="detail-product__quantity-btn">+</span>
+                    <span class="detail-product__number">1</span>
+                    <span class="detail-product__quantity-btn">−</span>
+                  </div>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="detail-product__action">
+                  <button class="detail-product__action--add">
+                    Add to cart
+                  </button>
+                  <button class="detail-product__action--buy">BUY NOW</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
-  
-    <section class="related-product">
-      <div class="container">
-        <h2 class="related-product__tilte">
-          San pham lien quan
-        </h2>
-        <div class="slide-wrapper">
-          <button class="arrow left">&#10094;</button>
-          <div class="row flex-nowrap overflow-auto slide-track"></div>
-          <button class="arrow right">&#10095;</button>
+      </article>
+
+      <section class="product-description">
+        <div class="container">
+          <h3 class="product-description__title">Chi tiết sản phẩm</h3>
+          <p class="product-description__text"><i>
+            Khám phá bộ sưu tập quần áo, giày dép và phụ kiện với thiết kế hiện đại, dễ phối và phù hợp nhiều phong cách khác nhau. Sản phẩm được chọn lọc kỹ lưỡng, chú trọng chất lượng và sự thoải mái khi sử dụng hằng ngày. Dù bạn theo đuổi phong cách năng động, thanh lịch hay cá tính, chúng tôi luôn có những lựa chọn phù hợp dành cho bạn.
+          </p>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer id = "footer"></footer>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script type ="module" src="asset/js/productDetail.js"></script>
-  <script type ="module" src="asset/js/script.js"></script>
-</body>
+      </section>
+
+      <section class="related-product">
+        <div class="container">
+          <h2 class="related-product__tilte">San pham lien quan</h2>
+          <div class="slide-wrapper">
+            <button class="arrow left">&#10094;</button>
+            <div class="row flex-nowrap overflow-auto slide-track"></div>
+            <button class="arrow right">&#10095;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="asset/js/productDetail.js"></script>
+    <script type="module" src="asset/js/script.js"></script>
+  </body>
 </html>

@@ -83,3 +83,4 @@ addCart.addEventListener("click" , () => {
   addToCart(productToCard, currentQuantity);
   alert("Da them vao gio hang");
 })
+

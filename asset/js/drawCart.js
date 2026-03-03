@@ -20,7 +20,7 @@ const drawCart = () => {
               <h2 class="cart__title ">${e.title}</h2>
               <div class="cart__price">
                 <span class="cart__price--current">${e.price}</span>
-                <span class="cart__price--old">${e.price}</span>
+                <span class="cart__price--">${e.price}</span>
               </div>
             </div>
             <div class="cart__quantity">
