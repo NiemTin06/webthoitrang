@@ -12536,7 +12536,7 @@ footer {
   max-width: 900px;
 }
 .detail-product {
-  /* BUTTONS */
+  /* BUTTON */
 }
 .detail-product__action {
   display: flex;
@@ -12567,7 +12567,7 @@ footer {
   color: white;
 }
 
-/* PRODUCT DESCRIPTION */
+/* PRODUCT DETAIL */
 .product-description {
   margin-top: 60px;
 }
