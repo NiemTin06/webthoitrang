@@ -1,4 +1,4 @@
-import { addToCart } from "./cart.js";
+import { addToCart, getCart } from "./cart.js";
 import { APIproduct } from "./contain.js";
 import { drawProductDetail } from "./drawProductDetail.js";
 import { drawRelatedProduct } from "./drawRelatedProduct.js";
@@ -51,35 +51,65 @@ document.querySelector(".right").onclick = () => {
 )};
 
 const addCart = document.querySelector(".detail-product__action--add");
-addCart.addEventListener("click" , () => {
-  if (!currentProduct) return;
-  const currentQuantity = getQuantityProduct();
+const buyItem = document.querySelector(".detail-product__action--buy");
+
+const checkItem = (currentQuantity, activeColor, activeSize) => {
+  
   if (currentQuantity <= 0) {
     alert("Vui long chon so luong");
-    return;
+    return false ;
   }
+  if (!activeColor) {
+    alert("Vui lòng chọn màu");
+    return false;
+  }
+
+  if (!activeSize) {
+    alert("Vui lòng chọn size");
+    return false ;
+  }
+
+  return true;
+}
+
+addCart.addEventListener("click" , () => {
   const activeColor = document.querySelector(".detail-product__colors .active");
   const activeSize =  document.querySelector(".detail-product__sizes .active")
-
-    if (!activeColor) {
-      alert("Vui lòng chọn màu");
-      return;
+  const cart = getCart()
+  if (!currentProduct) return;
+  const currentQuantity = getQuantityProduct();
+  if (checkItem(currentQuantity, activeColor, activeSize)){
+    const productToCard = {
+      id: currentProduct.id,
+      title: currentProduct.title,
+      price: currentProduct.price,
+      image: currentProduct.image,
+      color: activeColor.innerHTML,
+      size:activeSize.innerHTML,
+      checked: false
     }
-
-    if (!activeSize) {
-      alert("Vui lòng chọn size");
-      return;
-    }
-
-
-  const productToCard = {
-    id: currentProduct.id,
-    title: currentProduct.title,
-    price: currentProduct.price,
-    image: currentProduct.image,
-    color: activeColor.innerHTML,
-    size:activeSize.innerHTML,
+    addToCart(productToCard, currentQuantity, cart);
+    alert("Da them vao gio hang");
   }
-  addToCart(productToCard, currentQuantity);
-  alert("Da them vao gio hang");
+})
+
+buyItem.addEventListener(("click"), () => {
+const activeColor = document.querySelector(".detail-product__colors .active");
+const activeSize =  document.querySelector(".detail-product__sizes .active")
+const cart = getCart();
+if (!currentProduct) return;
+const currentQuantity = getQuantityProduct();
+  if (checkItem(currentQuantity, activeColor, activeSize)){
+    const productToCart = {
+      id: currentProduct.id,
+      title: currentProduct.title,
+      price: currentProduct.price,
+      image: currentProduct.image,
+      color: activeColor.innerHTML,
+      size:activeSize.innerHTML,
+      checked: true
+    }
+    addToCart(productToCart, currentQuantity, cart);
+    window.location.href = "../../cart.html"
+  }
 })
