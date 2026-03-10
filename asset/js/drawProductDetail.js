@@ -4,8 +4,8 @@ export const drawProductDetail = (element) =>{
   const priceOld = document.querySelector(".detail-product__price--old");
   const stock = document.querySelector(".detail-product__stock");
   const image = document.querySelector(".detail-product__image img");
-  const colors = document.querySelector(".detail-product__colors");
-  const sizes = document.querySelector(".detail-product__sizes");
+  const colors = document.querySelector(".detail-product__options--color");
+  const sizes = document.querySelector(".detail-product__options--size");
   const breadcrumbItems = document.querySelectorAll(".breadcrumb-item");
   breadcrumbItems[1].innerHTML =`<a href="productlist.html?category=${element.category}"> ${element.category_breadcrumb} </a>`
   
@@ -31,8 +31,8 @@ export const drawProductDetail = (element) =>{
   text = "";
   element.sizes.forEach(e => {
     text += ` <button class="detail-product__btn detail-product__btn--sizes-option">${e}</button>`
-    sizes.innerHTML = text;
   });
+  sizes.innerHTML = text;
   const btnColors = document.querySelectorAll(".detail-product__btn--colors-option");
   const btnSizes = document.querySelectorAll(".detail-product__btn--sizes-option");
 

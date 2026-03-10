@@ -34,6 +34,9 @@ export const drawRelatedProduct = (element, id) =>{
         </a>
       </div>
       `).join("");
-    relativeProduct.innerHTML = htmls;
+      if (relativeProduct){
+
+        relativeProduct.innerHTML = htmls;
+      }
   })
 }

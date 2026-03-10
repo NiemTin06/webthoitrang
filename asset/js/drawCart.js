@@ -1,4 +1,4 @@
-import { getCart, getTotalPrice } from "./cart.js";
+import { getCart} from "./cart.js";
 
 const drawCart = () => {
     const cart = getCart();
@@ -14,17 +14,18 @@ const drawCart = () => {
               <label>
                 <input type="checkbox" class="cart__checkbox" 
                 data-price="${e.price}"${e.checked ? "checked" : ""} 
-       data-quantity="${e.quantity}">
+       data-quantity="${e.quantity}">\ <a href="productdetailpage.html?slug=${e.slug}" > 
                 <div class="cart__image">
                   <img src= ${e.image} alt="ha">
                 </div>
+                </a>
               </label>
             </div>
             <div class="cart__content">
               <h2 class="cart__title ">${e.title} (màu sác: ${e.color}, size: ${e.size})</h2>
               <div class="cart__price">
                 <span class="cart__price--current">${e.price}</span>
-                <span class="cart__price--old">${e.price}</span>
+                <span class="cart__price--">${e.price}</span>
               </div>
             </div>
             <div class="cart__quantity">
@@ -44,9 +45,6 @@ const drawCart = () => {
         cartlist.innerHTML = text;
     }
     else cartlist.innerHTML =  "Gio hang trong" ;
-    const totalPrice = document.querySelector(".total__price")
-    totalPrice.innerHTML = `Tổng tiền là: ${getTotalPrice()}đ`
-
 }
 
 drawCart();

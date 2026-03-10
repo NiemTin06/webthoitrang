@@ -2,7 +2,6 @@ export const getCart = () => {
     const cart = localStorage.getItem("cart");
     return cart ? JSON.parse(cart) : [];
 }
-
 export const getPurchaseHistory = () => {
     const list = localStorage.getItem("purchaseHistory");
     return list ? JSON.parse(list) : [];
@@ -10,8 +9,6 @@ export const getPurchaseHistory = () => {
 export const saveCart = (cart) => {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-
-
 export const deleteCart = (cartItem, cart) => {
     const id = cartItem.dataset.id;
     const color = cartItem.dataset.color;
@@ -23,31 +20,20 @@ export const deleteCart = (cartItem, cart) => {
     );
     saveCart(newCart);
 }
-
-export const getTotalPrice = () => {
-    const cart = getCart();
-    const cartCheck = document.querySelectorAll(".cart__checkbox:checked");
+export const getTotalPrice = (cart) => {
     let total = 0;
-    cartCheck.forEach(item => {
-        const cartItem = item.closest(".cart__item");
-        const id = cartItem.dataset.id;
-        const color = cartItem.dataset.color;
-        const size = cartItem.dataset.size;
-
-        const product = cart.find(item =>
-            item.id == id &&
-            item.color == color &&
-            item.size == size
-        );
-        if (product) total += product.price * product.quantity;
+    cart.forEach(item => {
+        if (item.checked){
+            total += item.price * item.quantity;
+        }
     });
     return total;
 }
-
 export const addToCart = (product, quantity, cart) => {
     const exitingProduct = cart.find(item => item.id === product.id && item.color === product.color && item.size === product.size);
     if (exitingProduct) {
         exitingProduct.quantity += quantity;
+        exitingProduct.checked = product.checked;
     } else {
         cart.push({
             ...product,
@@ -56,7 +42,6 @@ export const addToCart = (product, quantity, cart) => {
     }
     saveCart(cart);
 }
-
 export const updateChecked = (cartItem, isChecked) => {
     const cart = getCart();
     const id = cartItem.dataset.id;
@@ -74,9 +59,21 @@ export const updateChecked = (cartItem, isChecked) => {
     }
     saveCart(cart); // Lưu lại vào LocalStorage
 }
-
 const cartList = document.querySelector(".cart__list");
-const totalPrice = document.querySelector(".total__price")
+
+const totalPrice = document.querySelector(".checkout__price--before")
+const lastTotalPrice = document.querySelector(".checkout__price--after")
+const buyItem = document.querySelector(".checkout__pay");
+const updateTotal = () => {
+      const cart = getCart();
+    const total = getTotalPrice(cart);
+    if (total && lastTotalPrice && totalPrice){
+        totalPrice.innerHTML = `${total}đ`;
+        lastTotalPrice.innerHTML = `${total}đ`;
+    }
+}
+updateTotal();
+
 if (cartList) {
     cartList.addEventListener("change", (e) => {
         const checkbox = e.target.classList.contains("cart__checkbox");
@@ -84,7 +81,7 @@ if (cartList) {
             const cartItem = e.target.closest(".cart__item");
             const isChecked = e.target.checked;
             updateChecked(cartItem, isChecked);
-            totalPrice.innerHTML = `Tổng tiền là: ${getTotalPrice()}đ`;
+            updateTotal();
         }
     })
     cartList.addEventListener("click", (e) => {
@@ -95,11 +92,18 @@ if (cartList) {
         if (e.target.classList.contains("cart__quantity-btn--up")) {
             let quantity = Number(quantityProduct.innerHTML) + 1;
             quantityProduct.innerHTML = quantity;
-            const product = cart.find(item => item.id == id);
+            const color = cartItem.dataset.color;
+            const size = cartItem.dataset.size;
+            const product = cart.find(item =>
+                item.id == id &&
+                item.color == color &&
+                item.size == size
+            );
             if (product) {
                 product.quantity = quantity;
             }
             saveCart(cart);
+            updateTotal();
         }
         if (e.target.classList.contains("cart__quantity-btn--down")) {
             let quantity = Number(quantityProduct.innerHTML);
@@ -112,11 +116,18 @@ if (cartList) {
             } else if (quantity > 1) {
                 quantity -= 1;
                 quantityProduct.innerHTML = quantity;
-                const product = cart.find(item => item.id == id);
+                const color = cartItem.dataset.color;
+                const size = cartItem.dataset.size;
+                const product = cart.find(item =>
+                    item.id == id &&
+                    item.color == color &&
+                    item.size == size
+                );
                 if (product) {
                     product.quantity = quantity;
                 }
                 saveCart(cart);
+                updateTotal();
             }
         }
         if (e.target.closest(".cart__deletebutton")) {
@@ -124,11 +135,11 @@ if (cartList) {
             if (confirmDelete) {
                 deleteCart(cartItem, cart);
                 cartItem.remove();
+                updateTotal();
             }
         }
     })
 }
-const buyItem = document.querySelector(".total__buy");
 if (buyItem) {
     buyItem.addEventListener("click", () => {
         const cart = getCart();

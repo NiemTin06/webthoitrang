@@ -41,6 +41,7 @@ buttonUp.addEventListener("click", () =>{
 })
 
 const slider = document.querySelector(".slide-track");
+console.log(slider)
 document.querySelector(".left").onclick = () => {
   // Cuộn sang trái 300px
   slider.scrollBy({ left: -300, behavior: 'smooth' });
@@ -74,6 +75,7 @@ const checkItem = (currentQuantity, activeColor, activeSize) => {
 
 addCart.addEventListener("click" , () => {
   const activeColor = document.querySelector(".detail-product__colors .active");
+  console.log(activeColor)
   const activeSize =  document.querySelector(".detail-product__sizes .active")
   const cart = getCart()
   if (!currentProduct) return;
@@ -86,7 +88,8 @@ addCart.addEventListener("click" , () => {
       image: currentProduct.image,
       color: activeColor.innerHTML,
       size:activeSize.innerHTML,
-      checked: false
+      checked: false,
+        slug: currentProduct.slug
     }
     addToCart(productToCard, currentQuantity, cart);
     alert("Da them vao gio hang");
@@ -107,7 +110,8 @@ const currentQuantity = getQuantityProduct();
       image: currentProduct.image,
       color: activeColor.innerHTML,
       size:activeSize.innerHTML,
-      checked: true
+      checked: true,
+      slug: currentProduct.slug
     }
     addToCart(productToCart, currentQuantity, cart);
     window.location.href = "../../cart.html"

@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #6e6e6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #000000, #020202);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
+}
+
+.left-panel h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.left-panel p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-panel h2 {
+  font-size: 32px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0a0a0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #141414;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.options a {
+  color: #666;
+  text-decoration: none;
+}
+
+.btn-signin {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #614092, #7b52ab);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 25px;
+}
+
+.btn-signin:hover {
+  opacity: 0.9;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #7b52ab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=login.css.map */
