@@ -809,6 +809,7 @@ footer {
       color: #f5222d;
       font-weight: bold;
       font-size: 1.9rem;
+          position: relative;
     }
     &--old {
       color: #8c8c8c;
@@ -819,9 +820,9 @@ footer {
 
   &__discountPercent::after {
     position: absolute;
-    left: 220px;
     top: 50%;
-    transform: translateY(-50%);
+      right: -75px;     /* khoảng cách cố định */
+  transform: translateY(-50%);
     display: inline-flex;
     justify-content: center;
     align-items: center;

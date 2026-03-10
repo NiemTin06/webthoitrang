@@ -35,10 +35,10 @@
             <h3>Vui lòng chọn hình thức thanh toán</h3>
 
             <div class="checkout__methods">
-              <label><input type="radio" name="payment" /> Momo</label>
-              <label><input type="radio" name="payment" /> Ngân hàng</label>
-              <label><input type="radio" name="payment" /> VNpay</label>
-              <label><input type="radio" name="payment" /> Thanh toán tiền
+              <label><input type="radio" name="payment" value="momo" checked/> Momo</label>
+              <label><input type="radio" name="payment" value="bank"/> Ngân hàng</label>
+              <label><input type="radio" name="payment" value="VNpay"/> VNpay</label>
+              <label><input type="radio" name="payment" value="cash"/> Thanh toán tiền
                 mặt</label>
             </div>
           </div>
@@ -54,15 +54,15 @@
               <input type="text" placeholder="Nhập mã giảm giá" />
               <button>Áp dụng</button>
             </div>
-
+            <div class="checkout__detailDiscount"></div>
             <div class="checkout__row checkout__discount">
               <span>Giảm giá</span>
-              <span class="checkout__discount--detail">-36.000đ</span>
+              <span class="checkout__discount--number">0đ</span>
             </div>
 
             <div class="checkout__row checkout__total">
               <span>Tổng tiền thanh toán</span>
-              <strong class="checkout__price--after">0đ</strong>
+              <strong class="checkout__price--after">0</strong>
             </div>
           </div>
         </div>

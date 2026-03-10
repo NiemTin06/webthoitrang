@@ -1,3 +1,4 @@
+import { initStorage } from "./cart.js";
 
 
 fetch("header.html")
@@ -12,4 +13,6 @@ fetch("footer.html")
     document.getElementById("footer").innerHTML = data    
   })           
   
+
+  initStorage();
 
