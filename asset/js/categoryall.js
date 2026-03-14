@@ -9,9 +9,7 @@ const category = document.querySelector(".category__list");
 const api =`${APIcategories}?category=${urlParams.get("category")}`;
 fetchApi(api)
   .then (data => {
-    console.log(data);
     let categories = data[0].sub_categories
-    console.log(categories)
     let html = categories.map(element => `
         <div class="category__item" data-sub="${element.sub_category}">
           <img src="asset/image/subcategory/${element.sub_category}.jpg"alt="ha">

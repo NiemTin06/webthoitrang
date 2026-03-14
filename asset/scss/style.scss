@@ -894,3 +894,87 @@ footer {
     font-style: italic;
   }
 }
+
+.product-manager {
+  &__item {
+    display: grid;
+    grid-template-columns: 60px 80px 1fr 120px 100px 120px 120px;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+
+    &:hover {
+      background: #f8f8f8;
+    }
+  }
+
+  &__id {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__image {
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__price {
+    color: #e53935;
+    font-weight: 600;
+  }
+
+  &__quantity {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__status {
+    font-weight: 600;
+
+    &::before {
+      margin-right: 4px;
+    }
+
+    &:contains("Còn hàng") {
+      color: #2e7d32;
+    }
+
+    &:contains("Hết hàng") {
+      color: #c62828;
+    }
+  }
+
+  &__action {
+    display: flex;
+    gap: 8px;
+
+    button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+
+      &.edit {
+        background: #1976d2;
+        color: #fff;
+      }
+
+      &.delete {
+        background: #d32f2f;
+        color: #fff;
+      }
+    }
+  }
+}

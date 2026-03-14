@@ -5,7 +5,13 @@ export let params = {
   sort: "",
   page:"1",
   limit:"12",
-  order:""
+  order:"",
+  sale:"",
+  new:"",
+  size:"",
+  priceMin: "0",
+  priceMax: "10000000000"
+  
 };
 
 export let lengthProduct = 100

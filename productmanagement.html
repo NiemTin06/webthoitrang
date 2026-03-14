@@ -9,7 +9,104 @@
   <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
+  <header id ="header"></header>
+  <main>
+    <section class="product__filter">
+      <div class="container">
 
-  <script src="script.js"></script>
+        <form action="" method="get" autocomplete>
+          <div class="form__wrap">
+            <div class="form-group">
+              <label for="name"> Tên sản phẩm</label>
+              <input type="text" id ="name" name ="title" placeholder="tên sản phẩm" autocomplete >
+            </div>
+            <div class="form-group">
+              <label for="category"> Danh mục </label>
+              <select name="category" id="category">
+                <option value=""> Tắt cả </option>
+                <option value="ao"> Áo </option>
+                <option value="quan"> Quần </option>
+                <option value="giay"> Giầy </option>
+                <option value="phu-kien"> Phụ kiện </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sub-category"> Danh mục chi tiết </label>
+              <select name="subCategory" id="sub-category" >
+                <option value=""> Tắt cả </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="price"> Giá</label>
+              <input type="number" name ="minPrice" placeholder="Min price" id = "price">
+              <input type="number" name ="maxPrice" placeholder="Max price">
+            </div>
+            <div class="form-group">
+              <label for="size"> Kích thước</label>
+              <select name="size" id="size">
+                <option selected value=""> Tất cả</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="color"> Màu sắc </label>
+              <input type="text" id="color" name="color" placeholder="Màu sắc">
+            </div>
+            <div class="form-group">
+              <label for="show"> Hiển thị </label>
+              <input name ="show" type="text" id="show" placeholder="10 sản phẩm">
+            </div>
+            <div class="form-group">
+              <label for="sale"> Sale </label>
+              <input name="sale" type="checkbox" id = "sale">
+            </div>
+            <div class="form-group">
+              <label for="new"> Hàng mới </label>
+              <input name="new"type="checkbox" id = "new">
+            </div>
+            <div class="form-group">
+              <label for="sort">Sắp xếp</label>
+                <select id="sort" name="sort">
+                  <option value="">Mặc định</option>
+                  <option value="price-asc">Giá tăng dần</option>
+                  <option value="price-desc">Giá giảm dần</option>
+                  <option value="quantity-asc">Số lượng tăng dần</option>
+                  <option value="quantity-desc">Số lượng giảm dần</option>
+                  <option value="discount">Giảm giá</option>
+                </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit">Lọc sản phẩm</button>
+              <button type="reset">Xóa bộ lọc</button>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="product-manager">
+      <div class="container">
+        <div class="product-manager__wrap">
+          <div class="product-manager__item">
+            <div class="product-manager__id"></div>
+            <div class="product-manager__image"></div>
+            <div class="product-manager__title"></div>
+            <div class="product-manager__price"></div>
+            <div class="product-manager__quantity"></div>
+            <div class="product-manager__status"></div>
+            <div class="product-manager__action"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pagination text-center mt-4">
+      <span class="pagination__button" id="paginationPrev">Prev</span>
+      <span class="pagination__number" id="paginationNumber">1</span>
+      <span class="pagination__button" id="paginationNext">Next</span>
+    </section>
+  </main>
+  <footer id ="footer"></footer>
+  <script type="module" src="asset/js/script.js"></script>
+  <script type="module" src="asset/js/productManagement.js"></script>
 </body>
-</html>
+</html> 

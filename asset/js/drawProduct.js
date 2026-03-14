@@ -1,16 +1,10 @@
-import { fetchApi, normalizeText } from "./function.js";
+import { fetchApi, getAPI, normalizeText } from "./function.js";
 import { APIproduct } from "./contain.js";
 import { lengthProduct, params } from "./variable.js";
 const product_list = document.querySelector(".product__list .row");
 
 export const drawProduct = () => {
-  const keyword = normalizeText(params.title || "");
-  let api = `${APIproduct}?search_key_like=${keyword}`;
-  if (params.category) api += `&category=${params.category}`;
-  if (params.subCategory) api += `&sub_category=${params.subCategory}`;
-  api += `&_page=${params.page}&_limit=${params.limit}`;
-  if (params.sort) api += `&_sort=${params.sort}&_order=${params.order}`;
-  console.log(api)
+  let api = getAPI();
   fetchApi(api).then((response) => {
     let products = response;
     console.log(lengthProduct);
