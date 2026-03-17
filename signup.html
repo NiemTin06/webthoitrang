@@ -1,15 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Trang chủ </title>
-  <link rel="stylesheet" href="asset/css/reset.css">
-  <link rel="stylesheet" href="asset/css/base.css">
-  <link rel="stylesheet" href="asset/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Fullscreen</title>
+    <style>
+        /* Reset mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Container chiếm toàn bộ màn hình */
+        .container {
+            display: flex;
+            height: 100vh; /* Chiều cao 100% màn hình */
+            width: 100vw;  /* Chiều rộng 100% màn hình */
+        }
+
+        /* Nửa bên trái (Nền đen) */
+        .left-panel {
+            flex: 4; /* Chiếm 4 phần */
+            background-color: #050505;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10%;
+        }
+
+        .left-panel h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .left-panel p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            line-height: 1.5;
+            max-width: 400px;
+        }
+
+        /* Nửa bên phải (Nền trắng, chứa form) */
+        .right-panel {
+            flex: 6; /* Chiếm 6 phần */
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 450px; /* Giới hạn chiều rộng của form cho đẹp */
+        }
+
+        .form-wrapper h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Nhóm ô nhập liệu */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px; /* Bo tròn giống hình */
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #333; /* Đổi màu viền khi click vào */
+        }
+
+        /* Nút Đăng ký */
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #333333;
+        }
+
+        /* Chữ điều hướng đăng nhập */
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #5d3ebc; /* Màu tím dịu giống link trong ảnh */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Reponsive: Chuyển dọc khi ở màn hình điện thoại */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-panel {
+                flex: none;
+                height: 30vh;
+                align-items: center;
+                text-align: center;
+            }
+            .right-panel {
+                flex: 1;
+                align-items: flex-start;
+                padding-top: 50px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <script src="script.js"></script>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Begin Your Journey</h1>
+            <p>Create a new account to explore all features.</p>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-wrapper">
+                <h2>Sign Up</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Create Account</button>
+                </form>
+
+                <p class="login-link">
+                    Already have an account? <a href="#">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
