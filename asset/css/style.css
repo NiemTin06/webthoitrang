@@ -12640,4 +12640,8 @@ footer {
   color: #fff;
 }
 
+#add-product__popup {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

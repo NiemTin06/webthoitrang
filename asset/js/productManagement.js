@@ -3,9 +3,9 @@ import { drawProductManager } from "./drawProductManager.js";
 import { fetchApi } from "./function.js";
 import { lengthProduct, params } from "./variable.js";
 
-const category = document.querySelector("#category");
-const size = document.querySelector("#size");
-const subCategory = document.querySelector("#sub-category");
+const category = document.querySelector("#filter-category");
+const size = document.querySelector("#filter-size");
+const subCategory = document.querySelector("#filter-sub-category");
 const sizeOptions = {
     quanAo: ["S", "M", "L", "XL", "XXL", "XXXL"],
     giay: ["30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45"]
@@ -42,7 +42,7 @@ category.addEventListener("change", () => {
 
 drawProductManager();
 
-const form = document.querySelector("form");
+const form = document.querySelector("#product-filter__form");
 form.addEventListener("submit", (e) => {
 
     e.preventDefault();
@@ -123,3 +123,77 @@ pagePrev.addEventListener("click" , () =>{
   }
 })
 // End pagination
+
+const addProduct = document.querySelector("#add-product__popup");
+const formAddProduct = document.querySelector("#add-product__form");
+const addProductButton = document.querySelector("#add-product__button");
+const closeProductButoon = document.querySelector("#closeAddPopup");
+console.log(addProduct);
+console.log(formAddProduct);
+addProductButton.addEventListener("click", () =>{
+  addProduct.style.display = "block";
+})
+closeProductButoon.addEventListener("click", () =>{
+  addProduct.style.display = "none";
+})
+
+const formAdd = document.querySelector("#add-product__form");
+console.log(formAdd);
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+    params.title = data.title;
+    params.category = data.category;
+    params.subCategory = data.subCategory;
+    
+    params.page = 1;
+    params.limit = data.show || 12;
+    if (data.sale){
+        params.sale = true;
+    }
+    else params.sale = false;
+    if (data.new){
+        params.new = true;
+    }
+    else params.new = false;
+    if (data.minPrice){
+        params.minPrice = data.minPrice;
+    }
+    if (data.maxPrice){
+        params.maxPrice = data.maxPrice;
+    }
+    params.size = data.size
+    switch (data.sort){
+        case "":
+        params.sort = "";
+        params.order = "";
+        break;
+      case "price-asc":
+        params.sort = "price";
+        params.order = "asc";
+        break;
+      case "price-desc":
+        params.sort = "price";
+        params.order = "desc";
+        break;
+      case "quantity-asc":
+        params.sort = "quantity";
+        params.order = "asc"
+        break;
+      case "quantity-desc":
+        params.sort = "quantity";
+        params.order = "desc"
+        break;
+      case "discount":
+        params.sort = "discount_percent";
+        params.order = "desc"
+        break;
+      default: 
+        break
+    }
+   drawProductManager();
+
+})
