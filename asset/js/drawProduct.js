@@ -1,5 +1,4 @@
 import { fetchApi, getAPI, normalizeText } from "./function.js";
-import { APIproduct } from "./contain.js";
 import { lengthProduct, params } from "./variable.js";
 const product_list = document.querySelector(".product__list .row");
 

@@ -1,25 +1,33 @@
 {
-
   "products": [
     {
       "id": 1,
       "title": "Áo Thun Nam Cotton Basic",
       "slug": "ao-thun-nam-cotton-basic",
-      "search_key": "ao thun nam cotton basic",
+      "search_key": "ao-thun-nam-cotton-basic",
       "category": "ao",
       "category_breadcrumb": "Áo",
       "sub_category": "ao-thun",
       "sub_category_name": "Áo thun",
-      "price": 190000,
+      "price": 125000,
       "original_price": 250000,
-      "discount_percent": 24,
+      "discount_percent": 50,
       "is_new": true,
       "is_sale": true,
-      "quantity": 45,
+      "quantity": 36,
       "image": "https://loremflickr.com/400/400/tshirt?lock=1",
-      "colors": ["Trắng", "Đen", "Xám"],
-      "sizes": ["S", "M", "L", "XL"],
-      "description": "Chất liệu cotton 100% co giãn, thoáng mát hằng ngày."
+      "colors": [
+        "Xanh Navy",
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "description": "Vải Pique mắt chim thoáng khí, họa tiết trẻ trung.",
+      "subCategory": "Áo thun",
+      "discount": "24"
     },
     {
       "id": 2,
@@ -37,8 +45,14 @@
       "is_sale": false,
       "quantity": 28,
       "image": "https://loremflickr.com/400/400/shirt?lock=2",
-      "colors": ["Trắng"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Chất vải Oxford ít nhăn, form dáng chuẩn công sở."
     },
     {
@@ -57,8 +71,15 @@
       "is_sale": true,
       "quantity": 56,
       "image": "https://loremflickr.com/400/400/polo?lock=3",
-      "colors": ["Xanh Navy", "Đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xanh Navy",
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải Pique mắt chim thoáng khí, họa tiết trẻ trung."
     },
     {
@@ -77,8 +98,14 @@
       "is_sale": false,
       "quantity": 12,
       "image": "https://loremflickr.com/400/400/jacket?lock=4",
-      "colors": ["Đen", "Xanh Rêu"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Đen",
+        "Xanh Rêu"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Lớp ngoài chống nước nhẹ, thiết kế hiện đại."
     },
     {
@@ -97,8 +124,15 @@
       "is_sale": true,
       "quantity": 89,
       "image": "https://loremflickr.com/400/400/sportswear?lock=5",
-      "colors": ["Đen", "Xanh Dương"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Đen",
+        "Xanh Dương"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Vải thun lạnh siêu nhẹ, thấm hút cực nhanh."
     },
     {
@@ -117,8 +151,15 @@
       "is_sale": false,
       "quantity": 34,
       "image": "https://loremflickr.com/400/400/jeans?lock=6",
-      "colors": ["Xanh sáng"],
-      "sizes": ["29", "30", "31", "32"],
+      "colors": [
+        "Xanh sáng"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Dáng ôm vừa vặn, chất liệu jean cao cấp."
     },
     {
@@ -137,8 +178,15 @@
       "is_sale": true,
       "quantity": 22,
       "image": "https://loremflickr.com/400/400/trousers?lock=7",
-      "colors": ["Be", "Nâu nhạt"],
-      "sizes": ["30", "31", "32"],
+      "colors": [
+        "Be",
+        "Nâu nhạt"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Chất kaki thun co giãn, phù hợp đi làm, đi chơi."
     },
     {
@@ -157,8 +205,15 @@
       "is_sale": false,
       "quantity": 67,
       "image": "https://loremflickr.com/400/400/shorts?lock=8",
-      "colors": ["Đen", "Xanh than"],
-      "sizes": ["29", "30", "31"],
+      "colors": [
+        "Đen",
+        "Xanh than"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31"
+      ],
       "description": "Độ dài ngang gối năng động, vải dày dặn."
     },
     {
@@ -177,8 +232,15 @@
       "is_sale": true,
       "quantity": 41,
       "image": "https://loremflickr.com/400/400/joggers?lock=9",
-      "colors": ["Xám", "Đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xám",
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Chất nỉ chân cua mềm mại, bo gấu gọn gàng."
     },
     {
@@ -197,8 +259,14 @@
       "is_sale": true,
       "quantity": 15,
       "image": "https://loremflickr.com/400/400/sneakers?lock=10",
-      "colors": ["Trắng"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Trắng"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế cao su đúc bền bỉ, dễ dàng phối mọi trang phục."
     },
     {
@@ -217,8 +285,16 @@
       "is_sale": false,
       "quantity": 30,
       "image": "https://loremflickr.com/400/400/footballshoes?lock=11",
-      "colors": ["Neon", "Xanh dương"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Neon",
+        "Xanh dương"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đinh TF bám sân tốt, hỗ trợ kiểm soát bóng."
     },
     {
@@ -237,8 +313,15 @@
       "is_sale": true,
       "quantity": 18,
       "image": "https://loremflickr.com/400/400/runningshoes?lock=12",
-      "colors": ["Đen Trắng", "Cam"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Đen Trắng",
+        "Cam"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đệm siêu êm, hỗ trợ phản lực khi chạy quãng dài."
     },
     {
@@ -257,8 +340,15 @@
       "is_sale": false,
       "quantity": 55,
       "image": "https://loremflickr.com/400/400/sandals?lock=13",
-      "colors": ["Đen"],
-      "sizes": ["38", "39", "40", "41"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
       "description": "Quai dù chắc chắn, đế chống trượt đi mưa tốt."
     },
     {
@@ -277,8 +367,12 @@
       "is_sale": true,
       "quantity": 100,
       "image": "https://loremflickr.com/400/400/cap?lock=14",
-      "colors": ["Đen"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Form mũ cứng cáp, logo thêu nổi bật."
     },
     {
@@ -297,8 +391,12 @@
       "is_sale": false,
       "quantity": 25,
       "image": "https://loremflickr.com/400/400/backpack?lock=15",
-      "colors": ["Xám đen"],
-      "sizes": ["40L"],
+      "colors": [
+        "Xám đen"
+      ],
+      "sizes": [
+        "40L"
+      ],
       "description": "Nhiều ngăn tiện dụng, có ngăn đựng laptop riêng."
     },
     {
@@ -317,8 +415,16 @@
       "is_sale": true,
       "quantity": 62,
       "image": "https://loremflickr.com/400/400/graphic-tee?lock=16",
-      "colors": ["Đen", "Trắng"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Trắng"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Hình in sắc nét, không bong tróc khi giặt máy."
     },
     {
@@ -337,8 +443,15 @@
       "is_sale": false,
       "quantity": 38,
       "image": "https://loremflickr.com/400/400/flannel?lock=17",
-      "colors": ["Đỏ đen", "Xanh đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đỏ đen",
+        "Xanh đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải bông mềm, giữ ấm tốt, phong cách bụi bặm."
     },
     {
@@ -357,8 +470,15 @@
       "is_sale": true,
       "quantity": 47,
       "image": "https://loremflickr.com/400/400/poloshirt?lock=18",
-      "colors": ["Xám", "Be"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xám",
+        "Be"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Thiết kế khóa kéo thay khuy áo hiện đại."
     },
     {
@@ -377,8 +497,14 @@
       "is_sale": false,
       "quantity": 10,
       "image": "https://loremflickr.com/400/400/leather-jacket?lock=19",
-      "colors": ["Đen"],
-      "sizes": ["L", "XL", "2XL"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "L",
+        "XL",
+        "2XL"
+      ],
       "description": "Chất liệu da tổng hợp cao cấp, không bong tróc."
     },
     {
@@ -397,8 +523,15 @@
       "is_sale": true,
       "quantity": 53,
       "image": "https://loremflickr.com/400/400/longsleeve?lock=20",
-      "colors": ["Xanh neon", "Đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xanh neon",
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Chất thun co giãn 4 chiều, chống tia UV."
     },
     {
@@ -417,8 +550,15 @@
       "is_sale": false,
       "quantity": 14,
       "image": "https://loremflickr.com/400/400/rippedjeans?lock=21",
-      "colors": ["Xanh mài"],
-      "sizes": ["29", "30", "31", "32"],
+      "colors": [
+        "Xanh mài"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Điểm nhấn rách gối mạnh mẽ cho phong cách Streetwear."
     },
     {
@@ -437,8 +577,14 @@
       "is_sale": true,
       "quantity": 44,
       "image": "https://loremflickr.com/400/400/chinopants?lock=22",
-      "colors": ["Xanh than"],
-      "sizes": ["30", "31", "32"],
+      "colors": [
+        "Xanh than"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Màu sắc trung tính dễ phối đồ cho quý ông."
     },
     {
@@ -457,8 +603,16 @@
       "is_sale": true,
       "quantity": 76,
       "image": "https://loremflickr.com/400/400/gymshorts?lock=23",
-      "colors": ["Đen", "Xám"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Xám"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải thun 2 lớp thoải mái vận động cường độ cao."
     },
     {
@@ -477,8 +631,14 @@
       "is_sale": false,
       "quantity": 31,
       "image": "https://loremflickr.com/400/400/trackpants?lock=24",
-      "colors": ["Đen Trắng"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen Trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Thiết kế 3 sọc kinh điển, phong cách năng động."
     },
     {
@@ -497,8 +657,15 @@
       "is_sale": true,
       "quantity": 21,
       "image": "https://loremflickr.com/400/400/suedesneakers?lock=25",
-      "colors": ["Nâu", "Xám"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Nâu",
+        "Xám"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Chất da lộn sang trọng, thích hợp đi làm và đi chơi."
     },
     {
@@ -517,8 +684,15 @@
       "is_sale": false,
       "quantity": 19,
       "image": "https://loremflickr.com/400/400/badmintonshoes?lock=26",
-      "colors": ["Trắng Đỏ"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Trắng Đỏ"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế gum chống trượt chuyên dụng cho sân trong nhà."
     },
     {
@@ -537,8 +711,15 @@
       "is_sale": true,
       "quantity": 9,
       "image": "https://loremflickr.com/400/400/marathonshoes?lock=27",
-      "colors": ["Cam", "Xanh lá"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Cam",
+        "Xanh lá"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Trọng lượng tối ưu, công nghệ carbon hỗ trợ tốc độ."
     },
     {
@@ -557,8 +738,16 @@
       "is_sale": true,
       "quantity": 82,
       "image": "https://loremflickr.com/400/400/slides?lock=28",
-      "colors": ["Đen", "Be"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Đen",
+        "Be"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Nhựa EVA cao cấp siêu bền và êm ái."
     },
     {
@@ -577,8 +766,13 @@
       "is_sale": false,
       "quantity": 40,
       "image": "https://loremflickr.com/400/400/buckethat?lock=29",
-      "colors": ["Đen", "Vàng"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Đen",
+        "Vàng"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Thiết kế vành tròn cá tính, che nắng cực tốt."
     },
     {
@@ -597,8 +791,13 @@
       "is_sale": true,
       "quantity": 36,
       "image": "https://loremflickr.com/400/400/minibackpack?lock=30",
-      "colors": ["Xanh dương", "Hồng"],
-      "sizes": ["10L"],
+      "colors": [
+        "Xanh dương",
+        "Hồng"
+      ],
+      "sizes": [
+        "10L"
+      ],
       "description": "Nhỏ gọn, thời trang, đựng được iPad và vật dụng cá nhân."
     },
     {
@@ -617,8 +816,16 @@
       "is_sale": false,
       "quantity": 58,
       "image": "https://loremflickr.com/400/400/oversizetee?lock=31",
-      "colors": ["Đen", "Trắng", "Xám"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Trắng",
+        "Xám"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Form rộng thoải mái, phong cách hip-hop năng động."
     },
     {
@@ -637,8 +844,14 @@
       "is_sale": true,
       "quantity": 29,
       "image": "https://loremflickr.com/400/400/denimshirt?lock=32",
-      "colors": ["Xanh jean"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xanh jean"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Chất denim bền đẹp, mặc như áo khoác hoặc áo chính."
     },
     {
@@ -657,8 +870,14 @@
       "is_sale": false,
       "quantity": 41,
       "image": "https://loremflickr.com/400/400/polo-shirt?lock=33",
-      "colors": ["Trắng phối đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Trắng phối đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Điểm nhấn bo cổ và bo tay dệt tỉ mỉ."
     },
     {
@@ -677,8 +896,14 @@
       "is_sale": true,
       "quantity": 65,
       "image": "https://loremflickr.com/400/400/hoodie?lock=34",
-      "colors": ["Xám", "Vàng"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Xám",
+        "Vàng"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Có mũ rộng che nắng và giữ ấm tai."
     },
     {
@@ -697,8 +922,15 @@
       "is_sale": false,
       "quantity": 93,
       "image": "https://loremflickr.com/400/400/tanktop?lock=35",
-      "colors": ["Đen", "Đỏ"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Đen",
+        "Đỏ"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Khoét nách sâu hỗ trợ vận động tay linh hoạt."
     },
     {
@@ -717,8 +949,15 @@
       "is_sale": true,
       "quantity": 48,
       "image": "https://loremflickr.com/400/400/blackjeans?lock=36",
-      "colors": ["Đen"],
-      "sizes": ["29", "30", "31", "32"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Màu đen tuyền không phai, form dáng dễ mặc."
     },
     {
@@ -737,8 +976,15 @@
       "is_sale": false,
       "quantity": 27,
       "image": "https://loremflickr.com/400/400/cargopants?lock=37",
-      "colors": ["Rêu", "Đen"],
-      "sizes": ["30", "31", "32"],
+      "colors": [
+        "Rêu",
+        "Đen"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Hệ thống túi hộp tiện lợi cho các chuyến dã ngoại."
     },
     {
@@ -757,8 +1003,14 @@
       "is_sale": true,
       "quantity": 52,
       "image": "https://loremflickr.com/400/400/jeanshorts?lock=38",
-      "colors": ["Xanh mài"],
-      "sizes": ["29", "30", "31"],
+      "colors": [
+        "Xanh mài"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31"
+      ],
       "description": "Phong cách cổ điển, chất jean dày dặn."
     },
     {
@@ -777,8 +1029,14 @@
       "is_sale": false,
       "quantity": 39,
       "image": "https://loremflickr.com/400/400/leggings?lock=39",
-      "colors": ["Đen"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Co giãn cực đại, ôm sát hỗ trợ cơ bắp."
     },
     {
@@ -797,8 +1055,14 @@
       "is_sale": true,
       "quantity": 11,
       "image": "https://loremflickr.com/400/400/reflectiveshoes?lock=40",
-      "colors": ["Xám bạc"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Xám bạc"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Nổi bật trong đêm khi có ánh sáng chiếu vào."
     },
     {
@@ -817,8 +1081,14 @@
       "is_sale": false,
       "quantity": 23,
       "image": "https://loremflickr.com/400/400/tennisshoes?lock=41",
-      "colors": ["Trắng Xanh"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Trắng Xanh"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế xương cá bền bỉ trên sân cứng."
     },
     {
@@ -837,8 +1107,14 @@
       "is_sale": true,
       "quantity": 17,
       "image": "https://loremflickr.com/400/400/trailshoes?lock=42",
-      "colors": ["Nâu xanh"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Nâu xanh"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Gai đế sâu bám chắc trên bùn lầy và đá dốc."
     },
     {
@@ -857,8 +1133,14 @@
       "is_sale": false,
       "quantity": 44,
       "image": "https://loremflickr.com/400/400/leather-sandals?lock=43",
-      "colors": ["Nâu Đen"],
-      "sizes": ["39", "40", "41"],
+      "colors": [
+        "Nâu Đen"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41"
+      ],
       "description": "Bảo vệ mũi chân an toàn khi lội suối hoặc đi bộ."
     },
     {
@@ -877,8 +1159,14 @@
       "is_sale": true,
       "quantity": 120,
       "image": "https://loremflickr.com/400/400/beanie?lock=44",
-      "colors": ["Xám", "Đen", "Xanh"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Xám",
+        "Đen",
+        "Xanh"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Len dệt kim giữ nhiệt cực tốt cho những ngày lạnh."
     },
     {
@@ -897,8 +1185,12 @@
       "is_sale": false,
       "quantity": 33,
       "image": "https://loremflickr.com/400/400/smart-backpack?lock=45",
-      "colors": ["Đen"],
-      "sizes": ["20L"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "20L"
+      ],
       "description": "Khóa kéo ẩn và chất liệu chống rạch an toàn."
     },
     {
@@ -917,8 +1209,15 @@
       "is_sale": true,
       "quantity": 59,
       "image": "https://loremflickr.com/400/400/henley?lock=46",
-      "colors": ["Trắng", "Xám"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Trắng",
+        "Xám"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Cổ áo Henley mang lại nét phong trần nam tính."
     },
     {
@@ -937,8 +1236,15 @@
       "is_sale": false,
       "quantity": 42,
       "image": "https://loremflickr.com/400/400/mandarin-shirt?lock=47",
-      "colors": ["Trắng", "Xanh lơ"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Trắng",
+        "Xanh lơ"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Thiết kế cổ trụ gọn gàng, trẻ trung."
     },
     {
@@ -957,8 +1263,15 @@
       "is_sale": true,
       "quantity": 35,
       "image": "https://loremflickr.com/400/400/embroidered-polo?lock=48",
-      "colors": ["Đen", "Trắng"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Họa tiết thêu tay nhỏ tinh tế ở ngực áo."
     },
     {
@@ -977,8 +1290,14 @@
       "is_sale": false,
       "quantity": 18,
       "image": "https://loremflickr.com/400/400/trenchcoat?lock=49",
-      "colors": ["Be", "Đen"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Be",
+        "Đen"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Phong cách thanh lịch cho những ngày thu đông."
     },
     {
@@ -997,8 +1316,15 @@
       "is_sale": true,
       "quantity": 43,
       "image": "https://loremflickr.com/400/400/trackjacket?lock=50",
-      "colors": ["Đen", "Navy"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Navy"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải dù cao cấp, thích hợp tập luyện hoặc mặc thường ngày."
     },
     {
@@ -1017,8 +1343,16 @@
       "is_sale": true,
       "quantity": 72,
       "image": "https://loremflickr.com/400/400/tshirt-white?lock=51",
-      "colors": ["Trắng", "Đen"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Trắng",
+        "Đen"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Sợi vải bền gấp 2 lần cotton thường, không xù lông."
     },
     {
@@ -1037,8 +1371,15 @@
       "is_sale": false,
       "quantity": 31,
       "image": "https://loremflickr.com/400/400/linenshirt?lock=52",
-      "colors": ["Xanh lơ", "Kem"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xanh lơ",
+        "Kem"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Chất liệu linen tự nhiên, thoáng mát tuyệt đối."
     },
     {
@@ -1057,8 +1398,16 @@
       "is_sale": true,
       "quantity": 26,
       "image": "https://loremflickr.com/400/400/golfpolo?lock=53",
-      "colors": ["Đỏ", "Xanh Navy"],
-      "sizes": ["M", "L", "XL", "2XL"],
+      "colors": [
+        "Đỏ",
+        "Xanh Navy"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
       "description": "Công nghệ thoát nhiệt chuyên dụng cho người chơi golf."
     },
     {
@@ -1077,8 +1426,14 @@
       "is_sale": false,
       "quantity": 14,
       "image": "https://loremflickr.com/400/400/parka?lock=54",
-      "colors": ["Đen", "Xanh Rêu"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Đen",
+        "Xanh Rêu"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Lớp lót lông cừu dày dặn, chịu được nhiệt độ âm."
     },
     {
@@ -1097,8 +1452,15 @@
       "is_sale": true,
       "quantity": 88,
       "image": "https://loremflickr.com/400/400/compression-shirt?lock=55",
-      "colors": ["Đen", "Xám"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Đen",
+        "Xám"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Bó sát cơ thể, tăng cường lưu thông máu khi tập luyện."
     },
     {
@@ -1117,8 +1479,16 @@
       "is_sale": false,
       "quantity": 37,
       "image": "https://loremflickr.com/400/400/baggypants?lock=56",
-      "colors": ["Xanh nhạt", "Đen"],
-      "sizes": ["28", "30", "32", "34"],
+      "colors": [
+        "Xanh nhạt",
+        "Đen"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34"
+      ],
       "description": "Ống rộng thời thượng, phong cách tự do."
     },
     {
@@ -1137,8 +1507,15 @@
       "is_sale": true,
       "quantity": 46,
       "image": "https://loremflickr.com/400/400/cargojoggers?lock=57",
-      "colors": ["Đen", "Vàng cát"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Vàng cát"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Sự kết hợp giữa túi hộp và gấu chun năng động."
     },
     {
@@ -1157,8 +1534,15 @@
       "is_sale": false,
       "quantity": 95,
       "image": "https://loremflickr.com/400/400/fleece-shorts?lock=58",
-      "colors": ["Xám", "Than"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xám",
+        "Than"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Mặc ở nhà hoặc tập thể dục đều rất thoải mái."
     },
     {
@@ -1177,8 +1561,15 @@
       "is_sale": true,
       "quantity": 66,
       "image": "https://loremflickr.com/400/400/gympants?lock=59",
-      "colors": ["Đen"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải chuyên dụng chống nhăn, khô nhanh."
     },
     {
@@ -1197,8 +1588,15 @@
       "is_sale": true,
       "quantity": 13,
       "image": "https://loremflickr.com/400/400/chunkyshoes?lock=60",
-      "colors": ["Trắng phối màu"],
-      "sizes": ["38", "39", "40", "41"],
+      "colors": [
+        "Trắng phối màu"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
       "description": "Đế cao 5cm giúp tôn dáng, phong cách hoài cổ."
     },
     {
@@ -1217,8 +1615,15 @@
       "is_sale": false,
       "quantity": 21,
       "image": "https://loremflickr.com/400/400/basketballshoes?lock=61",
-      "colors": ["Đen Đỏ", "Trắng Xanh"],
-      "sizes": ["41", "42", "43"],
+      "colors": [
+        "Đen Đỏ",
+        "Trắng Xanh"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43"
+      ],
       "description": "Cổ cao bảo vệ cổ chân, đệm khí bật nhảy cực êm."
     },
     {
@@ -1237,8 +1642,14 @@
       "is_sale": true,
       "quantity": 37,
       "image": "https://loremflickr.com/400/400/cushionshoes?lock=62",
-      "colors": ["Xanh Navy"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Xanh Navy"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Công nghệ đệm bọt mới giảm chấn thương tối đa."
     },
     {
@@ -1257,8 +1668,16 @@
       "is_sale": false,
       "quantity": 80,
       "image": "https://loremflickr.com/400/400/flipflops?lock=63",
-      "colors": ["Đen", "Dương"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Đen",
+        "Dương"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Quai cao su mềm không gây đau kẽ chân."
     },
     {
@@ -1277,8 +1696,13 @@
       "is_sale": true,
       "quantity": 42,
       "image": "https://loremflickr.com/400/400/snapback?lock=64",
-      "colors": ["Đen", "Đỏ"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Đen",
+        "Đỏ"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Lưỡi mũ phẳng, form dáng snapback cá tính."
     },
     {
@@ -1297,8 +1721,12 @@
       "is_sale": false,
       "quantity": 29,
       "image": "https://loremflickr.com/400/400/military-backpack?lock=65",
-      "colors": ["Camo"],
-      "sizes": ["35L"],
+      "colors": [
+        "Camo"
+      ],
+      "sizes": [
+        "35L"
+      ],
       "description": "Chất liệu vải dù siêu bền, chống rách."
     },
     {
@@ -1317,8 +1745,16 @@
       "is_sale": true,
       "quantity": 55,
       "image": "https://loremflickr.com/400/400/v-neck?lock=66",
-      "colors": ["Đen", "Trắng", "Navy"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Đen",
+        "Trắng",
+        "Navy"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Dáng ôm nhẹ tôn vẻ nam tính, cổ tim trẻ trung."
     },
     {
@@ -1337,8 +1773,14 @@
       "is_sale": false,
       "quantity": 31,
       "image": "https://loremflickr.com/400/400/striped-shirt?lock=67",
-      "colors": ["Sọc xanh trắng"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Sọc xanh trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Họa tiết sọc dọc giúp người mặc trông cao ráo hơn."
     },
     {
@@ -1357,8 +1799,15 @@
       "is_sale": true,
       "quantity": 48,
       "image": "https://loremflickr.com/400/400/pique-polo?lock=68",
-      "colors": ["Vàng", "Xanh than"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Vàng",
+        "Xanh than"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Mặt vải dệt lỗ kim thoáng khí, bền màu."
     },
     {
@@ -1377,8 +1826,14 @@
       "is_sale": false,
       "quantity": 12,
       "image": "https://loremflickr.com/400/400/overcoat?lock=69",
-      "colors": ["Nâu", "Xám"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Nâu",
+        "Xám"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Đẳng cấp quý ông, chất dạ giữ ấm tuyệt hảo."
     },
     {
@@ -1397,8 +1852,16 @@
       "is_sale": true,
       "quantity": 25,
       "image": "https://loremflickr.com/400/400/gymjacket?lock=70",
-      "colors": ["Hồng", "Tím", "Đen"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Hồng",
+        "Tím",
+        "Đen"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Thiết kế ôm sát, vải thun gân co giãn tốt."
     },
     {
@@ -1417,8 +1880,15 @@
       "is_sale": false,
       "quantity": 43,
       "image": "https://loremflickr.com/400/400/darkjeans?lock=71",
-      "colors": ["Xanh đen"],
-      "sizes": ["29", "30", "31", "32"],
+      "colors": [
+        "Xanh đen"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Màu sắc truyền thống, dễ phối với mọi loại áo."
     },
     {
@@ -1437,8 +1907,14 @@
       "is_sale": true,
       "quantity": 56,
       "image": "https://loremflickr.com/400/400/olive-kaki?lock=72",
-      "colors": ["Xanh rêu"],
-      "sizes": ["30", "31", "32"],
+      "colors": [
+        "Xanh rêu"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Màu rêu lạ mắt, chất kaki không nhăn."
     },
     {
@@ -1457,8 +1933,14 @@
       "is_sale": false,
       "quantity": 62,
       "image": "https://loremflickr.com/400/400/denimshorts?lock=73",
-      "colors": ["Xanh mài"],
-      "sizes": ["29", "30", "31"],
+      "colors": [
+        "Xanh mài"
+      ],
+      "sizes": [
+        "29",
+        "30",
+        "31"
+      ],
       "description": "Vết mài tự nhiên, cá tính cho các buổi dã ngoại."
     },
     {
@@ -1477,8 +1959,15 @@
       "is_sale": true,
       "quantity": 81,
       "image": "https://loremflickr.com/400/400/sweatpants?lock=74",
-      "colors": ["Xám", "Than"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xám",
+        "Than"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Phù hợp mặc đi chạy bộ hoặc tập gym mùa lạnh."
     },
     {
@@ -1497,8 +1986,16 @@
       "is_sale": false,
       "quantity": 29,
       "image": "https://loremflickr.com/400/400/plimsolls?lock=75",
-      "colors": ["Đen", "Trắng"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Đen",
+        "Trắng"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế bằng cao su, phong cách đơn giản thanh lịch."
     },
     {
@@ -1517,8 +2014,15 @@
       "is_sale": true,
       "quantity": 24,
       "image": "https://loremflickr.com/400/400/futsalshoes?lock=76",
-      "colors": ["Vàng neon"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Vàng neon"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế bằng cao su bám sàn gỗ và sàn xi măng tốt."
     },
     {
@@ -1537,8 +2041,14 @@
       "is_sale": false,
       "quantity": 15,
       "image": "https://loremflickr.com/400/400/trailrunning?lock=77",
-      "colors": ["Cam Đen"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Cam Đen"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Đế giày có đinh cao su bám chắc mọi địa hình."
     },
     {
@@ -1557,8 +2067,16 @@
       "is_sale": true,
       "quantity": 90,
       "image": "https://loremflickr.com/400/400/school-sandals?lock=78",
-      "colors": ["Đen"],
-      "sizes": ["36", "37", "38", "39", "40"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
       "description": "Quai da mềm bền bỉ, đúng tiêu chuẩn học đường."
     },
     {
@@ -1577,8 +2095,13 @@
       "is_sale": false,
       "quantity": 55,
       "image": "https://loremflickr.com/400/400/fishermans-hat?lock=79",
-      "colors": ["Vàng rêu", "Đen"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Vàng rêu",
+        "Đen"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Mẫu mũ ngắn che nửa tai cá tính."
     },
     {
@@ -1597,8 +2120,12 @@
       "is_sale": true,
       "quantity": 38,
       "image": "https://loremflickr.com/400/400/canvas-backpack?lock=80",
-      "colors": ["Trắng kem"],
-      "sizes": ["15L"],
+      "colors": [
+        "Trắng kem"
+      ],
+      "sizes": [
+        "15L"
+      ],
       "description": "Vải canvas dày, in họa tiết thời trang."
     },
     {
@@ -1617,8 +2144,16 @@
       "is_sale": false,
       "quantity": 47,
       "image": "https://loremflickr.com/400/400/raglanshirt?lock=81",
-      "colors": ["Trắng-Đen", "Xám-Navy"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Trắng-Đen",
+        "Xám-Navy"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Thiết kế tay áo khác màu đặc trưng."
     },
     {
@@ -1637,8 +2172,14 @@
       "is_sale": true,
       "quantity": 28,
       "image": "https://loremflickr.com/400/400/pink-shirt?lock=82",
-      "colors": ["Hồng nhạt"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Hồng nhạt"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Màu hồng pastel lịch lãm, không kén da."
     },
     {
@@ -1657,8 +2198,15 @@
       "is_sale": false,
       "quantity": 41,
       "image": "https://loremflickr.com/400/400/logo-polo?lock=83",
-      "colors": ["Đen", "Navy"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen",
+        "Navy"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Logo thêu nổi tỉ mỉ tạo điểm nhấn sang trọng."
     },
     {
@@ -1677,8 +2225,15 @@
       "is_sale": true,
       "quantity": 34,
       "image": "https://loremflickr.com/400/400/cardigan?lock=84",
-      "colors": ["Kem", "Đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Kem",
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải len dệt kim mềm, phù hợp khoác nhẹ bên ngoài."
     },
     {
@@ -1697,8 +2252,15 @@
       "is_sale": false,
       "quantity": 77,
       "image": "https://loremflickr.com/400/400/gymtank?lock=85",
-      "colors": ["Xanh mint", "Đen"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "Xanh mint",
+        "Đen"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "description": "Vải thun lưới cực thoáng khí phía sau lưng."
     },
     {
@@ -1717,8 +2279,15 @@
       "is_sale": true,
       "quantity": 30,
       "image": "https://loremflickr.com/400/400/straightjeans?lock=86",
-      "colors": ["Xanh trung"],
-      "sizes": ["30", "31", "32", "33"],
+      "colors": [
+        "Xanh trung"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32",
+        "33"
+      ],
       "description": "Form dáng cổ điển, lịch sự và dễ cử động."
     },
     {
@@ -1737,8 +2306,14 @@
       "is_sale": false,
       "quantity": 22,
       "image": "https://loremflickr.com/400/400/gray-kaki?lock=87",
-      "colors": ["Xám chuột"],
-      "sizes": ["30", "31", "32"],
+      "colors": [
+        "Xám chuột"
+      ],
+      "sizes": [
+        "30",
+        "31",
+        "32"
+      ],
       "description": "Chất kaki thun đứng form nhưng vẫn co giãn."
     },
     {
@@ -1757,8 +2332,14 @@
       "is_sale": true,
       "quantity": 64,
       "image": "https://loremflickr.com/400/400/2in1-shorts?lock=88",
-      "colors": ["Đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Lớp lót bên trong giúp bảo vệ và giữ cơ bắp."
     },
     {
@@ -1777,8 +2358,14 @@
       "is_sale": false,
       "quantity": 50,
       "image": "https://loremflickr.com/400/400/windpants?lock=89",
-      "colors": ["Navy"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Navy"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Cản gió tốt, chống thấm nước nhẹ khi đi dưới mưa nhỏ."
     },
     {
@@ -1797,8 +2384,15 @@
       "is_sale": true,
       "quantity": 33,
       "image": "https://loremflickr.com/400/400/slipon?lock=90",
-      "colors": ["Đen Trắng"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Đen Trắng"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Tiện lợi không cần buộc dây, phong cách năng động."
     },
     {
@@ -1817,8 +2411,15 @@
       "is_sale": false,
       "quantity": 16,
       "image": "https://loremflickr.com/400/400/volleyballshoes?lock=91",
-      "colors": ["Trắng Xanh"],
-      "sizes": ["38", "39", "40", "41"],
+      "colors": [
+        "Trắng Xanh"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
       "description": "Hỗ trợ bật nhảy và di chuyển ngang linh hoạt."
     },
     {
@@ -1837,8 +2438,14 @@
       "is_sale": true,
       "quantity": 59,
       "image": "https://loremflickr.com/400/400/dailyrun?lock=92",
-      "colors": ["Đen"],
-      "sizes": ["40", "41", "42"],
+      "colors": [
+        "Đen"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Giày chạy bộ quốc dân cho người mới bắt đầu."
     },
     {
@@ -1857,8 +2464,15 @@
       "is_sale": false,
       "quantity": 11,
       "image": "https://loremflickr.com/400/400/mensandals?lock=93",
-      "colors": ["Nâu bò"],
-      "sizes": ["39", "40", "41", "42"],
+      "colors": [
+        "Nâu bò"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "description": "Da bò thật 100%, đế cao su đúc chắc chắn."
     },
     {
@@ -1877,8 +2491,13 @@
       "is_sale": true,
       "quantity": 25,
       "image": "https://loremflickr.com/400/400/beret?lock=94",
-      "colors": ["Đen", "Nâu"],
-      "sizes": ["Free size"],
+      "colors": [
+        "Đen",
+        "Nâu"
+      ],
+      "sizes": [
+        "Free size"
+      ],
       "description": "Phụ kiện mang lại nét lãng mạn, cổ điển."
     },
     {
@@ -1897,8 +2516,13 @@
       "is_sale": false,
       "quantity": 110,
       "image": "https://loremflickr.com/400/400/drawstring-bag?lock=95",
-      "colors": ["Đen", "Xanh"],
-      "sizes": ["5L"],
+      "colors": [
+        "Đen",
+        "Xanh"
+      ],
+      "sizes": [
+        "5L"
+      ],
       "description": "Siêu nhẹ, đựng vừa đôi giày và bình nước tập gym."
     },
     {
@@ -1917,8 +2541,16 @@
       "is_sale": true,
       "quantity": 64,
       "image": "https://loremflickr.com/400/400/polotee?lock=96",
-      "colors": ["Trắng", "Xám"],
-      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        "Trắng",
+        "Xám"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Sự giao thoa giữa áo thun và áo polo."
     },
     {
@@ -1937,8 +2569,14 @@
       "is_sale": false,
       "quantity": 22,
       "image": "https://loremflickr.com/400/400/redflannel?lock=97",
-      "colors": ["Kẻ đỏ đen"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Kẻ đỏ đen"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Vải nỉ xù nhẹ, phong cách grunge bụi bặm."
     },
     {
@@ -1957,8 +2595,14 @@
       "is_sale": true,
       "quantity": 49,
       "image": "https://loremflickr.com/400/400/tippedpolo?lock=98",
-      "colors": ["Than phối trắng"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Than phối trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Viền cổ và tay áo tinh tế, trẻ trung."
     },
     {
@@ -1977,8 +2621,13 @@
       "is_sale": false,
       "quantity": 8,
       "image": "https://loremflickr.com/400/400/suedejacket?lock=99",
-      "colors": ["Nâu bò"],
-      "sizes": ["L", "XL"],
+      "colors": [
+        "Nâu bò"
+      ],
+      "sizes": [
+        "L",
+        "XL"
+      ],
       "description": "Da bò lộn nguyên tấm, lót lụa cao cấp."
     },
     {
@@ -1997,8 +2646,14 @@
       "is_sale": true,
       "quantity": 33,
       "image": "https://loremflickr.com/400/400/reflective-jacket?lock=100",
-      "colors": ["Xanh neon"],
-      "sizes": ["M", "L", "XL"],
+      "colors": [
+        "Xanh neon"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
       "description": "Toàn bộ họa tiết trên áo đều có khả năng phản quang."
     }
   ],
@@ -2012,41 +2667,85 @@
       "name": "Áo",
       "category": "ao",
       "sub_categories": [
-        { "name": "Áo thun", "sub_category": "ao-thun" },
-        { "name": "Áo sơ mi", "sub_category": "ao-so-mi" },
-        { "name": "Áo polo", "sub_category": "ao-polo" },
-        { "name": "Áo khoác", "sub_category": "ao-khoac" },
-        { "name": "Áo thể thao", "sub_category": "ao-the-thao" }
+        {
+          "name": "Áo thun",
+          "sub_category": "ao-thun"
+        },
+        {
+          "name": "Áo sơ mi",
+          "sub_category": "ao-so-mi"
+        },
+        {
+          "name": "Áo polo",
+          "sub_category": "ao-polo"
+        },
+        {
+          "name": "Áo khoác",
+          "sub_category": "ao-khoac"
+        },
+        {
+          "name": "Áo thể thao",
+          "sub_category": "ao-the-thao"
+        }
       ]
     },
     {
       "name": "Quần",
       "category": "quan",
       "sub_categories": [
-        { "name": "Quần jean", "sub_category": "quan-jean" },
-        { "name": "Quần kaki", "sub_category": "quan-kaki" },
-        { "name": "Quần short", "sub_category": "quan-short" },
-        { "name": "Quần thể thao", "sub_category": "quan-the-thao" }
+        {
+          "name": "Quần jean",
+          "sub_category": "quan-jean"
+        },
+        {
+          "name": "Quần kaki",
+          "sub_category": "quan-kaki"
+        },
+        {
+          "name": "Quần short",
+          "sub_category": "quan-short"
+        },
+        {
+          "name": "Quần thể thao",
+          "sub_category": "quan-the-thao"
+        }
       ]
     },
     {
       "name": "Giày",
       "category": "giay",
       "sub_categories": [
-        { "name": "Giày sneaker", "sub_category": "giay-sneaker" },
-        { "name": "Giày thể thao", "sub_category": "giay-the-thao" },
-        { "name": "Giày chạy bộ", "sub_category": "giay-chay-bo" },
-        { "name": "Dép & Sandal", "sub_category": "giay-sandal-dep" }
+        {
+          "name": "Giày sneaker",
+          "sub_category": "giay-sneaker"
+        },
+        {
+          "name": "Giày thể thao",
+          "sub_category": "giay-the-thao"
+        },
+        {
+          "name": "Giày chạy bộ",
+          "sub_category": "giay-chay-bo"
+        },
+        {
+          "name": "Dép & Sandal",
+          "sub_category": "giay-sandal-dep"
+        }
       ]
     },
     {
       "name": "Phụ kiện",
       "category": "phu-kien",
       "sub_categories": [
-        { "name": "Mũ / Nón", "sub_category": "mu" },
-        { "name": "Balo", "sub_category": "balo" }
+        {
+          "name": "Mũ / Nón",
+          "sub_category": "mu"
+        },
+        {
+          "name": "Balo",
+          "sub_category": "balo"
+        }
       ]
     }
   ]
-
 }

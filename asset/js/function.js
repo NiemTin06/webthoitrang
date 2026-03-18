@@ -9,6 +9,32 @@ export const fetchApi = async(api) =>{
   return result;
 }
 
+export const addProduct = async (api, data) => {
+  const response = await fetch(api, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+}
+
+export const deleteProduct = async (api, id) => {
+  await fetch(`${api}/${id}`, {
+    method: "DELETE"
+  });
+};
+
+export const updateProduct = async (api, id, data) => {
+  const response = await fetch(`${api}/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+};
+
 export const getAPI = () => {
   const keyword = normalizeText(params.title || "");
   let api = `${APIproduct}?search_key_like=${keyword}`;
@@ -38,3 +64,15 @@ export const normalizeText = (str = "") => {
     .replace(/\s+/g, " ")                                  
     .trim();                                              
 };
+
+export const convertSlugText = (str = "") =>{
+  if (!str) return "";
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[đĐ]/g, "d")
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, "-")   // đổi khoảng trắng thành -
+    .trim();                                            
+}
