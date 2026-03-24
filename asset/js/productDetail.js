@@ -74,11 +74,14 @@ const checkItem = (currentQuantity, activeColor, activeSize) => {
 }
 
 addCart.addEventListener("click" , () => {
+  if (!currentProduct) {
+    alert("Vui lòng chọn sản phẩm từ trang chủ hoặc danh sách sản phẩm.");
+    return;
+  }
   const activeColor = document.querySelector(".detail-product__colors .active");
   console.log(activeColor)
   const activeSize =  document.querySelector(".detail-product__sizes .active")
   const cart = getCart()
-  if (!currentProduct) return;
   const currentQuantity = getQuantityProduct();
   if (checkItem(currentQuantity, activeColor, activeSize)){
     const productToCard = {
@@ -92,16 +95,27 @@ addCart.addEventListener("click" , () => {
         slug: currentProduct.slug
     }
     addToCart(productToCard, currentQuantity, cart);
-    alert("Da them vao gio hang");
+    const toast = document.getElementById("toast");
+    if(toast) {
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    } else {
+      alert("Đã thêm vào giỏ thành công!");
+    }
   }
 })
 
 buyItem.addEventListener(("click"), () => {
-const activeColor = document.querySelector(".detail-product__colors .active");
-const activeSize =  document.querySelector(".detail-product__sizes .active")
-const cart = getCart();
-if (!currentProduct) return;
-const currentQuantity = getQuantityProduct();
+  if (!currentProduct) {
+    alert("Vui lòng chọn sản phẩm từ trang chủ hoặc danh sách sản phẩm.");
+    return;
+  }
+  const activeColor = document.querySelector(".detail-product__colors .active");
+  const activeSize =  document.querySelector(".detail-product__sizes .active")
+  const cart = getCart();
+  const currentQuantity = getQuantityProduct();
   if (checkItem(currentQuantity, activeColor, activeSize)){
     const productToCart = {
       id: currentProduct.id,
@@ -114,6 +128,6 @@ const currentQuantity = getQuantityProduct();
       slug: currentProduct.slug
     }
     addToCart(productToCart, currentQuantity, cart);
-    window.location.href = "../../cart.html"
+    window.location.href = "cart.html"
   }
 })

@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đặt hàng thành công</title>
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/base.css">
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
-<body>
+<body class="thanks-page">
     <header id="header"></header>
-    <main>
+    <main class="thanks-main">
         <div class="container">
-            Thank you for your purchase
+            <div class="thanks-card">
+                <div class="success-checkmark">
+                    <svg class="check-svg" width="80" height="80" viewBox="0 0 80 80">
+                        <polyline class="check-path" points="22,42 35,55 58,28" />
+                    </svg>
+                </div>
+                <h2>Đơn hàng đã được đặt</h2>
+                <a href="index.html" class="btn-continue">Tiếp tục mua hàng</a>
+            </div>
         </div>
     </main>
     <footer id="footer"></footer>
-    <script src="asset/js/script.js"> </script>
+    <script src="asset/js/script.js"></script>
 </body>
 </html>
