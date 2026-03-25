@@ -9,26 +9,29 @@ const subCategory = document.querySelector("#filter-sub-category");
 const sizeOptions = {
     quanAo: ["S", "M", "L", "XL", "XXL", "XXXL"],
     giay: ["30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45"]
-}
+  }
 //const filter = document.querySelector('.form-action__submit');
 
+const pagePrev = document.querySelector("#paginationPrev")
+const pageNext = document.querySelector("#paginationNext")
+export const pageNumber = document.querySelector("#paginationNumber")
 
 category.addEventListener("change", () => {
-    const categoryOption = category.value;
-    console.log(categoryOption)
-    let html = `<option value=""> Tắt cả</option>`;
-    if (categoryOption === "ao" || categoryOption ==="quan"){
-        sizeOptions.quanAo.forEach((e)=> {
-            html += `<option value=${e}> ${e}</option>`
-        });
-        size.innerHTML = html;
-    }
-    else if (categoryOption == "giay"){
-        sizeOptions.giay.forEach((e)=> {
-            html += `<option value=${e}> ${e}</option>`
-        });
-        size.innerHTML = html;
-    }
+  const categoryOption = category.value;
+  console.log(categoryOption)
+  let html = `<option value=""> Tắt cả</option>`;
+  if (categoryOption === "ao" || categoryOption ==="quan"){
+    sizeOptions.quanAo.forEach((e)=> {
+      html += `<option value=${e}> ${e}</option>`
+    });
+    size.innerHTML = html;
+  }
+  else if (categoryOption == "giay"){
+    sizeOptions.giay.forEach((e)=> {
+      html += `<option value=${e}> ${e}</option>`
+    });
+    size.innerHTML = html;
+  }
     const api =`${APIcategories}?category=${category.value}`;
     fetchApi(api)
         .then (data => {
@@ -37,8 +40,8 @@ category.addEventListener("change", () => {
             let html = `<option value=""> Tắt cả</option>`;
             categories.forEach(e => {html += `<option value="${e.sub_category}"> ${e.name}</option>`})
             subCategory.innerHTML = html;
+          })
         })
-})
 
 drawProductManager();
 
@@ -98,13 +101,11 @@ form.addEventListener("submit", (e) => {
       default: 
         break
     }
+    pageNumber.innerHTML = 1;
    drawProductManager();
 
 })
 
-const pagePrev = document.querySelector("#paginationPrev")
-const pageNext = document.querySelector("#paginationNext")
-export const pageNumber = document.querySelector("#paginationNumber")
 
 // Pagination
 pageNext.addEventListener("click" , () =>{

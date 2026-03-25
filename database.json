@@ -14,7 +14,7 @@
       "discount_percent": 50,
       "is_new": true,
       "is_sale": true,
-      "quantity": 36,
+      "quantity": 360,
       "image": "https://loremflickr.com/400/400/tshirt?lock=1",
       "colors": [
         "Xanh Navy",
@@ -379,7 +379,7 @@
       "id": 15,
       "title": "Balo Du Lịch Đa Năng",
       "slug": "balo-du-lich-da-nang",
-      "search_key": "balo du lich da nang",
+      "search_key": "balo-du-lich-da-nang",
       "category": "phu-kien",
       "category_breadcrumb": "Phụ kiện",
       "sub_category": "balo",
@@ -389,7 +389,7 @@
       "discount_percent": 0,
       "is_new": true,
       "is_sale": false,
-      "quantity": 25,
+      "quantity": 251,
       "image": "https://loremflickr.com/400/400/backpack?lock=15",
       "colors": [
         "Xám đen"

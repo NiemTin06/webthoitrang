@@ -6,10 +6,57 @@
   <title> Trang chủ </title>
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
-  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/dashboard.css">
 </head>
 <body>
+  <header class="header"></header>
+  <main>
+    <nav class = "sidebar"></nav>
+    <article class = "dashboard">
+      <div class="container">
 
-  <script src="script.js"></script>
+        <section class = "dashboard__stat">
+          <h1 class="stat__title">Good morning</h1>
+          <p class="stat__desc"> Here what happening</p>
+          <div class="row justify-content-center">
+            <div class="stat-card col-lg-3 col-sm-6 col-12">        
+                <div class="stat-card__label"> <i class="fa-solid fa-dollar-sign"></i> Tổng doanh thu </div>
+                <h2 class="stat-card__value">100.366.000đ</h2>
+                <p class="stat-card__change">
+                  Tăng 20% so với tháng trước
+                </p>
+            </div>
+            <div class="stat-card col-lg-3 col-sm-6 col-12">        
+                <div class="stat-card__label"> <i class="fa-solid fa-dollar-sign"></i> Tổng người dùng </div>
+                <h2 class="stat-card__value">2530000</h2>
+                <p class="stat-card__change">
+                  Tăng 10% so với tháng trước
+                </p>
+            </div>
+            <div class="stat-card col-lg-3 col-6 col-sm-6 col-12">        
+                <div class="stat-card__label"> <i class="fa-solid fa-dollar-sign"></i> Tổng đơn hàng </div>
+                <h2 class="stat-card__value">23100</h2>
+                <p class="stat-card__change">
+                  Tang 50% so với tháng trước
+                </p>
+            </div>
+            <div class="stat-card col-lg-3 col-6 col-sm-6 col-12">        
+                <div class="stat-card__label"> <i class="fa-solid fa-dollar-sign"></i> Tổng lượt truy cập</div>
+                <h2 class="stat-card__value">223100</h2>
+                <p class="stat-card__change">
+                  Tăng 10% so với tháng trước
+                </p>
+            </div>
+          </div>
+        </section>
+      </div>
+     
+        
+    </article>
+  </main>
+  <footer class = "footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script type = "module" src="asset/js/admin.js"></script>
+  <script type = "module"src="asset/js/dashboard.js"></script>
 </body>
 </html>

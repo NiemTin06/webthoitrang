@@ -7,228 +7,232 @@
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/dashboard.css">
 </head>
 <body>
-  <header id ="header"></header>
+  <header class ="header"></header>
   <main>
-    <section class="product-filter">
-      <div class="container">
-        <form id ="product-filter__form" action="" method="get" autocomplete>
-          <div class="form-group">
-            <label for="filter-name"> Tên sản phẩm</label>
-            <input type="text" id ="filter-name" name ="title" placeholder="tên sản phẩm" autocomplete >
-          </div>
-          <div class="form-group">
-            <label for="filter-category"> Danh mục </label>
-            <select name="category" id="filter-category">
-              <option value=""> Tắt cả </option>
-              <option value="ao"> Áo </option>
-              <option value="quan"> Quần </option>
-              <option value="giay"> Giầy </option>
-              <option value="phu-kien"> Phụ kiện </option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="filter-sub-category"> Danh mục chi tiết </label>
-            <select name="subCategory" id="filter-sub-category" >
-              <option value=""> Tắt cả </option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="filter-price"> Giá</label>
-            <input type="number" name ="minPrice" placeholder="Min price" id = "price">
-            <input type="filter-number" name ="maxPrice" placeholder="Max price">
-          </div>
-          <div class="form-group">
-            <label for="filter-size"> Kích thước</label>
-            <select name="size" id="filter-size">
-              <option selected value=""> Tất cả</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="filter-color"> Màu sắc </label>
-            <input type="text" id="filter-color" name="color" placeholder="Màu sắc">
-          </div>
-          <div class="form-group">
-            <label for="filter-show"> Hiển thị </label>
-            <input name ="show" type="text" id="filter-show" placeholder="10 sản phẩm">
-          </div>
-          <div class="form-group">
-            <label for="filter-sale"> Sale </label>
-            <input name="sale" type="checkbox" id = "filter-sale">
-          </div>
-          <div class="form-group">
-            <label for="filter-new"> Hàng mới </label>
-            <input name="new"type="checkbox" id = "filter-new">
-          </div>
-          <div class="form-group">
-            <label for="filter-sort">Sắp xếp</label>
-              <select id="filter-sort" name="sort">
-                <option value="">Mặc định</option>
-                <option value="price-asc">Giá tăng dần</option>
-                <option value="price-desc">Giá giảm dần</option>
-                <option value="quantity-asc">Số lượng tăng dần</option>
-                <option value="quantity-desc">Số lượng giảm dần</option>
-                <option value="discount">Giảm giá</option>
+    <nav class="sidebar"></nav>
+    <article>
+      <section class="product-filter">
+        <div class="container">
+          <form id ="product-filter__form" action="" method="get" autocomplete>
+            <div class="form-group">
+              <label for="filter-name"> Tên sản phẩm</label>
+              <input type="text" id ="filter-name" name ="title" placeholder="tên sản phẩm" autocomplete >
+            </div>
+            <div class="form-group">
+              <label for="filter-category"> Danh mục </label>
+              <select name="category" id="filter-category">
+                <option value=""> Tắt cả </option>
+                <option value="ao"> Áo </option>
+                <option value="quan"> Quần </option>
+                <option value="giay"> Giầy </option>
+                <option value="phu-kien"> Phụ kiện </option>
               </select>
-          </div>
-          <div class="form-actions">
-            <button type="submit">Lọc sản phẩm</button>
-            <button type="reset">Xóa bộ lọc</button>
-            
-          </div>
-        </form>
-    </section>
-    <section class="add-product">
-      <div class="container">
-
-        <button id="add-product__button">Thêm sản phẩm</button>
-        <div id="add-product__popup" class="popup">
-          <form id ="add-product__form" action="" method="get" autocomplete>
-            <div class="form-group">
-              <label for="add-title">Tên sản phẩm</label>
-              <input type="text" id="add-title" name="title" placeholder="Tên sản phẩm">
             </div>
-
             <div class="form-group">
-              <label for="add-category">Category</label>
-              <input type="text" id="add-category" name="category" placeholder="Category">
+              <label for="filter-sub-category"> Danh mục chi tiết </label>
+              <select name="subCategory" id="filter-sub-category" >
+                <option value=""> Tắt cả </option>
+              </select>
             </div>
-
             <div class="form-group">
-              <label for="add-sub-category">Sub Category</label>
-              <input type="text" id="add-sub-category" name="subCategory" placeholder="Sub Category">
+              <label for="filter-price"> Giá</label>
+              <input type="number" name ="minPrice" placeholder="Min price" id = "price">
+              <input type="filter-number" name ="maxPrice" placeholder="Max price">
             </div>
-
             <div class="form-group">
-              <label for="add-price">Giá</label>
-              <input type="number" id="add-price" name="price" placeholder="Giá">
+              <label for="filter-size"> Kích thước</label>
+              <select name="size" id="filter-size">
+                <option selected value=""> Tất cả</option>
+              </select>
             </div>
-
             <div class="form-group">
-              <label for="add-discount">giảm giá </label>
-              <input type="number" id="add-discount" name="discount" placeholder="giảm giá ">
+              <label for="filter-color"> Màu sắc </label>
+              <input type="text" id="filter-color" name="color" placeholder="Màu sắc">
             </div>
-
             <div class="form-group">
-              <label for="add-quantity">Số lượng</label>
-              <input type="number" id="add-quantity" name="quantity" placeholder="Số lượng">
+              <label for="filter-show"> Hiển thị </label>
+              <input name ="show" type="text" id="filter-show" placeholder="10 sản phẩm">
             </div>
-
             <div class="form-group">
-              <label for="add-image">Link hình</label>
-              <input type="text" id="add-image" name="image" placeholder="Link hình">
+              <label for="filter-sale"> Sale </label>
+              <input name="sale" type="checkbox" id = "filter-sale">
             </div>
-
             <div class="form-group">
-              <label for="add-colors">Màu sắc</label>
-              <input type="text" id="add-colors" name="colors" placeholder="VD: do,xanh,vang">
+              <label for="filter-new"> Hàng mới </label>
+              <input name="new"type="checkbox" id = "filter-new">
             </div>
-
             <div class="form-group">
-              <label for="add-sizes">Size</label>
-              <input type="text" id="add-sizes" name="sizes" placeholder="VD: S,M,L">
+              <label for="filter-sort">Sắp xếp</label>
+                <select id="filter-sort" name="sort">
+                  <option value="">Mặc định</option>
+                  <option value="price-asc">Giá tăng dần</option>
+                  <option value="price-desc">Giá giảm dần</option>
+                  <option value="quantity-asc">Số lượng tăng dần</option>
+                  <option value="quantity-desc">Số lượng giảm dần</option>
+                  <option value="discount">Giảm giá</option>
+                </select>
             </div>
-
-            <div class="form-group">
-              <label for="add-description">Mô tả</label>
-              <textarea id="add-description" name="description" placeholder="Mô tả"></textarea>
-            </div>
-            <div class="form-action">
-              <button type="submit">Thêm</button>
-              <button type="reset">Reset</button>
-              <button type="button" id="closeAddPopup">Đóng</button>
+            <div class="form-actions">
+              <button type="submit">Lọc sản phẩm</button>
+              <button type="reset">Xóa bộ lọc</button>
+              
             </div>
           </form>
-        </div>
-      </div>
-    </section>
-    <section class="update-product">
-         <div class="container">
-        <div id="update-product__popup" class="popup">
-          <form id ="update-product__form" action="" method="get" autocomplete>
-            <input type="text" id ="id"
-            name = "id" style="display: none;">
-            <div class="form-group">
-              <label for="update-title">Tên sản phẩm</label>
-              <input type="text" id="update-title" name="title" placeholder="Tên sản phẩm">
-            </div>
-
-            <div class="form-group">
-              <label for="update-category">Category</label>
-              <input type="text" id="update-category" name="category" placeholder="Category">
-            </div>
-
-            <div class="form-group">
-              <label for="update-sub-category">Sub Category</label>
-              <input type="text" id="update-sub-category" name="subCategory" placeholder="Sub Category">
-            </div>
-
-            <div class="form-group">
-              <label for="update-price">Giá</label>
-              <input type="number" id="update-price" name="price" placeholder="Giá">
-            </div>
-
-            <div class="form-group">
-              <label for="update-discount">giảm giá </label>
-              <input type="number" id="update-discount" name="discount" placeholder="giảm giá ">
-            </div>
-
-            <div class="form-group">
-              <label for="update-quantity">Số lượng</label>
-              <input type="number" id="update-quantity" name="quantity" placeholder="Số lượng">
-            </div>
-
-            <div class="form-group">
-              <label for="update-image">Link hình</label>
-              <input type="text" id="update-image" name="image" placeholder="Link hình">
-            </div>
-
-            <div class="form-group">
-              <label for="update-colors">Màu sắc</label>
-              <input type="text" id="update-colors" name="colors" placeholder="VD: do,xanh,vang">
-            </div>
-
-            <div class="form-group">
-              <label for="update-sizes">Size</label>
-              <input type="text" id="update-sizes" name="sizes" placeholder="VD: S,M,L">
-            </div>
-
-            <div class="form-group">
-              <label for="update-description">Mô tả</label>
-              <textarea id="update-description" name="description" placeholder="Mô tả"></textarea>
-            </div>
-            <div class="form-action">
-              <button type="submit">Cập nhật</button>
-              <button type="button" id="closeupdatePopup">Đóng</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="product-manager">
-      <div class="container">
-        <div class="product-manager__wrap">
-          <div class="product-manager__item">
-            <div class="product-manager__id"></div>
-            <div class="product-manager__image"></div>
-            <div class="product-manager__title"></div>
-            <div class="product-manager__price"></div>
-            <div class="product-manager__quantity"></div>
-            <div class="product-manager__status"></div>
-            <div class="product-manager__action"></div>
+      </section>
+      <section class="add-product">
+        <div class="container">
+  
+          <button id="add-product__button">Thêm sản phẩm</button>
+          <div id="add-product__popup" class="popup">
+            <form id ="add-product__form" action="" method="get" autocomplete>
+              <div class="form-group">
+                <label for="add-title">Tên sản phẩm</label>
+                <input type="text" id="add-title" name="title" placeholder="Tên sản phẩm">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-category">Category</label>
+                <input type="text" id="add-category" name="category" placeholder="Category">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-sub-category">Sub Category</label>
+                <input type="text" id="add-sub-category" name="subCategory" placeholder="Sub Category">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-price">Giá</label>
+                <input type="number" id="add-price" name="price" placeholder="Giá">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-discount">giảm giá </label>
+                <input type="number" id="add-discount" name="discount" placeholder="giảm giá ">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-quantity">Số lượng</label>
+                <input type="number" id="add-quantity" name="quantity" placeholder="Số lượng">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-image">Link hình</label>
+                <input type="text" id="add-image" name="image" placeholder="Link hình">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-colors">Màu sắc</label>
+                <input type="text" id="add-colors" name="colors" placeholder="VD: do,xanh,vang">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-sizes">Size</label>
+                <input type="text" id="add-sizes" name="sizes" placeholder="VD: S,M,L">
+              </div>
+  
+              <div class="form-group">
+                <label for="add-description">Mô tả</label>
+                <textarea id="add-description" name="description" placeholder="Mô tả"></textarea>
+              </div>
+              <div class="form-action">
+                <button type="submit">Thêm</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="closeAddPopup">Đóng</button>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="pagination text-center mt-4">
-      <span class="pagination__button" id="paginationPrev">Prev</span>
-      <span class="pagination__number" id="paginationNumber">1</span>
-      <span class="pagination__button" id="paginationNext">Next</span>
-    </section>
+      </section>
+      <section class="update-product">
+           <div class="container">
+          <div id="update-product__popup" class="popup">
+            <form id ="update-product__form" action="" method="get" autocomplete>
+              <input type="text" id ="id"
+              name = "id" style="display: none;">
+              <div class="form-group">
+                <label for="update-title">Tên sản phẩm</label>
+                <input type="text" id="update-title" name="title" placeholder="Tên sản phẩm">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-category">Category</label>
+                <input type="text" id="update-category" name="category" placeholder="Category">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-sub-category">Sub Category</label>
+                <input type="text" id="update-sub-category" name="subCategory" placeholder="Sub Category">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-price">Giá</label>
+                <input type="number" id="update-price" name="price" placeholder="Giá">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-discount">giảm giá </label>
+                <input type="number" id="update-discount" name="discount" placeholder="giảm giá ">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-quantity">Số lượng</label>
+                <input type="number" id="update-quantity" name="quantity" placeholder="Số lượng">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-image">Link hình</label>
+                <input type="text" id="update-image" name="image" placeholder="Link hình">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-colors">Màu sắc</label>
+                <input type="text" id="update-colors" name="colors" placeholder="VD: do,xanh,vang">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-sizes">Size</label>
+                <input type="text" id="update-sizes" name="sizes" placeholder="VD: S,M,L">
+              </div>
+  
+              <div class="form-group">
+                <label for="update-description">Mô tả</label>
+                <textarea id="update-description" name="description" placeholder="Mô tả"></textarea>
+              </div>
+              <div class="form-action">
+                <button type="submit">Cập nhật</button>
+                <button type="button" id="closeupdatePopup">Đóng</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="product-manager">
+        <div class="container">
+          <div class="product-manager__wrap">
+            <div class="product-manager__item">
+              <div class="product-manager__id"></div>
+              <div class="product-manager__image"></div>
+              <div class="product-manager__title"></div>
+              <div class="product-manager__price"></div>
+              <div class="product-manager__quantity"></div>
+              <div class="product-manager__status"></div>
+              <div class="product-manager__action"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pagination text-center mt-4">
+        <span class="pagination__button" id="paginationPrev">Prev</span>
+        <span class="pagination__number" id="paginationNumber">1</span>
+        <span class="pagination__button" id="paginationNext">Next</span>
+      </section>
+    </article>
   </main>
-  <footer id ="footer"></footer>
-  <script type="module" src="asset/js/script.js"></script>
+  <footer class="footer"></footer>
+  <script type="module" src="asset/js/admin.js"></script>
   <script type="module" src="asset/js/productManagement.js"></script>
 </body>
 </html> 
