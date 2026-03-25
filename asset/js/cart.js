@@ -24,7 +24,17 @@ export const initStorage = () => {
 
 export const getCart = () => {
     const cart = localStorage.getItem("cart");
-    return cart ? JSON.parse(cart) : [];
+    if (!cart) return [];
+    try {
+        const parsedCart = JSON.parse(cart);
+        const validCart = parsedCart.filter(item => item && item.id && item.id !== "undefined");
+        if (validCart.length !== parsedCart.length) {
+            localStorage.setItem("cart", JSON.stringify(validCart));
+        }
+        return validCart;
+    } catch (e) {
+        return [];
+    }
 }
 export const getPurchaseHistory = () => {
     const list = localStorage.getItem("purchaseHistory");
@@ -38,9 +48,9 @@ export const deleteCart = (cartItem, cart) => {
     const color = cartItem.dataset.color;
     const size = cartItem.dataset.size;
     const newCart = cart.filter(item =>
-        item.id != id ||
-        item.color != color ||
-        item.size != size
+        String(item.id) !== String(id) ||
+        String(item.color) !== String(color) ||
+        String(item.size) !== String(size)
     );
     saveCart(newCart);
 }
@@ -54,7 +64,11 @@ export const getTotalPrice = (cart) => {
     return total;
 }
 export const addToCart = (product, quantity, cart) => {
-    const exitingProduct = cart.find(item => item.id === product.id && item.color === product.color && item.size === product.size);
+    const exitingProduct = cart.find(item => 
+        String(item.id) === String(product.id) && 
+        String(item.color) === String(product.color) && 
+        String(item.size) === String(product.size)
+    );
     if (exitingProduct) {
         exitingProduct.quantity += quantity;
         exitingProduct.checked = product.checked;
@@ -73,9 +87,9 @@ export const updateChecked = (cartItem, isChecked) => {
     const size = cartItem.dataset.size;
 
     const product = cart.find(item =>
-        item.id == id &&
-        item.color == color &&
-        item.size == size
+        String(item.id) === String(id) &&
+        String(item.color) === String(color) &&
+        String(item.size) === String(size)
     );
 
     if (product) {
@@ -88,15 +102,40 @@ const cartList = document.querySelector(".cart__list");
 const totalPrice = document.querySelector(".checkout__price--before")
 const lastTotalPrice = document.querySelector(".checkout__price--after")
 const buyItem = document.querySelector(".checkout__pay");
+
+const checkEmptyCartState = () => {
+    const cart = getCart();
+    if (!cart || cart.length === 0) {
+        if (cartList) cartList.innerHTML = "<div style='text-align: center; font-size: 1.2rem; padding: 40px 20px; color: #555; background: #e2e2e2; border-radius: 20px; font-weight: 500;'>Giỏ hàng của bạn đang trống.</div>";
+        const checkout = document.querySelector(".checkout");
+        const cartAll = document.querySelector(".cart__all");
+        if (checkout) checkout.style.display = "block";
+        if (cartAll) cartAll.style.display = "none";
+    }
+}
+
 const updateTotal = () => {
-      const cart = getCart();
+    const cart = getCart();
     const total = getTotalPrice(cart);
     if (total != null && lastTotalPrice && totalPrice){
-        totalPrice.innerHTML = `${total}đ`;
-        lastTotalPrice.innerHTML = `${total}đ`;
+        totalPrice.innerHTML = `${total.toLocaleString()}đ`;
+        lastTotalPrice.innerHTML = `${total.toLocaleString()}đ`;
     }
 }
 updateTotal();
+
+const cartAllCheckbox = document.querySelector(".cart__all input[type='checkbox']");
+if (cartAllCheckbox) {
+    cartAllCheckbox.addEventListener("change", (e) => {
+        const cart = getCart();
+        const isChecked = e.target.checked;
+        cart.forEach(item => item.checked = isChecked);
+        saveCart(cart);
+        const itemCheckboxes = document.querySelectorAll(".cart__checkbox");
+        itemCheckboxes.forEach(cb => cb.checked = isChecked);
+        updateTotal();
+    });
+}
 
 if (cartList) {
     cartList.addEventListener("change", (e) => {
@@ -106,6 +145,12 @@ if (cartList) {
             const isChecked = e.target.checked;
             updateChecked(cartItem, isChecked);
             updateTotal();
+            
+            if (cartAllCheckbox) {
+                const allCheckboxes = document.querySelectorAll(".cart__checkbox");
+                const allChecked = allCheckboxes.length > 0 && Array.from(allCheckboxes).every(cb => cb.checked);
+                cartAllCheckbox.checked = allChecked;
+            }
         }
     })
     cartList.addEventListener("click", (e) => {
@@ -119,9 +164,9 @@ if (cartList) {
             const color = cartItem.dataset.color;
             const size = cartItem.dataset.size;
             const product = cart.find(item =>
-                item.id == id &&
-                item.color == color &&
-                item.size == size
+                String(item.id) === String(id) &&
+                String(item.color) === String(color) &&
+                String(item.size) === String(size)
             );
             if (product) {
                 product.quantity = quantity;
@@ -136,6 +181,8 @@ if (cartList) {
                 if (confirmDelete) {
                     deleteCart(cartItem, cart);
                     cartItem.remove();
+                    checkEmptyCartState();
+                    updateTotal();
                 }
             } else if (quantity > 1) {
                 quantity -= 1;
@@ -143,9 +190,9 @@ if (cartList) {
                 const color = cartItem.dataset.color;
                 const size = cartItem.dataset.size;
                 const product = cart.find(item =>
-                    item.id == id &&
-                    item.color == color &&
-                    item.size == size
+                    String(item.id) === String(id) &&
+                    String(item.color) === String(color) &&
+                    String(item.size) === String(size)
                 );
                 if (product) {
                     product.quantity = quantity;
@@ -159,6 +206,7 @@ if (cartList) {
             if (confirmDelete) {
                 deleteCart(cartItem, cart);
                 cartItem.remove();
+                checkEmptyCartState();
                 updateTotal();
             }
         }
