@@ -29,6 +29,32 @@
       "subCategory": "Áo thun",
       "discount": "24"
     },
+     {
+      "id": 2,
+      "title": "Áo Sơ Mi Trắng Công Sở",
+      "slug": "ao-so-mi-trang-cong-so",
+      "search_key": "ao so mi trang cong so",
+      "category": "ao",
+      "category_breadcrumb": "Áo",
+      "sub_category": "ao-so-mi",
+      "sub_category_name": "Áo sơ mi",
+      "price": 450000,
+      "original_price": 450000,
+      "discount_percent": 0,
+      "is_new": true,
+      "is_sale": false,
+      "quantity": 28,
+      "image": "https://loremflickr.com/400/400/shirt?lock=2",
+      "colors": [
+        "Trắng"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "description": "Chất vải Oxford ít nhăn, form dáng chuẩn công sở."
+    },
     {
       "id": 2,
       "title": "Áo Sơ Mi Trắng Công Sở",

@@ -1,38 +1,35 @@
-const charts = [
-  { id: "#chart-revenue", data: [10, 20, 30, 25, 40] },
-  { id: "#chart-users", data: [5, 15, 25, 20, 30] },
-  { id: "#chart-orders", data: [8, 18, 12, 22, 28] },
-  { id: "#chart-views", data: [12, 10, 20, 18, 35] }
-];
 
-charts.forEach(item => {
-  const chart = new ApexCharts(
-    document.querySelector(item.id),
-    {
-      chart: {
-        type: 'area',
-        height: 120,
-        sparkline: {
-          enabled: true // 🔥 quan trọng nhất
-        }
-      },
-      stroke: {
-        curve: 'smooth',
-        width: 2
-      },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.4,
-          opacityTo: 0
-        }
-      },
-      series: [{
-        data: item.data
-      }]
+// Dữ liệu mẫu
+const options = {
+  chart: {
+    type: 'line', 
+    height: 500
+  },
+  series: [{
+    name: 'Doanh thu',
+    data: [100, 230, 150, 550, 350, 500]
+  }],
+  xaxis: {
+    categories: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6']
+  },
+   yaxis: {
+    labels: {
+      formatter: function (val) {
+        return val + 'tr'; // thêm đơn vị cho trục Y
+      }
     }
-  );
+  },
+  colors: ['#333'],
+  title: {
+    text: 'Doanh thu 6 tháng đầu năm', // Tên biểu đồ
+    align: 'center',                   // căn giữa
+    style: {
+      fontSize: '20px',
+      fontWeight: 'bold',
+      color: '#222'
+    }
+  }
+};
 
-  chart.render();
-});
+const chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();

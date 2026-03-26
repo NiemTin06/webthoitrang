@@ -13,10 +13,11 @@
   <main>
     <nav class = "sidebar"></nav>
     <article class = "dashboard">
-        <section class = "dashboard__stat">
+      <section class = "dashboard__stat">
+        <div class="container">
           <h1 class="stat__title">Good morning</h1>
           <p class="stat__desc"> Here what happening</p>
-          <div class="row justify-content-center">
+          <div class="row gx-4 gy-4 justify-content-center">
             <div class="stat-card col-lg-3 col-sm-6 col-12">        
                 <div class="stat-card__label"> <i class="fa-solid fa-dollar-sign"></i> Tổng doanh thu </div>
                 <h2 class="stat-card__value">100.366.000đ</h2>
@@ -46,9 +47,43 @@
                 </p>
             </div>
           </div>
-      </div>
-     
-        
+        </div>
+    </div>
+      </section>
+      <section class="dashboard__chart">
+        <div class="container">
+          <div id="chart"></div>
+        </div>
+      </section>
+      <section class="dashboard__table">
+        <div class="container">
+          <h2 class="table__title">Bảng thống kê chi tiết</h2>
+          <div class="row justify-content-center">
+            <div class="table-card col-md-3 col-sm-6 col-12">
+              <div class="table-card__label">Sản phẩm bán chạy</div>
+              <div class="table-card__value">120</div>
+            </div>
+            <div class="table-card col-md-3 col-sm-6 col-12">
+              <div class="table-card__label">Sản phẩm tồn kho</div>
+              <div class="table-card__value">80</div>
+            </div>
+            <div class="table-card col-md-3 col-sm-6 col-12">
+              <div class="table-card__label">Đơn hàng hoàn thành</div>
+              <div class="table-card__value">450</div>
+            </div>
+            <div class="table-card col-md-3 col-sm-6 col-12">
+              <div class="table-card__label">Đơn hàng đang xử lý</div>
+              <div class="table-card__value">32</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard__notice">
+        <h2 class="notice__title">Thông báo quan trọng</h2>
+        <p class="notice__desc">
+          Hệ thống sẽ bảo trì từ 22:00 hôm nay đến 02:00 sáng mai. Vui lòng lưu dữ liệu trước khi đăng xuất.
+        </p>
+      </section>
     </article>
   </main>
   <footer class = "footer"></footer>

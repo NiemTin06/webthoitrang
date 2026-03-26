@@ -1,0 +1,163 @@
+main {
+  display: flex;
+}
+
+article {
+  flex: 1;
+}
+
+.product-filter {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.product-filter form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.product-filter form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.product-filter form .form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.product-filter form .form-group input, .product-filter form .form-group select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.product-filter form .form-group input:focus, .product-filter form .form-group select:focus {
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+.product-filter form .form-actions {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.product-filter form .form-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.product-filter form .form-actions button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+.product-filter form .form-actions button[type=submit]:hover {
+  background-color: #45a049;
+}
+.product-filter form .form-actions button[type=reset] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+.product-filter form .form-actions button[type=reset]:hover {
+  background-color: #e2e2e2;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+}
+.popup .form-group {
+  margin-bottom: 15px;
+}
+.popup .form-group input, .popup .form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.popup .form-action {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.popup .form-action button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.popup.show {
+  display: block;
+}
+
+.product-manager {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.product-manager__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.product-manager__wrap__item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  text-align: center;
+}
+.product-manager__wrap__item__image {
+  height: 120px;
+  background-color: #dcdde1;
+  border-radius: 6px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pagination__button, .pagination__number {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.pagination__button:hover, .pagination__number:hover {
+  background-color: #e2e2e2;
+}
+
+@media screen and (max-width: 768px) {
+  .product-filter form {
+    grid-template-columns: 1fr;
+  }
+  .product-manager__wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=productmanager.css.map */
