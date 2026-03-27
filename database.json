@@ -29,11 +29,11 @@
       "subCategory": "Áo thun",
       "discount": "24"
     },
-     {
+    {
       "id": 2,
       "title": "Áo Sơ Mi Trắng Công Sở",
       "slug": "ao-so-mi-trang-cong-so",
-      "search_key": "ao so mi trang cong so",
+      "search_key": "ao-so-mi-trang-cong-so",
       "category": "ao",
       "category_breadcrumb": "Áo",
       "sub_category": "ao-so-mi",
@@ -219,7 +219,7 @@
       "id": 8,
       "title": "Quần Short Kaki Đi Chơi",
       "slug": "quan-short-kaki-di-choi",
-      "search_key": "quan short kaki di choi",
+      "search_key": "quan-short-kaki-di-choi",
       "category": "quan",
       "category_breadcrumb": "Quần",
       "sub_category": "quan-short",
@@ -229,7 +229,7 @@
       "discount_percent": 0,
       "is_new": true,
       "is_sale": false,
-      "quantity": 67,
+      "quantity": 0,
       "image": "https://loremflickr.com/400/400/shorts?lock=8",
       "colors": [
         "Đen",
@@ -246,17 +246,17 @@
       "id": 9,
       "title": "Quần Thể Thao Jogger Nỉ",
       "slug": "quan-the-thao-jogger-ni",
-      "search_key": "quan the thao jogger ni",
+      "search_key": "quan-the-thao-jogger-ni",
       "category": "quan",
       "category_breadcrumb": "Quần",
       "sub_category": "quan-the-thao",
       "sub_category_name": "Quần thể thao",
-      "price": 350000,
+      "price": 349440,
       "original_price": 416000,
       "discount_percent": 16,
       "is_new": true,
       "is_sale": true,
-      "quantity": 41,
+      "quantity": 4,
       "image": "https://loremflickr.com/400/400/joggers?lock=9",
       "colors": [
         "Xám",
@@ -2681,6 +2681,54 @@
         "XL"
       ],
       "description": "Toàn bộ họa tiết trên áo đều có khả năng phản quang."
+    },
+    {
+      "id": 1774516878194,
+      "title": "",
+      "slug": "",
+      "search_key": "",
+      "category": "",
+      "category_breadcrumb": "",
+      "sub_category": "",
+      "sub_category_name": "",
+      "price": 0,
+      "original_price": 0,
+      "discount_percent": 0,
+      "is_new": true,
+      "is_sale": false,
+      "quantity": 0,
+      "image": "",
+      "colors": [
+        ""
+      ],
+      "sizes": [
+        ""
+      ],
+      "description": ""
+    },
+    {
+      "id": 1774516948135,
+      "title": "",
+      "slug": "",
+      "search_key": "",
+      "category": "",
+      "category_breadcrumb": "",
+      "sub_category": "",
+      "sub_category_name": "",
+      "price": 0,
+      "original_price": 0,
+      "discount_percent": 0,
+      "is_new": true,
+      "is_sale": false,
+      "quantity": 0,
+      "image": "",
+      "colors": [
+        ""
+      ],
+      "sizes": [
+        ""
+      ],
+      "description": ""
     }
   ],
   "categories": [

@@ -15,7 +15,7 @@ const sizeOptions = {
 const pagePrev = document.querySelector("#paginationPrev")
 const pageNext = document.querySelector("#paginationNext")
 export const pageNumber = document.querySelector("#paginationNumber")
-
+const overlay = document.querySelector(".overlay");
 category.addEventListener("change", () => {
   const categoryOption = category.value;
   console.log(categoryOption)
@@ -106,7 +106,6 @@ form.addEventListener("submit", (e) => {
 
 })
 
-
 // Pagination
 pageNext.addEventListener("click" , () =>{
   if (params.page < Math.ceil(lengthProduct / params.limit)){
@@ -130,9 +129,11 @@ const addProductButton = document.querySelector("#add-product__button");
 const closeProductButoon = document.querySelector("#closeAddPopup");
 addProductButton.addEventListener("click", () =>{
   addProductPopUp.style.display = "block";
+  overlay.classList.toggle("show");
 })
 closeProductButoon.addEventListener("click", () =>{
   addProductPopUp.style.display = "none";
+  overlay.classList.toggle("show");
 })
 
 const formAdd = document.querySelector("#add-product__form");
@@ -163,6 +164,7 @@ formAdd.addEventListener("submit", (e) => {
       description: data.description
     };
     addProduct(APIproduct, product);
+     overlay.classList.toggle("show");
 })
 
 const updatePopUp = document.querySelector("#update-product__popup");
@@ -190,6 +192,7 @@ const renderValue = (id) => {
 const closePopUp = document.querySelector("#closeupdatePopup");
 closePopUp.addEventListener("click", () => {
   updatePopUp.style.display = "none"
+   overlay.classList.toggle("show");
 })
 
 
@@ -201,12 +204,15 @@ productManager.addEventListener("click", (e) => {
     const id = cartItem.dataset.id;
     renderValue(id);
     updatePopUp.style.display = "block";
+     overlay.classList.toggle("show");
   }
   if (e.target.classList.contains("product-manager__action--delete")) {
     const id = cartItem.dataset.id;
     deleteProduct(APIproduct, id);
+     overlay.classList.toggle("show");
   }
 });
+
 
 const formUpdate = document.querySelector("#update-product__form")
 updatePopUp.addEventListener("submit", (e) => {
@@ -235,5 +241,12 @@ updatePopUp.addEventListener("submit", (e) => {
     sizes: data.sizes.split(",").map(s => s.trim()),
     description: data.description
   };
+  overlay.classList.toggle("show");
   updateProduct(APIproduct, product.id, product);
+})
+
+overlay.addEventListener("click", ()=> {
+  addProductPopUp.style.display = "none";
+  updatePopUp.style.display = "none";
+  overlay.classList.toggle("show");
 })

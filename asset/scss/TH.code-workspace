@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../TH"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../pythonAI"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projectweb"
+	}
+}

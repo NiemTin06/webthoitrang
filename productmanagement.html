@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <!-- <link rel="stylesheet" href="asset/css/style.css"> -->
-  <link rel="stylesheet" href="asset/css/dashboard.css">
+  <link rel="stylesheet" href="asset/css/admin.css">
   <link rel="stylesheet" href="asset/css/productmanager.css">
 </head>
 <body>
@@ -15,66 +15,72 @@
   <main>
     <nav class="sidebar"></nav>
     <article>
+      <div id="overlay" class="overlay"></div>
       <section class="product-filter">
         <div class="container">
+          <h1 class="product-filter__title">
+          Lọc sản phẩm
+        </h1>
           <form id ="product-filter__form" action="" method="get" autocomplete>
-            <div class="form-group">
-              <label for="filter-name"> Tên sản phẩm</label>
-              <input type="text" id ="filter-name" name ="title" placeholder="tên sản phẩm" autocomplete >
-            </div>
-            <div class="form-group">
-              <label for="filter-category"> Danh mục </label>
-              <select name="category" id="filter-category">
-                <option value=""> Tắt cả </option>
-                <option value="ao"> Áo </option>
-                <option value="quan"> Quần </option>
-                <option value="giay"> Giầy </option>
-                <option value="phu-kien"> Phụ kiện </option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filter-sub-category"> Danh mục chi tiết </label>
-              <select name="subCategory" id="filter-sub-category" >
-                <option value=""> Tắt cả </option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filter-price"> Giá</label>
-              <input type="number" name ="minPrice" placeholder="Min price" id = "price">
-              <input type="filter-number" name ="maxPrice" placeholder="Max price">
-            </div>
-            <div class="form-group">
-              <label for="filter-size"> Kích thước</label>
-              <select name="size" id="filter-size">
-                <option selected value=""> Tất cả</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filter-color"> Màu sắc </label>
-              <input type="text" id="filter-color" name="color" placeholder="Màu sắc">
-            </div>
-            <div class="form-group">
-              <label for="filter-show"> Hiển thị </label>
-              <input name ="show" type="text" id="filter-show" placeholder="10 sản phẩm">
-            </div>
-            <div class="form-group form-group-checkbox">
-              <label for="filter-sale"> Sale </label>
-              <input name="sale" type="checkbox" id = "filter-sale">
-            </div>
-            <div class="form-group form-group-checkbox">
-              <label for="filter-new"> Hàng mới </label>
-              <input name="new"type="checkbox" id = "filter-new">
-            </div>
-            <div class="form-group">
-              <label for="filter-sort">Sắp xếp</label>
-                <select id="filter-sort" name="sort">
-                  <option value="">Mặc định</option>
-                  <option value="price-asc">Giá tăng dần</option>
-                  <option value="price-desc">Giá giảm dần</option>
-                  <option value="quantity-asc">Số lượng tăng dần</option>
-                  <option value="quantity-desc">Số lượng giảm dần</option>
-                  <option value="discount">Giảm giá</option>
+            <div class="form-wrap">
+              <div class="form-group">
+                <label for="filter-name"> Tên sản phẩm</label>
+                <input type="text" id ="filter-name" name ="title" placeholder="tên sản phẩm" autocomplete >
+              </div>
+              <div class="form-group">
+                <label for="filter-category"> Danh mục </label>
+                <select name="category" id="filter-category">
+                  <option value=""> Tắt cả </option>
+                  <option value="ao"> Áo </option>
+                  <option value="quan"> Quần </option>
+                  <option value="giay"> Giầy </option>
+                  <option value="phu-kien"> Phụ kiện </option>
                 </select>
+              </div>
+              <div class="form-group">
+                <label for="filter-sub-category"> Danh mục chi tiết </label>
+                <select name="subCategory" id="filter-sub-category" >
+                  <option value=""> Tắt cả </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filter-price"> Giá</label>
+                <input type="number" name ="minPrice" placeholder="Min price" id = "price">
+                <input type="filter-number" name ="maxPrice" placeholder="Max price">
+              </div>
+              <div class="form-group">
+                <label for="filter-size"> Kích thước</label>
+                <select name="size" id="filter-size">
+                  <option selected value=""> Tất cả</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filter-color"> Màu sắc </label>
+                <input type="text" id="filter-color" name="color" placeholder="Màu sắc">
+              </div>
+              <div class="form-group">
+                <label for="filter-show"> Hiển thị </label>
+                <input name ="show" type="text" id="filter-show" placeholder="10 sản phẩm">
+              </div>
+              <div class="form-group form-group-checkbox">
+                <label for="filter-sale"> Sale </label>
+                <input name="sale" type="checkbox" id = "filter-sale">
+              </div>
+              <div class="form-group  form-group-checkbox">
+                <label for="filter-new"> Hàng mới </label>
+                <input name="new"type="checkbox" id = "filter-new">
+              </div>
+              <div class="form-group">
+                <label for="filter-sort">Sắp xếp</label>
+                  <select id="filter-sort" name="sort">
+                    <option value="">Mặc định</option>
+                    <option value="price-asc">Giá tăng dần</option>
+                    <option value="price-desc">Giá giảm dần</option>
+                    <option value="quantity-asc">Số lượng tăng dần</option>
+                    <option value="quantity-desc">Số lượng giảm dần</option>
+                    <option value="discount">Giảm giá</option>
+                  </select>
+              </div>
             </div>
             <div class="form-actions">
               <button type="submit">Lọc sản phẩm</button>
@@ -85,8 +91,7 @@
       </section>
       <section class="add-product">
         <div class="container">
-  
-          <button id="add-product__button">Thêm sản phẩm</button>
+          <button id="add-product__button" class="add-product__button">Thêm sản phẩm</button>
           <div id="add-product__popup" class="popup">
             <form id ="add-product__form" action="" method="get" autocomplete>
               <div class="form-group">
@@ -212,6 +217,9 @@
       </section>
       <section class="product-manager">
         <div class="container">
+          <h2 class="product-manager__title">
+            Danh sách sản phẩm
+          </h2>
           <div class="product-manager__wrap">
             <div class="product-manager__item">
               <div class="product-manager__id"></div>
