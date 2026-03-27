@@ -8,16 +8,26 @@
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/home.css">
 </head>
 <body>
   <header id ="header"></header>
   <main>
     <section class="banner">
-      Banner
+      <div class="banner__image show">
+        <img src="asset/image/banner-thoi-trang-nam.jpg" alt="banner1">
+      </div>
+      <div class="banner__image">
+        <img src="asset/image/banner-thoi-trang-nam-tinh2.jpg" alt="banner2">
+      </div>
+      <div class="banner__image">
+        <img src="asset/image/banner-thoi-trang-nu2.jpg" alt="banner3">
+      </div>
+  
     </section>
      <section class="category">
       <div class="container">
-        <h2 class="category__title">Danh muc san pham</h2>
+        <h2 class="category__title">Danh mục sản phẩm</h2>
         <div class="category__list">
           <a href="productlist.html?category=ao">
             <div class="category__item category__item--big">
@@ -77,16 +87,16 @@
 
     <!-- PAGINATION -->
     <section class="pagination text-center mt-4">
-      <span class="pagination__button" id="paginationPrev">Prev</span>
-      <span class="pagination__number" id="paginationNumber">1</span>
-      <span class="pagination__button" id="paginationNext">Next</span>
-    </section>
+        <span class="pagination__button" id="paginationPrev">Prev</span>
+        <span class="pagination__number" id="paginationNumber">1</span>
+        <span class="pagination__button" id="paginationNext">Next</span>
+      </section>
   </main>
   <footer id ="footer"></footer>
   
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script type ="module" src="asset/js/product.js"></script>
   <script type ="module" src="asset/js/script.js"></script>
-  <!-- <script type ="module" src="asset/js/categoryall.js"></script> -->
+  <script type ="module" src="asset/js/home.js"></script>
 </body>
 </html>

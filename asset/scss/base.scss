@@ -91,7 +91,7 @@ a {
     min-width: 80px;
 
     &:hover {
-      border-color: $summit-color;
+      border-color: $bg-color-2;
       color: $summit-color;
       background-color: rgba($summit-color, 0.05);
     }
@@ -100,9 +100,6 @@ a {
   &__number {
     min-width: 40px;
     padding: 0 12px;
-    background-color: $summit-color; // Màu chủ đạo của bạn
-    color: white;
-    border-color: $summit-color;
     cursor: default;
     box-shadow: 0 4px 10px rgba($summit-color, 0.2);
   }

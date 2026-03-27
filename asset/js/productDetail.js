@@ -79,8 +79,7 @@ addCart.addEventListener("click" , () => {
     return;
   }
   const activeColor = document.querySelector(".detail-product__colors .active");
-  console.log(activeColor)
-  const activeSize =  document.querySelector(".detail-product__sizes .active")
+  const activeSize =  document.querySelector(".detail-product__sizes .active");
   const cart = getCart()
   const currentQuantity = getQuantityProduct();
   if (checkItem(currentQuantity, activeColor, activeSize)){
@@ -94,8 +93,9 @@ addCart.addEventListener("click" , () => {
       checked: false,
         slug: currentProduct.slug
     }
-    addToCart(productToCard, currentQuantity, cart);
+    addToCart(productToCard, currentQuantity, cart);;
     const toast = document.getElementById("toast");
+    console.log(toast);
     if(toast) {
       toast.classList.add("show");
       setTimeout(() => {

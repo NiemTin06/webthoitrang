@@ -91,6 +91,7 @@ pageNext.addEventListener("click" , () =>{
   if (params.page < Math.ceil(lengthProduct / params.limit)){
     params.page = parseInt(params.page) + 1;
     pageNumber.innerHTML = params.page;
+    console.log(pageNumber);
     drawProduct();
   }
 })
@@ -99,6 +100,7 @@ pagePrev.addEventListener("click" , () =>{
   if (params.page > 1){
     params.page = parseInt(params.page) - 1;
     pageNumber.innerHTML = params.page;
+    console.log(pageNumber.innerHTML);
     drawProduct();
   }
 })

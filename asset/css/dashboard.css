@@ -11937,16 +11937,13 @@ button[type=reset]:hover {
   min-width: 80px;
 }
 .pagination__button:hover {
-  border-color: #4CAF50;
+  border-color: #242021;
   color: #4CAF50;
   background-color: rgba(76, 175, 80, 0.05);
 }
 .pagination__number {
   min-width: 40px;
   padding: 0 12px;
-  background-color: #4CAF50;
-  color: white;
-  border-color: #4CAF50;
   cursor: default;
   box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
 }
