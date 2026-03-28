@@ -11869,6 +11869,16 @@ a {
   color: var(--bs-breadcrumb-item-active-color);
 }
 
+header {
+  color: white;
+  background-color: #242021;
+}
+
+footer {
+  color: white;
+  background-color: #242021;
+}
+
 button {
   padding: 8px 12px;
   border-radius: 8px;
@@ -11960,6 +11970,29 @@ button[type=reset]:hover {
     height: 35px;
     min-width: 35px;
   }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 9999;
+}
+.back-to-top:hover {
+  background: #333;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=base.css.map */

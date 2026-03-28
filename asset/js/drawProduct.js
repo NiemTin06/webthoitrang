@@ -23,7 +23,7 @@ export const drawProduct = () => {
             <img src="${item.image}" alt="${item.title}">
           </div>
           <div class="product__content">
-            <h3 class="product__title">${item.title}</h3>
+            <h3 class="product__name">${item.title}</h3>
             <div class="product__price">
               <span class="product__price--current">
                 ${item.price.toLocaleString()}đ

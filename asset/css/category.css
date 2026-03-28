@@ -11995,138 +11995,111 @@ button[type=reset]:hover {
   color: #ffffff;
 }
 
-.banner {
+.category {
+  padding: 30px 0;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+.category__title {
+  font-size: 2rem;
+  color: #242021;
+  font-weight: 700;
+}
+@media (max-width: 765px) {
+  .category__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .category__title {
+    font-size: 1rem;
+  }
+}
+.category__list {
+  padding: 30px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.category__item {
+  width: calc((100% - 80px) / 5);
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
 }
-.banner .container {
-  position: relative;
-  aspect-ratio: 16/6;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 768px) {
-  .banner .container {
-    aspect-ratio: 16/9;
-  }
-}
-.banner__image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-.banner__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-.banner__image.show {
-  opacity: 1;
-  z-index: 1;
-}
-
-.sub-banner {
-  position: relative;
-}
-.sub-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.about {
-  margin-top: 30px;
-  background-color: #242021;
-  color: white;
-  padding: 30px 0;
-  text-align: center;
-}
-.about__title {
-  font-size: 1.5rem;
-}
-.about__desc {
-  font-size: 1rem;
-}
-
-.transport {
-  margin-top: 30px;
-  padding: 40px 0;
-  background-color: #ffffff;
-  color: #333;
-}
-.transport__wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.transport__item {
-  display: flex;
-  width: calc((100% - 60px) / 4);
-  justify-content: space-between;
-  gap: 10px;
+.category__item--big {
+  width: calc(25% - 20px);
 }
 @media (max-width: 992px) {
-  .transport__item {
-    width: calc((100% - 60px) / 2);
+  .category__item--big {
+    width: calc((100% - 20px) / 2);
+  }
+}
+.category__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.category__item:hover img {
+  transform: scale(1.1);
+}
+.category__item:hover .category__icon {
+  background-color: black;
+  color: white;
+  transform: rotate(-45deg);
+}
+.category__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+}
+.category__name {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .category__name {
+    font-size: 1rem;
   }
 }
 @media (max-width: 576px) {
-  .transport__item {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.transport__icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-  height: 100%;
-}
-.transport__content {
-  flex: 1;
-  height: 100%;
-}
-.transport__content .transport__title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-@media (max-width: 1200px) {
-  .transport__content .transport__title {
+  .category__name {
     font-size: 0.8rem;
   }
 }
-@media (max-width: 576px) {
-  .transport__content .transport__title {
-    text-align: center;
-  }
+.category__icon {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
-.transport__content .transport__desc {
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-.transport__item:hover .transport__icon {
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .transport__item {
-    flex: 0 0 45%;
-  }
-}
-@media (max-width: 576px) {
-  .transport__item {
-    flex: 0 0 100%;
+@media (max-width: 767px) {
+  .category__icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
   }
 }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=category.css.map */

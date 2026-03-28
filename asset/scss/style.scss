@@ -1,13 +1,6 @@
 @use "base" as *;
 
-header {
-  color: white;
-  background-color: $bg-color-2;
-}
-footer {
-  color: white;
-  background-color: $bg-color-2;
-}
+
 
 .product {
   &__list {
@@ -76,114 +69,6 @@ footer {
   }
 }
 
-.category {
-
-  margin-top: 20px;
-  
-  &__list {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 30px 60px;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color: $bg-color-2;
-  }
-
-  &__item {
-    width: calc((100% - 80px) / 5);
-    aspect-ratio: 3 / 4;
-    border-radius: 8px; 
-    cursor: pointer;
-    position: relative;
-    overflow: hidden; 
-
-    @media (max-width: 992px) {
-      width: calc(33.33% - 14px); // 3 cột cho tablet
-    }
-
-    @media (max-width: 767px) {
-      width: calc(50% - 10px); // 2 cột cho mobile
-    }
-
-    &--big {
-       width: calc(25% - 20px);
-      
-      @media (max-width: 992px) {
-        width: calc(50% - 40px); // Mobile chiếm trọn 1 hàng cho nổi bật
-      }
-      .category__name {
-        font-size: 18px;
-        font-weight: bold;
-      }
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    &:hover img {
-      transform: scale(1.1);
-    }
-
-    &:hover .category__icon {
-      background-color: black;
-      color: white;
-      transform: rotate(-45deg); // Thêm hiệu ứng xoay cho nghệ
-    }
-  }
-
-  &__content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35%; 
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 15px;
-    display: flex;
-    align-items: flex-end; 
-    justify-content: space-between;
-    color: white;
-  }
-
-  &__name {
-    font-size: 15px;
-    margin: 0;
-    line-height: 1.2;
-    text-transform: capitalize;
-
-    @media (max-width: 767px) {
-      font-size: 13px;
-    }
-  }
-
-  &__icon {
-    // Bí kíp hình tròn: W = H, border-radius 50%, NO PADDING
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0; // Không cho icon bị bóp méo
-    transition: all 0.3s ease;
-    font-size: 16px;
-
-    @media (max-width: 767px) {
-      width: 32px;
-      height: 32px;
-      font-size: 14px;
-    }
-  }
-}
-
-
 .related-product {
   & .row {
     scrollbar-width: none;
@@ -193,7 +78,6 @@ footer {
 .slide-wrapper {
   position: relative;
 }
-
 .arrow {
   position: absolute;
   top: 50%;

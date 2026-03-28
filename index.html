@@ -8,37 +8,52 @@
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/category.css">
+  <link rel="stylesheet" href="asset/css/productlist.css">
   <link rel="stylesheet" href="asset/css/home.css">
 </head>
 <body>
   <header id ="header"></header>
   <main>
     <section class="banner">
-      <div class="banner__image show">
-        <img src="asset/image/banner-thoi-trang-nam.jpg" alt="banner1">
-      </div>
-      <div class="banner__image">
-        <img src="asset/image/banner-thoi-trang-nam-tinh2.jpg" alt="banner2">
-      </div>
-      <div class="banner__image">
-        <img src="asset/image/banner-thoi-trang-nu2.jpg" alt="banner3">
+      <div class="container">
+        <div class="banner__image show">
+          <img src="asset/image/banner1.jpg" alt="banner1">
+        </div>
+        <div class="banner__image">
+          <img src="asset/image/banner2.jpg" alt="banner2">
+        </div>
+        <div class="banner__image">
+          <img src="asset/image/banner3.jpg" alt="banner3">
+        </div>
       </div>
   
+    </section>
+    <section class="about">
+      <div class="container">
+        <h2 class="about__title">Về chúng tôi</h2>
+        <p class="about__desc">
+          Chúng tôi mang đến những sản phẩm chất lượng cao với thiết kế hiện đại,
+          giúp bạn nâng tầm phong cách mỗi ngày.
+          <hr>
+          <a href="about.html">Xem thêm</a>
+        </p>
+      </div>
     </section>
      <section class="category">
       <div class="container">
         <h2 class="category__title">Danh mục sản phẩm</h2>
         <div class="category__list">
-          <a href="productlist.html?category=ao">
-            <div class="category__item category__item--big">
-              <img src="asset/image/aomu.jpg" alt="ao">
+          <div class="category__item category__item--big">
+              <a href="productlist.html?category=ao">
+              <img src="asset/image/ao.jpg" alt="ao">
               <div class="category__content">
                 <h3 class="category__name">Áo</h3>
                 <div class="category__icon">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
-          </a>
+            </a>
 
           </div>
           <div class="category__item category__item--big">
@@ -54,7 +69,7 @@
           </div>
           <div class="category__item category__item--big">
             <a href="productlist.html?category=giay">
-            <img src="asset/image/giaythuongdinh.webp" alt="giay">
+            <img src="asset/image/giay.avif" alt="giay">
             <div class="category__content">
               <h3 class="category__name"> Giày  </h3>
               <div class="category__icon">
@@ -65,7 +80,7 @@
           </div>
           <div class="category__item category__item--big">
             <a href="productlist.html?category=phu-kien">
-            <img src="asset/image/baloff.jpg" alt="phu kien">
+            <img src="asset/image/balo.jpg" alt="phu kien">
             <div class="category__content">
               <h3 class="category__name">Phụ kiện</h3>
               <div class="category__icon">
@@ -80,17 +95,91 @@
     <!-- PRODUCT LIST -->
     <section class="product__list">
       <div class="container">
-        <h2 class="inner-title">Danh sach san pham</h2>
+        <h2 class="product__title">Danh sách sản phẩm</h2>
         <div class="row g-4 align-items-stretch"></div>
       </div>
     </section>
 
     <!-- PAGINATION -->
-    <section class="pagination text-center mt-4">
+    <section class="pagination">
         <span class="pagination__button" id="paginationPrev">Prev</span>
         <span class="pagination__number" id="paginationNumber">1</span>
         <span class="pagination__button" id="paginationNext">Next</span>
-      </section>
+    </section>
+    <!--END PAGINATION -->
+    <!-- SUB-BANNER -->
+    <section class="sub-banner">
+      <div class="container">
+        <a href="#">
+          <img src="asset/image/subbanner.png" alt="subbanner">
+        </a>
+      </div>
+    </section>
+    <!-- END SUB-BANNER -->
+    <section class="transport">
+    <div class="container">
+      <div class="transport__wrap">
+        <div class="transport__item">
+          <div class="transport__icon">
+           <i class="fa-solid fa-box"></i>
+          </div>
+          <div class="transport__content">
+            <h3 class="transport__title">
+              Miễn phí vận chuyển
+            </h3>
+            <p class="transport__desc">
+              Áp dụng cho mọi đơn hàng từ 500k
+            </p>
+          </div>
+        </div>
+        <div class="transport__item">
+          <div class="transport__icon">
+           <i class="fa-solid fa-arrow-rotate-left"></i>
+          </div>
+          <div class="transport__content">
+            <h3 class="transport__title">
+              Đổi hàng dễ dàng
+            </h3>
+            <p class="transport__desc">
+              7 ngày đổi hàng vì bất kì lí do gì
+            </p>
+          </div>
+        </div>
+        <div class="transport__item">
+          <div class="transport__icon">
+           <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="transport__content">
+            <h3 class="transport__title">
+              Hỗ trợ nhanh chóng
+            </h3>
+            <p class="transport__desc">
+              HOTLINE 24/7 : 0123456789
+            </p>
+          </div>
+        </div>
+        <div class="transport__item">
+          <div class="transport__icon">
+           <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <div class="transport__content">
+            <h3 class="transport__title">
+              Thanh toán đa dạng
+            </h3>
+            <p class="transport__desc">
+              Thanh toán khi nhận hàng, Napas, Visa, Chuyển Khoản
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button class="back-to-top">
+    <a href="#">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </button>    
+
   </main>
   <footer id ="footer"></footer>
   

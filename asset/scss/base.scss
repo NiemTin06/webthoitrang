@@ -20,6 +20,15 @@ a {
   color: var(--bs-breadcrumb-item-active-color);
 }
 
+header {
+  color: white;
+  background-color: $bg-color-2;
+}
+footer {
+  color: white;
+  background-color: $bg-color-2;
+}
+
  button{
         padding: 8px 12px;
         border-radius: 8px;
@@ -120,3 +129,28 @@ a {
 }
 
 
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: $bg-color-1;
+  color: $text-color;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 9999;
+  &:hover {
+    background: $text-color;
+    color: $bg-color-1;
+  }
+}
