@@ -15,7 +15,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 360,
-      "image": "https://loremflickr.com/400/400/tshirt?lock=1",
+      "image": "asset/image/image-item/ao2.jpeg",
       "colors": [
         "Xanh Navy",
         "Đen"
@@ -33,32 +33,6 @@
       "id": 2,
       "title": "Áo Sơ Mi Trắng Công Sở",
       "slug": "ao-so-mi-trang-cong-so",
-      "search_key": "ao-so-mi-trang-cong-so",
-      "category": "ao",
-      "category_breadcrumb": "Áo",
-      "sub_category": "ao-so-mi",
-      "sub_category_name": "Áo sơ mi",
-      "price": 450000,
-      "original_price": 450000,
-      "discount_percent": 0,
-      "is_new": true,
-      "is_sale": false,
-      "quantity": 28,
-      "image": "https://loremflickr.com/400/400/shirt?lock=2",
-      "colors": [
-        "Trắng"
-      ],
-      "sizes": [
-        "M",
-        "L",
-        "XL"
-      ],
-      "description": "Chất vải Oxford ít nhăn, form dáng chuẩn công sở."
-    },
-    {
-      "id": 2,
-      "title": "Áo Sơ Mi Trắng Công Sở",
-      "slug": "ao-so-mi-trang-cong-so",
       "search_key": "ao so mi trang cong so",
       "category": "ao",
       "category_breadcrumb": "Áo",
@@ -70,7 +44,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 28,
-      "image": "https://loremflickr.com/400/400/shirt?lock=2",
+      "image": "asset/image/image-item/ao-so-mi.jpg",
       "colors": [
         "Trắng"
       ],
@@ -96,7 +70,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 56,
-      "image": "https://loremflickr.com/400/400/polo?lock=3",
+      "image": "asset/image/image-item/ao15.jpeg",
       "colors": [
         "Xanh Navy",
         "Đen"
@@ -123,7 +97,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 12,
-      "image": "https://loremflickr.com/400/400/jacket?lock=4",
+      "image": "asset/image/image-item/ao-khoac.jpg",
       "colors": [
         "Đen",
         "Xanh Rêu"
@@ -149,7 +123,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 89,
-      "image": "https://loremflickr.com/400/400/sportswear?lock=5",
+      "image": "asset/image/image-item/ao18.jpg",
       "colors": [
         "Đen",
         "Xanh Dương"
@@ -176,7 +150,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 34,
-      "image": "https://loremflickr.com/400/400/jeans?lock=6",
+      "image": "asset/image/image-item/quan1.jpeg",
       "colors": [
         "Xanh sáng"
       ],
@@ -203,7 +177,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 22,
-      "image": "https://loremflickr.com/400/400/trousers?lock=7",
+      "image": "asset/image/image-item/quan8.jpeg",
       "colors": [
         "Be",
         "Nâu nhạt"
@@ -230,7 +204,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 0,
-      "image": "https://loremflickr.com/400/400/shorts?lock=8",
+      "image": "asset/image/image-item/quan15.jpeg",
       "colors": [
         "Đen",
         "Xanh than"
@@ -257,7 +231,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 4,
-      "image": "https://loremflickr.com/400/400/joggers?lock=9",
+      "image": "asset/image/image-item/quan5.jpeg",
       "colors": [
         "Xám",
         "Đen"
@@ -284,7 +258,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 15,
-      "image": "https://loremflickr.com/400/400/sneakers?lock=10",
+      "image": "asset/image/image-item/quan13.jpeg",
       "colors": [
         "Trắng"
       ],

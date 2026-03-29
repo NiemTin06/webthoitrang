@@ -10,10 +10,10 @@ export const initStorage = () => {
   if (!localStorage.getItem("discount")) {
     const discount = [
         {
-            code: "thanhhoa36",
+            code: "muasamthara",
             discount: 36000,
             require: 67000,
-            desc: "Giảm 36 ngàn đồng cho người Thanh Hóa khi món đồ có giá trị trên 67 ngàn đồng"
+            desc: "Giảm 36 ngàn đồng cho đơn giá trị trên 67 ngàn đồng"
         }
 
     ]
@@ -233,36 +233,38 @@ if (buyItem) {
     })
 }
 
+//Add vocher vao 
 const vocher = document.querySelector(".checkout__voucher button");
 if (vocher){
-
     vocher.addEventListener("click", () => {
         const detailPercent = document.querySelector(".checkout__discount--number");
         const detailDiscount = document.querySelector(".checkout__detailDiscount");
         const current = document.querySelector(".checkout__price--after");
-        const before = document.querySelector(".checkout__price--before");
+        // const before = document.querySelector(".checkout__price--before");
         const code = document.querySelector(".checkout__voucher input").value;
+        const discountList = JSON.parse(localStorage.getItem("discount")) || [];
         let found = false;
-        const discountList = JSON.parse(localStorage.getItem("discount"));
+        const cart = getCart();
+        const totalAmount = getTotalPrice(cart);
         discountList.forEach((item) => {
             if (item.code === code) {
-                const priceCurrent = current.innerHTML.replace("đ", "");
-                if (Number(priceCurrent) > Number(item.require)){
-                    detailDiscount.innerHTML= item.desc
-                    detailPercent.innerHTML = `${item.discount}đ`
-                    current.innerHTML = `${Number(priceCurrent) - Number(item.discount)}đ`;
-                    
-                }
-                else alert("Mã giảm giá không dùng được");
                 found = true;
+                if (totalAmount > Number(item.require)){
+                    detailDiscount.innerHTML= item.desc;
+                    detailPercent.innerHTML = `${item.discount.toLocaleString()}đ`;
+                    const finalAmount = totalAmount - Number(item.discount);
+                    current.innerHTML = `${finalAmount.toLocaleString()}đ`;
+                } else {
+                    alert(`Đơn hàng phải trên ${item.require.toLocaleString()}đ mới dùng được mã này.`);
+                }
             }
         });
-    
+
         if (!found) {
-            alert("Mã giảm giá không đúng");
+            alert("Mã giảm giá không hợp lệ");
             detailDiscount.innerHTML= "";
             detailPercent.innerHTML = `0đ`;
-            current.innerHTML = before.innerHTML;
+            current.innerHTML = `${totalAmount.toLocaleString()}đ`;
         }
     });
 }

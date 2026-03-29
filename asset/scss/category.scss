@@ -27,6 +27,18 @@
 
   &__item {
     width: calc((100% - 80px) / 5);
+    @media (max-width: 992px) {
+      width: calc((100% - 60px) / 4);
+    }
+    @media (max-width: 992px) {
+      width: calc((100% - 60px) / 4);
+    }
+    @media (max-width: 768px) {
+      width: calc((100% - 40px) / 3);
+    }
+    @media (max-width: 576px) {
+      width: calc((100% - 20px) / 2);
+    }
     aspect-ratio: 3 / 4;
     border-radius: 8px; 
     cursor: pointer;
@@ -34,11 +46,15 @@
     overflow: hidden; 
     &--big {
        width: calc(25% - 20px);
-      
+       font-size: 2rem;
       @media (max-width: 992px) {
          width: calc((100% - 20px) / 2);
       }
       
+      .category__icon{
+        width: 40px;
+        height: 40px;
+      }
     }
 
     img {
@@ -74,7 +90,7 @@
   }
 
   &__name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     line-height: 1.2;
     text-transform: capitalize;
@@ -88,9 +104,8 @@
   }
 
   &__icon {
-    // Bí kíp hình tròn: W = H, border-radius 50%, NO PADDING
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: white;
     color: black;
     border-radius: 50%;

@@ -1,3 +1,5 @@
+
+
 const slides = document.querySelectorAll('.banner__image');
 let current = 0;
 const showSlide = (index) => {

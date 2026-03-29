@@ -3,73 +3,122 @@
 .product {
   &__list {
     background-color: $bg-color-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    } 
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 2rem;
     font-weight: 700;
     color: $bg-color-2;
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 12px;
     cursor: pointer;
     border: 1px solid $border-color;
     height: 100%;
     position: relative;
+    background: #fff;
+    transition: all 0.3s ease;
+
+    // ✨ hover nổi lên
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+
     &[data-discount]::after {
       content: attr(data-discount);
       position: absolute;
-      top:-10px;
-      right:  -10px;
-      margin-left: 8px;
-      padding: 3px 8px;
+      top: 10px;
+      right: 10px;
+      padding: 4px 10px;
       background: $denied-color;
       color: white;
       font-size: 0.75rem;
-      border-radius: 12px;
-      white-space: nowrap;
+      border-radius: 20px;
+      font-weight: 600;
     }
+
     a {
+      display: block;
       width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
     }
   }
 
   &__image {
     width: 100%;
     aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 10px;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.4s ease;
     }
   }
-  &__price {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-top: auto;
-    &--current {
-      color: #f5222d;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    &--old {
-      color: #8c8c8c;
-      text-decoration: line-through; /* Gạch ngang giá cũ */
-      font-size: 0.9rem;
-    }
+
+
+  &__item:hover &__image img {
+    transform: scale(1.08);
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     flex: 1;
+    margin-top: 10px;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    overflow: hidden;
+    min-height: 40px;
+  }
+
+  &__price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+
+    &--current {
+      color: $denied-color;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    &--old {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+    }
   }
 }

@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Trang chủ </title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
-  <link rel="stylesheet" href="asset/css/style.css">
   <link rel="stylesheet" href="asset/css/category.css">
   <link rel="stylesheet" href="asset/css/productlist.css">
   <link rel="stylesheet" href="asset/css/home.css">
@@ -93,10 +91,12 @@
     </section>
 
     <!-- PRODUCT LIST -->
-    <section class="product__list">
+    <section class="product">
       <div class="container">
-        <h2 class="product__title">Danh sách sản phẩm</h2>
-        <div class="row g-4 align-items-stretch"></div>
+        <h2 class="product__title"> 
+          Danh sách sản phẩm
+        </h2>
+        <div class="product__list"></div>
       </div>
     </section>
 
@@ -116,6 +116,49 @@
       </div>
     </section>
     <!-- END SUB-BANNER -->
+    <section class = "feedback">
+      <div class="container">
+        <h2 class="feedback__title">
+          Feedback
+        </h2>
+        <div class="feedback__wrap">
+          <div class="feedback__item">
+            <div class="feedback__info">
+              <div class="feedback__avatar">
+                <img src="asset/image/avatar1.jpg" alt="avatar">
+              </div>
+              <h3 class="feedback__name"> Linda</h3>
+            </div>
+            <p class="feedback__desc">
+              Mình mua áo ở shop và thật sự bất ngờ về chất lượng. Vải mềm, form lên dáng rất đẹp, mặc vào nhìn gọn gàng hơn hẳn. Giao hàng cũng nhanh, đóng gói cẩn thận. Sẽ ủng hộ tiếp!
+            </p>
+          </div>
+          <div class="feedback__item">
+            <div class="feedback__info">
+              <div class="feedback__avatar">
+                <img src="asset/image/avatar2.jpg" alt="avatar">
+              </div>
+              <h3 class="feedback__name"> John</h3>
+            </div>
+            <p class="feedback__desc">
+            Mình mua áo ở shop và thật sự bất ngờ về chất lượng. Vải mềm, form lên dáng rất đẹp, mặc vào nhìn gọn gàng hơn hẳn. Giao hàng cũng nhanh, đóng gói cẩn thận. Sẽ ủng hộ tiếp!
+            </p>
+          </div>
+          <div class="feedback__item">
+            <div class="feedback__info">
+              <div class="feedback__avatar">
+                <img src="asset/image/avatar3.jpg" alt="avatar">
+              </div>
+              <h3 class="feedback__name"> Ana</h3>
+            </div>
+            <p class="feedback__desc">
+              Lần đầu mua nhưng trải nghiệm rất tốt. Nhân viên tư vấn nhiệt tình, chọn size chuẩn. Áo giống hình, màu sắc đẹp, không bị lệch. Sẽ giới thiệu bạn bè mua cùng
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <section class="transport">
     <div class="container">
       <div class="transport__wrap">
@@ -182,8 +225,6 @@
 
   </main>
   <footer id ="footer"></footer>
-  
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script type ="module" src="asset/js/product.js"></script>
   <script type ="module" src="asset/js/script.js"></script>
   <script type ="module" src="asset/js/home.js"></script>

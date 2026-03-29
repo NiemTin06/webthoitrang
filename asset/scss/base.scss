@@ -1,7 +1,13 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // npx sass --watch asset/scss:asset/css
 // npm start
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 $bg-color-1: #ffffff;
 $bg-color-2: #242021;
 $text-color: #333;
@@ -11,6 +17,44 @@ $price-color: #e53935;
 $true-color:  #2e7d32;
 $false-color: #c62828;
 $border-color: #ddd;
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
 
 a {
   text-decoration: none;  /* bỏ gạch chân */
@@ -152,5 +196,36 @@ footer {
   &:hover {
     background: $text-color;
     color: $bg-color-1;
+  }
+}
+
+.breadcrumb {
+  padding: 15px 0;
+  margin-bottom: 20px;
+  &__wrap{
+    display: flex;
+  }
+  &__item {
+    font-size: 14px;
+    color: black;
+    display: flex;
+    align-items: center;
+
+    // Tự động thêm dấu "/" vào giữa các mục (trừ mục cuối)
+    &:not(:last-child)::after {
+      content: "/";
+      margin: 0 10px;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+    &.active {
+      color: $text-color;
+      font-weight: 500;
+      pointer-events: none;
+    }
   }
 }

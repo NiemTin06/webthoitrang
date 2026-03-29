@@ -1,12 +1,11 @@
-import { fetchApi, getAPI, normalizeText } from "./function.js";
-import { lengthProduct, params } from "./variable.js";
-const product_list = document.querySelector(".product__list .row");
+import { fetchApi, getAPI } from "./function.js";
+import { lengthProduct, } from "./variable.js";
+const product_list = document.querySelector(".product__list");
 
 export const drawProduct = () => {
   let api = getAPI();
   fetchApi(api).then((response) => {
     let products = response;
-    console.log(lengthProduct);
     if (products.length === 0) {
       product_list.innerHTML = "<p>Không tìm thấy sản phẩm nào.</p>";
       return;
@@ -14,34 +13,33 @@ export const drawProduct = () => {
     let htmls = products
       .map(
         (item) => `
-       <div class = "col col-6 col-md-4 col-lg-3 ">
-       <a href="productdetailpage.html?slug=${item.slug}" > 
         <div class="product__item" ${item.discount_percent > 0 ? 
           `data-discount="-${item.discount_percent}%"` 
           : ""} >
+          <a href="productdetailpage.html?slug=${item.slug}" > 
           <div class="product__image">
-            <img src="${item.image}" alt="${item.title}">
+          <img src="${item.image}" alt="${item.title}">
           </div>
           <div class="product__content">
-            <h3 class="product__name">${item.title}</h3>
-            <div class="product__price">
+          <h3 class="product__name">${item.title}</h3>
+          <div class="product__price">
               <span class="product__price--current">
                 ${item.price.toLocaleString()}đ
-              </span>
+                </span>
               ${ item.price < item.original_price
                     ? `<span class="product__price--old">${item.original_price.toLocaleString()}đ</span>`
                     : ""
                 }
-            </div>
-          </div>
-          </div>
-          </a>
-        </div>
-       `,
-      )
+                </div>
+                </div>
+                </a>
+                </div>
+          `,
+        )
       .join("");
 
     product_list.innerHTML = htmls;
-   
+    
   });
 };
+// <div class = "col col-6 col-md-4 col-lg-3 "></div>

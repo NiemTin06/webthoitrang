@@ -40,16 +40,29 @@ buttonUp.addEventListener("click", () =>{
   quantity.innerHTML = quantityCurrent;
 })
 
-const slider = document.querySelector(".slide-track");
-console.log(slider)
-document.querySelector(".left").onclick = () => {
-  // Cuộn sang trái 300px
-  slider.scrollBy({ left: -300, behavior: 'smooth' });
+const slider = document.querySelector(".related-product__list");
+const leftBtn = document.querySelector(".left");
+const rightBtn = document.querySelector(".right");
+
+const getScrollAmount = () => {
+  const item = document.querySelector(".related-product__item");
+  const gap = 20; // phải giống CSS
+  return item.offsetWidth + gap;
 };
-document.querySelector(".right").onclick = () => {
-  // Cuộn sang phải 300px
-  slider.scrollBy({ left: 300, behavior: 'smooth' }  
-)};
+
+leftBtn.onclick = () => {
+  slider.scrollBy({
+    left: -getScrollAmount(),
+    behavior: "smooth"
+  });
+};
+
+rightBtn.onclick = () => {
+  slider.scrollBy({
+    left: getScrollAmount(),
+    behavior: "smooth"
+  });
+};
 
 const addCart = document.querySelector(".detail-product__action--add");
 const buyItem = document.querySelector(".detail-product__action--buy");

@@ -31,9 +31,9 @@ export const drawCart = () => {
               </div>
             </a>
             <div class="cart__content">
-              <h2 class="cart__title">${e.title} (Màu: ${e.color}, Size: ${e.size})</h2>
+              <h2 class="cart__title cart__title--sub">${e.title} (Màu: ${e.color}, Size: ${e.size})</h2>
               <div class="cart__price">
-                <span class="cart__price--current">${e.price.toLocaleString()}đ</span>
+                ${e.price.toLocaleString()}đ
               </div>
             </div>
             <div class="cart__quantity">

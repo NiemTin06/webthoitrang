@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Trang chủ </title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="asset/css/reset.css">
   <link rel="stylesheet" href="asset/css/base.css">
   <link rel="stylesheet" href="asset/css/category.css">
-  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/productlist.css">
 </head>
 
 <body>
   <header id = "header"></header>
   <main>
-    <a href="cart.html"> gio hang </a>
-      <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Trang chủ </a></li>
-         <li class="breadcrumb-item active" aria-current="page"></li>
-      </ol>
-    </nav>
+     <section class="breadcrumb">
+      <div class="container">
+        <div class="breadcrumb__wrap">
+          <div class="breadcrumb__item"><a href="index.html">Trang chủ </a></div>
+          <div class="breadcrumb__item active"></div>
+        </div>
+      </div>
+    </section>
     <section class="category">
       <div class="container">
         <h2 class="category__title">Danh mục sản phẩm</h2>
@@ -41,52 +41,23 @@
         </div>
       </div>
     </div>
-    <section class="product__list">
+   <!-- PRODUCT LIST -->
+    <section class="product">
       <div class="container">
-        <h2 class="inner-title">Danh sach san pham</h2>
-        <div class="row g-4 align-items-stretch">
-          <div class="col-md-3">
-            <div class="product-item">
-             <img src="asset/image/">
-              <h3>Quần</h3>
-             <p class="price">200000đ</p>
-             <button>Mua ngay</button>
-           </div>
-         </div>
-         <div class="col-md-3">
-            <div class="product-item">
-             <img src="asset/image/">
-              <h3>Áo</h3>
-             <p class="price">250000đ</p>
-             <button>Mua ngay</button>
-           </div>
-         </div>
-         <div class="col-md-3">
-            <div class="product-item">
-             <img src="asset/image/">
-              <h3>Balo</h3>
-             <p class="price">150000đ</p>
-             <button>Mua ngay</button>
-           </div>
-         </div>
-         <div class="col-md-3">
-            <div class="product-item">
-             <img src="asset/image/">
-              <h3>Giày</h3>
-             <p class="price">250000đ</p>
-             <button>Mua ngay</button>
-           </div>
-         </div>
-        </div>
+        <h2 class="product__title"> 
+          Danh sách sản phẩm
+        </h2>
+        <div class="product__list"></div>
       </div>
     </section>
 
-    <!-- PAGINATION -->
-    <section class="pagination text-center mt-4">
-      <span class="pagination__button" id="paginationPrev">Prev</span>
-      <span class="pagination__number" id="paginationNumber">1</span>
-      <span class="pagination__button" id="paginationNext">Next</span>
+  <!-- PAGINATION -->
+    <section class="pagination">
+        <span class="pagination__button" id="paginationPrev">Prev</span>
+        <span class="pagination__number" id="paginationNumber">1</span>
+        <span class="pagination__button" id="paginationNext">Next</span>
     </section>
+    <!--END PAGINATION -->
     
   </main>
   <footer id = "footer"></footer>

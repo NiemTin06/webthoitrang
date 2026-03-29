@@ -1,0 +1,298 @@
+@use "base" as *;
+
+
+.cart {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    margin-bottom: 20px;
+    &:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+  }
+
+  /* CHECK + IMAGE */
+  &__check {
+    align-self: stretch;
+    label {
+      display: flex;
+      align-items: center;
+    //   gap: 15px;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+
+  &__image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  /* CONTENT */
+  &__content {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    overflow: hidden;
+
+    &--sub{
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+        overflow: hidden;
+    }
+  }
+
+
+
+  /* PRICE */
+  &__price {
+      color: #ff4d4f;
+      font-weight: bold;
+      font-size: 18px;
+  }
+
+  /* RIGHT SIDE */
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  /* QUANTITY */
+  &__quantity {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f9f9;
+      cursor: pointer;
+
+      &:hover {
+        background: #eee;
+      }
+
+      &--down {
+        border-right: 1px solid #ddd;
+      }
+
+      &--up {
+        border-left: 1px solid #ddd;
+      }
+    }
+  }
+
+  &__number {
+    padding: 0 12px;
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* DELETE */
+  &__delete {
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: #d9363e;
+    }
+  }
+
+  /* 📱 RESPONSIVE */
+  @media (max-width: 768px) {
+    &__item {
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    &__image {
+      width: 90px;
+      height: 90px;
+    }
+
+    &__right {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__price {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 567px) {
+    .cart__title--sub{
+        font-size: 12px
+    }
+    .cart__price{
+        font-size: 14px;
+    }
+    .cart__quantity{
+        font-size: 12px;
+        height: 30px;
+        
+    }
+    .cart__image {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+
+.total{
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  &__buy{
+    background-color: #f5222d;
+    border: 2px solid #f5222d;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    &:hover{
+      background-color: white;
+      color: #f5222d;
+    }
+  }
+}
+
+// -------------------------------------------------
+// css for cart.html
+
+/* CHECKOUT */
+.checkout {
+  margin-top: 40px;
+
+  &__wrap {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__payment {
+    flex: 1;
+
+    h3 {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__summary {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__subtotal {
+    font-size: 18px;
+  }
+
+  &__total {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__voucher {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+
+    input {
+      flex: 1;
+      padding: 5px;
+    }
+
+    button {
+      background: #c62828;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__pay {
+    width: 100%;
+    background: #b71c1c;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+// ----------------------------------------------
+// css for productdetail

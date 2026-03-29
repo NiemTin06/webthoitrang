@@ -3,7 +3,7 @@ import { fetchApi } from "./function.js";
 
 export const drawRelatedProduct = (element, id) =>{
   const category = element.category;
-  const relativeProduct = document.querySelector(".related-product .row");
+  const relativeProduct = document.querySelector(".related-product__list");
   fetchApi(`${APIproduct}?category=${category}`)
   .then (response => {
     
@@ -14,25 +14,25 @@ export const drawRelatedProduct = (element, id) =>{
       related.push(filtered.splice(index, 1)[0])
     }
     let htmls = related.map(item => `
-      <div class = "col col-6 col-md-4 col-lg-3">
+
+      <div class="related-product__item">
       <a href="productdetailpage.html?slug=${item.slug}" > 
-      <div class="product__item">
-        <div class="product__image">
+        <div class="related-product__image">
           <img src="${item.image}" alt="${item.title}">
         </div>
-        <div class="product__content">
-          <h3 class="product__title">${item.title}</h3>
-          <div class="product__price">
-              <span class = "product__price--current ${item.discount_percent > 0 ? "product__discount_percent" : 
+        <div class="related-product__content">
+          <h3 class="related-product__name">${item.title}</h3>
+          <div class="related-product__price">
+              <span class = "related-product__price--current ${item.discount_percent > 0 ? "related-product__discount_percent" : 
                 ""
               }"> ${item.price.toLocaleString()}đ <span>
               ${item.price < item.original_price ? 
-              `<span class="product__price--old">${item.original_price.toLocaleString()}đ</span>` : ''}
+              `<span class="related-product__price--old">${item.original_price.toLocaleString()}đ</span>` : ''}
           </div>
         </div>
-        </div>
         </a>
-      </div>
+        </div>
+  
       `).join("");
       if (relativeProduct){
 

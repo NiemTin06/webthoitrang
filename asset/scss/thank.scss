@@ -1,0 +1,84 @@
+.thanks-page {
+  background-color: #ebebeb;
+}
+
+.thanks-page .thanks-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: 60px 20px;
+}
+
+.thanks-card {
+  background-color: #2bca60;
+  padding: 40px 30px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.thanks-card h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.thanks-card .btn-continue {
+  display: inline-block;
+  background-color: #f1f2f6;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.thanks-card .btn-continue:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-checkmark {
+  width: 76px;
+  height: 76px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-checkmark .check-svg {
+  width: 60px;
+  height: 60px;
+}
+
+.success-checkmark .check-path {
+  fill: none;
+  stroke: #735ad5;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawCheck 0.6s ease-out forwards 0.2s;
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 100;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

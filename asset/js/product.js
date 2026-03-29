@@ -4,20 +4,25 @@ import { fetchApi } from "./function.js";
 import { lengthProduct, params } from "./variable.js";
 
 const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get("category")) {
-  params.category = urlParams.get("category");
-  let api = `${APIproduct}?scategory=${params.category}`;
-  fetchApi(api)
-    .then(response => {
-      const product = response[0];
-      if (!product) {
-        return;
-      }
-     const breadcrumbItem = document.querySelector(".breadcrumb-item:nth-child(2)");
-    breadcrumbItem.innerHTML = product.category_breadcrumb
-   } ) }
+const breadcrumbItems = document.querySelectorAll(".breadcrumb__item");
 
-drawProduct();
+if (urlParams.get("category")) {
+  console.log(params)
+  params.category = urlParams.get("category");
+  let api = `${APIproduct}?category=${params.category}`;
+  console.log(api);
+  fetchApi(api)
+  .then(response => {
+    console.log(response);
+    const product = response[0];
+    console.log(product);
+    if (!product) {
+      return;
+    }
+    breadcrumbItems[1].innerHTML = product.category_breadcrumb;
+  } ) }
+
+
 const pagePrev = document.querySelector("#paginationPrev")
 const pageNext = document.querySelector("#paginationNext")
 export const pageNumber = document.querySelector("#paginationNumber")
@@ -31,27 +36,30 @@ let search = () => {
   drawProduct();
 } 
 
-    
+
 //   });
 
 if (buttonSearch && inputSearch){
   buttonSearch.addEventListener("click", () => { 
-      params.page = 1;
-      pageNumber.innerHTML = params.page;
-      params.category= "";
-      search()
+    params.page = 1;
+    pageNumber.innerHTML = params.page;
+    params.category= "";
+    search()
   })
   inputSearch.addEventListener("keydown", (e) =>{
     if (e.key == "Enter"){
       params.page = 1;
-       pageNumber.innerHTML = params.page;
+      pageNumber.innerHTML = params.page;
       params.category= "";
-  
+      
       search();
     }
   })
 }
 // End seacrh
+drawProduct();
+const allItem = document.querySelector(".category__item.all");
+allItem?.click();
 
 //  filter
 
@@ -64,9 +72,9 @@ if (filter){
         params.sort = "";
         params.order = "";
         break;
-      case "gia-thap-den-cao":
-        params.sort = "price";
-        params.order = "asc";
+        case "gia-thap-den-cao":
+          params.sort = "price";
+          params.order = "asc";
         break;
       case "gia-cao-den-thap":
         params.sort = "price";
@@ -87,22 +95,26 @@ if (filter){
 //  End filter
 
 // Pagination
-pageNext.addEventListener("click" , () =>{
-  if (params.page < Math.ceil(lengthProduct / params.limit)){
-    params.page = parseInt(params.page) + 1;
-    pageNumber.innerHTML = params.page;
-    console.log(pageNumber);
-    drawProduct();
-  }
-})
+if (pageNext && pagePrev && pageNumber) {
+  pageNext.addEventListener("click", () => {
+    if (params.page < Math.ceil(lengthProduct / params.limit)) {
+      params.page++;
+      pageNumber.innerHTML = params.page;
+      console.log("ok")
+      drawProduct();
+    }
+  });
+  
+  pagePrev.addEventListener("click", () => {
+    if (params.page > 1) {
+      params.page--;
+      pageNumber.innerHTML = params.page;
+      console.log("ok")
 
-pagePrev.addEventListener("click" , () =>{
-  if (params.page > 1){
-    params.page = parseInt(params.page) - 1;
-    pageNumber.innerHTML = params.page;
-    console.log(pageNumber.innerHTML);
-    drawProduct();
-  }
-})
+      drawProduct();
+    }
+  });
+}
+
 // End pagination
 

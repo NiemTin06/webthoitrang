@@ -6,7 +6,7 @@ export const drawProductDetail = (element) =>{
   const image = document.querySelector(".detail-product__image img");
   const colors = document.querySelector(".detail-product__options--color");
   const sizes = document.querySelector(".detail-product__options--size");
-  const breadcrumbItems = document.querySelectorAll(".breadcrumb-item");
+  const breadcrumbItems = document.querySelectorAll(".breadcrumb__item");
   breadcrumbItems[1].innerHTML =`<a href="productlist.html?category=${element.category}"> ${element.category_breadcrumb} </a>`
   
   breadcrumbItems[2].innerHTML = element.title;  
@@ -22,15 +22,15 @@ export const drawProductDetail = (element) =>{
     priceCurrent.setAttribute('data-discount', `-${element.discount_percent}%`);
   }
   let text = "";
-  element.colors.forEach(e => {
-    text += ` <button class="detail-product__btn detail-product__btn--colors-option">${e}</button>`
+  element.colors.forEach((e, index) => {
+    text += ` <button class="detail-product__btn detail-product__btn--colors-option ${index === 0 ? 'active' : ''}">${e}</button>`
   });
   colors.innerHTML = text;
   
   
   text = "";
-  element.sizes.forEach(e => {
-    text += ` <button class="detail-product__btn detail-product__btn--sizes-option">${e}</button>`
+   element.sizes.forEach((e, index) => {
+    text += ` <button class="detail-product__btn detail-product__btn--sizes-option ${index === 0 ? 'active' : ''}">${e}</button>`
   });
   sizes.innerHTML = text;
   const btnColors = document.querySelectorAll(".detail-product__btn--colors-option");

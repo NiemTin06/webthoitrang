@@ -10,9 +10,19 @@ const api =`${APIcategories}?category=${urlParams.get("category")}`;
 fetchApi(api)
   .then (data => {
     console.log(data);
-    let categories = data[0].sub_categories
-    console.log(categories)
-    let html = categories.map(element => `
+    let categories = data[0].sub_categories;
+    let html =  `
+        <div class="category__item all" data-sub="">
+          <img src="asset/image/allcate.jpg"alt="ha">
+              <div class="category__content">
+                <h3 class="category__name"> Tắt cả </h3>
+                <div class="category__icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+          </div>
+    `;
+    html += categories.map(element => `
         <div class="category__item" data-sub="${element.sub_category}">
           <img src="asset/image/subcategory/${element.sub_category}.jpg"alt="ha">
               <div class="category__content">
