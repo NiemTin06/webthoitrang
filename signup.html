@@ -35,6 +35,16 @@
                         <input type="password" placeholder="Confirm Password" required>
                     </div>
                     
+                <div class="input-group role-group" style="display: flex; gap: 20px; align-items: center; justify-content: start; margin-bottom: 15px; color: #555;">
+                        <span style="font-weight: bold;">Register as:</span>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                            <input type="radio" name="role" value="user" checked required> User
+                        </label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                            <input type="radio" name="role" value="admin" required> Admin
+                        </label>
+                </div>
+
                     <button type="submit" class="btn-submit">Create Account</button>
                 </form>
 

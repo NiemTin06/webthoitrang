@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = signupForm.querySelector('input[placeholder="Email Address"]').value;
         const password = signupForm.querySelector('input[placeholder="Password"]').value;
         const confirmPassword = signupForm.querySelector('input[placeholder="Confirm Password"]').value;
+        
+        // --- BỔ SUNG: Lấy giá trị của ô Role đang được chọn ---
+        const role = signupForm.querySelector('input[name="role"]:checked').value;
 
         // 2. Kiểm tra mật khẩu khớp nhau
         if (password !== confirmPassword) {
@@ -32,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fullName: fullName,
             username: username,
             email: email,
-            password: password // Nhắc lại: Chỉ dùng để học tập, thực tế rất nguy hiểm
+            password: password, 
+            role: role // --- BỔ SUNG: Lưu thêm quyền (admin/user) vào đây ---
         };
         
         users.push(newUser);
