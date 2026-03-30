@@ -22,20 +22,27 @@
                     <div class="input-group">
                         <input type="text" placeholder="Full Name" required>
                     </div>
+                    
                     <div class="input-group">
                         <input type="text" placeholder="Username" required>
                     </div>
+                    
                     <div class="input-group">
                         <input type="email" placeholder="Email Address" required>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="password" placeholder="Password" required>
                     </div>
-                    <div class="input-group">
-                        <input type="password" placeholder="Confirm Password" required>
+
+                    <div class="input-group" style="display: flex; flex-direction: column;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <span id="passwordError" style="color: red; font-size: 13px; margin-top: 5px; display: none;">
+                            Mật khẩu không khớp!
+                        </span>
                     </div>
                     
-                <div class="input-group role-group" style="display: flex; gap: 20px; align-items: center; justify-content: start; margin-bottom: 15px; color: #555;">
+                    <div class="input-group role-group" style="display: flex; gap: 20px; align-items: center; justify-content: start; margin-bottom: 15px; color: #555;">
                         <span style="font-weight: bold;">Register as:</span>
                         <label style="cursor: pointer; display: flex; align-items: center; gap: 5px;">
                             <input type="radio" name="role" value="user" checked required> User
@@ -43,7 +50,7 @@
                         <label style="cursor: pointer; display: flex; align-items: center; gap: 5px;">
                             <input type="radio" name="role" value="admin" required> Admin
                         </label>
-                </div>
+                    </div>
 
                     <button type="submit" class="btn-submit">Create Account</button>
                 </form>
