@@ -27,3 +27,25 @@ fetch("footer.html")
 
   initStorage();
 
+
+// --- SCROLL REVEAL EFFECT (ABOUT PAGE) ---
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            } else {
+                entry.target.classList.remove("active");
+            }
+        });
+    }, {
+        threshold: 0.15, // Kích hoạt khi thấy 15% phần tử
+        rootMargin: "0px 0px -50px 0px" 
+    });
+
+    reveals.forEach(reveal => {
+        revealObserver.observe(reveal);
+    });
+});

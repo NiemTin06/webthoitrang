@@ -1,3 +1,5 @@
+@use "sass:color";
+@import "base";
 
 .thanks-page {
     background-color: #f8f9fa;
@@ -6,8 +8,14 @@
 }
 
 .thanks-container {
+    overflow: hidden;
     padding: 80px 15px;
     min-height: 80vh;
+
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+        min-height: auto;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,19 +28,23 @@
         width: 150%;
         height: 100%;
         z-index: 1;
-
+    
         &--left {
             top: -50%;
             left: -50%;
-            background-color: #f1c40f; 
+            background-color: $bg-color-2; 
             transform: rotate(-15deg);
         }
 
         &--right {
             bottom: -50%;
             right: -50%;
-            background-color: $summit-color; 
+            background-color: $bg-color-2; 
             transform: rotate(-15deg);
+        }
+
+        @media (max-width: 768px) {
+            display: none; // Ẩn trang trí nền trên mobile để tránh rối mắt
         }
     }
 }
@@ -48,7 +60,11 @@
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
     text-align: center;
     backdrop-filter: blur(10px);
-    animation: float 4s ease-in-out infinite; // Hiệu ứng lơ lửng
+    animation: float 4s ease-in-out infinite; 
+
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+    }
 }
 
 .success-icon {
@@ -71,6 +87,14 @@
     color: #111;
     margin: 0 0 20px;
     font-weight: 800;
+
+    @media (max-width: 768px) {
+        font-size: 2.2rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.8rem;
+    }
 }
 
 .thanks-description {
@@ -79,10 +103,10 @@
     line-height: 1.8;
     margin: 0 0 45px;
 
-
-
-
-
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
 }
 
 .thanks-cards {
