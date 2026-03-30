@@ -1,28 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặt hàng thành công</title>
+    <title>Cảm ơn bạn - Đặt hàng thành công</title>
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/base.css">
     <link rel="stylesheet" href="asset/css/thank.css">
+    <!-- FontAwesome was already imported in base.scss, but adding here just in case -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="thanks-page">
     <header id="header"></header>
-    <main class="thanks-main">
-        <div class="container">
-            <div class="thanks-card">
-                <div class="success-checkmark">
-                    <svg class="check-svg" width="80" height="80" viewBox="0 0 80 80">
-                        <polyline class="check-path" points="22,42 35,55 58,28" />
-                    </svg>
-                </div>
-                <h2>Đơn hàng đã được đặt</h2>
-                <a href="index.html" class="btn-continue">Tiếp tục mua hàng</a>
+
+    <main class="thanks-container">
+        <!-- Diagonal Background Elements -->
+        <div class="diagonal-bg diagonal-bg--left"></div>
+        <div class="diagonal-bg diagonal-bg--right"></div>
+
+        <section class="thanks-content">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
             </div>
-        </div>
+            <h1 class="thanks-title">Cảm ơn bạn!</h1>
+            <p class="thanks-description">
+                Chúng tôi đã nhận được đơn đặt hàng của bạn. <br>
+                Bạn có thể tìm thấy thông tin chi tiết đơn hàng trong email xác nhận mà chúng tôi vừa gửi.
+            </p>
+
+            <div class="thanks-cards">
+                <!-- Social Connect Card -->
+                <div class="thanks-card">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="social-links">
+                        <a href="index.html" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="index.html" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="index.html" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="index.html" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Website Visit Card -->
+                <div class="thanks-card">
+                    <h3>Tiếp tục mua sắm</h3>
+                    <div class="website-action">
+                        <a href="index.html" class="btn-visit">Trang chủ</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
     </main>
+
     <footer id="footer"></footer>
     <script src="asset/js/script.js"></script>
 </body>

@@ -1,84 +1,193 @@
+
 .thanks-page {
-  background-color: #ebebeb;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
-.thanks-page .thanks-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 160px);
-  padding: 60px 20px;
+.thanks-container {
+    padding: 80px 15px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+
+    .diagonal-bg {
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        z-index: 1;
+
+        &--left {
+            top: -50%;
+            left: -50%;
+            background-color: #f1c40f; 
+            transform: rotate(-15deg);
+        }
+
+        &--right {
+            bottom: -50%;
+            right: -50%;
+            background-color: $summit-color; 
+            transform: rotate(-15deg);
+        }
+    }
+}
+
+.thanks-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(white, 0.98);
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: float 4s ease-in-out infinite; // Hiệu ứng lơ lửng
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: $summit-color;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 20px rgba($summit-color, 0.3);
+    animation: successPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both 0.2s; // Hiệu ứng dấu check
+}
+
+.thanks-title {
+    font-size: 2.8rem;
+    color: #111;
+    margin: 0 0 20px;
+    font-weight: 800;
+}
+
+.thanks-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 0 45px;
+
+
+
+
+
+}
+
+.thanks-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .thanks-card {
-  background-color: #2bca60;
-  padding: 40px 30px;
-  border-radius: 5px;
-  text-align: center;
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #efefef;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 0 0 20px;
+        color: #222;
+        font-weight: 700;
+    }
 }
 
-.thanks-card h2 {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 25px;
+.social-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+
+    a {
+        width: 42px;
+        height: 42px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #444;
+        transition: 0.25s;
+        border: 1px solid #e0e0e0;
+
+        &:hover {
+            color: white;
+            transform: translateY(-3px);
+
+            &[title="Facebook"] { background-color: #3b5998; border-color: #3b5998; }
+            &[title="LinkedIn"] { background-color: #0077b5; border-color: #0077b5; }
+            &[title="Pinterest"] { background-color: #bd081c; border-color: #bd081c; }
+            &[title="Twitter"] { background-color: #1da1f2; border-color: #1da1f2; }
+        }
+    }
 }
 
-.thanks-card .btn-continue {
-  display: inline-block;
-  background-color: #f1f2f6;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.website-action {
+    .btn-visit {
+        display: inline-block;
+        background-color: $summit-color;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.25s;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba($summit-color, 0.2);
+
+        &:hover {
+            background-color: color.adjust($summit-color, $lightness: -8%);
+            box-shadow: 0 6px 18px rgba($summit-color, 0.3);
+        }
+    }
 }
 
-.thanks-card .btn-continue:hover {
-  background-color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
 }
 
-.success-checkmark {
-  width: 76px;
-  height: 76px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.success-checkmark .check-svg {
-  width: 60px;
-  height: 60px;
-}
-
-.success-checkmark .check-path {
-  fill: none;
-  stroke: #735ad5;
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: drawCheck 0.6s ease-out forwards 0.2s;
-}
-
-@keyframes drawCheck {
-  0% {
-    stroke-dashoffset: 100;
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-  }
+@keyframes successPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

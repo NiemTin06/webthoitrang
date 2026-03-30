@@ -23,6 +23,7 @@ if (urlParams.get("category")) {
   } ) }
 
 
+
 const pagePrev = document.querySelector("#paginationPrev")
 const pageNext = document.querySelector("#paginationNext")
 export const pageNumber = document.querySelector("#paginationNumber")
@@ -65,7 +66,7 @@ allItem?.click();
 
 const filter = document.querySelector("#filter");
 if (filter){
-  
+
   filter.addEventListener("change", (e) => {
     switch (e.target.value){
       case "mac-dinh":
@@ -116,5 +117,11 @@ if (pageNext && pagePrev && pageNumber) {
   });
 }
 
-// End pagination
+
+
+
+
+
+
+
 

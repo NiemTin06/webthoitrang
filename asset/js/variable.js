@@ -10,14 +10,12 @@ export let params = {
   new:"",
   size:"",
   priceMin: "0",
-  priceMax: "10000000000"
-  
+  priceMax: "10000000000",
 };
+export let lengthProduct = 100;
 
-export let lengthProduct = 100
-
-export const setLengthProduct = (value) => {
-  lengthProduct = value;
+export const setLengthProduct = (params, value) => {
+  params.lengthProduct = value;
 };
 export const normalizeText = (str = "") => {
   if (!str) return "";

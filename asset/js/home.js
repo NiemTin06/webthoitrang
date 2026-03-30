@@ -11,3 +11,4 @@ const showSlide = (index) => {
     current = (current + 1) % slides.length;
     showSlide(current);
   }, 3000); // 3 giây chuyển 1 lần
+

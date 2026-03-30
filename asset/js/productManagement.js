@@ -1,7 +1,7 @@
 import { APIcategories, APIproduct } from "./contain.js";
 import { drawProductManager } from "./drawProductManager.js";
 import { addProduct, convertSlugText, deleteProduct, fetchApi, updateProduct } from "./function.js";
-import { lengthProduct, params } from "./variable.js";
+import { params } from "./variable.js";
 
 const category = document.querySelector("#filter-category");
 const size = document.querySelector("#filter-size");
@@ -108,7 +108,7 @@ form.addEventListener("submit", (e) => {
 
 // Pagination
 pageNext.addEventListener("click" , () =>{
-  if (params.page < Math.ceil(lengthProduct / params.limit)){
+  if (params.page < Math.ceil(params.lengthProduct / params.limit)){
     params.page = parseInt(params.page) + 1;
     pageNumber.innerHTML = params.page;
     drawProductManager();

@@ -2,7 +2,7 @@ import { fetchApi } from "./function.js";
 import { APIcategories } from "./contain.js";
 import { drawProduct } from "./drawProduct.js";
 import { params } from "./variable.js";
-import { pageNumber } from "./product.js";
+import { pageNumber} from "./product.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const category = document.querySelector(".category__list");
@@ -42,6 +42,11 @@ fetchApi(api)
         params.category = data[0].category;
         params.subCategory = item.getAttribute("data-sub");
         drawProduct();
+        const newUrl = params.subCategory
+      ? `?category=${params.category}&sub=${params.subCategory}`
+      : `?category=${params.category}`;
+          window.history.pushState({}, "", newUrl);
+          console.log(newUrl);
       })
     })
   })

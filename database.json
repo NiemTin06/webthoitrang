@@ -2655,54 +2655,6 @@
         "XL"
       ],
       "description": "Toàn bộ họa tiết trên áo đều có khả năng phản quang."
-    },
-    {
-      "id": 1774516878194,
-      "title": "",
-      "slug": "",
-      "search_key": "",
-      "category": "",
-      "category_breadcrumb": "",
-      "sub_category": "",
-      "sub_category_name": "",
-      "price": 0,
-      "original_price": 0,
-      "discount_percent": 0,
-      "is_new": true,
-      "is_sale": false,
-      "quantity": 0,
-      "image": "",
-      "colors": [
-        ""
-      ],
-      "sizes": [
-        ""
-      ],
-      "description": ""
-    },
-    {
-      "id": 1774516948135,
-      "title": "",
-      "slug": "",
-      "search_key": "",
-      "category": "",
-      "category_breadcrumb": "",
-      "sub_category": "",
-      "sub_category_name": "",
-      "price": 0,
-      "original_price": 0,
-      "discount_percent": 0,
-      "is_new": true,
-      "is_sale": false,
-      "quantity": 0,
-      "image": "",
-      "colors": [
-        ""
-      ],
-      "sizes": [
-        ""
-      ],
-      "description": ""
     }
   ],
   "categories": [

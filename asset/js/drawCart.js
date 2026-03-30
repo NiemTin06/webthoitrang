@@ -41,9 +41,9 @@ export const drawCart = () => {
               <span class="cart__number">${e.quantity}</span>
               <span class="cart__quantity-btn cart__quantity-btn--up"> + </span>
             </div>
-            <div class="cart__deletebutton">
-              <button style="border: none; background: transparent; cursor: pointer; color: red; font-weight: bold;"> X </button>
-            </div>
+                  <button class="cart__delete-icon">
+              <i class="fa-solid fa-trash-can"></i> Xóa
+            </button>
           </div>
         `).join("");
         cartlist.innerHTML = text;

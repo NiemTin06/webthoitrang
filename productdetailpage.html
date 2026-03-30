@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trang chủ</title>
+  <title>Chi tiết sản phẩm</title>
 
   <link rel="stylesheet" href="asset/css/reset.css" />
   <link rel="stylesheet" href="asset/css/base.css" />
@@ -12,17 +12,17 @@
 </head>
 
 <body>
-  <header id="header"></header>
+  <header class="header"></header>
   <main>
-    <a href="cart.html"> gio hang </a>
-    <a href="productlist.html">trang chu </a>
+    <a href="cart.html" style="display:none"> gio hang </a>
+    <a href="productlist.html" style="display:none">trang chu </a>
 
     <section class="breadcrumb">
       <div class="container">
         <div class="breadcrumb__wrap">
           <div class="breadcrumb__item"><a href="index.html">Trang chủ </a></div>
           <div class="breadcrumb__item"></div>
-          <div class="breadcrumb__item active" ></div>
+          <div class="breadcrumb__item active"></div>
         </div>
       </div>
     </section>
@@ -30,41 +30,51 @@
     <article class="detail-product">
       <div class="container">
         <div class="detail-product__wrap">
+
+          <!-- LEFT: Product Image -->
           <div class="detail-product__image">
             <img src="https://loremflickr.com/400/400/suedejacket?lock=99" alt="" />
           </div>
+
+          <!-- RIGHT: Product Info -->
           <div class="detail-product__content">
             <h2 class="detail-product__title">(Product name)</h2>
 
-            <div class="detail-product__price">
-              <span class="detail-product__label">Giá:</span>
-
-              <span class="detail-product__price--old">5.000.000</span>
-              <span class="detail-product__price--current">3.500.000</span>
+            <!-- PRICE BOX -->
+            <div class="detail-product__price-box">
+              <div class="detail-product__price">
+                <span class="detail-product__label">Giá:</span>
+                <span class="detail-product__price--old">5.000.000</span>
+                <span class="detail-product__price--current">3.500.000</span>
+                <span class="detail-product__discount-badge"></span>
+              </div>
             </div>
+
             <p class="detail-product__stock"></p>
 
             <!-- COLOR -->
-            <div class="detail-product__colors">
+            <div class="detail-product__colors detail-product__row">
               <span class="detail-product__label">Màu sắc:</span>
               <div class="detail-product__options--color">
               </div>
             </div>
 
             <!-- SIZE -->
-            <div class="detail-product__sizes">
+            <div class="detail-product__sizes detail-product__row">
               <span class="detail-product__label">Kích thước:</span>
               <div class="detail-product__options--size">
               </div>
             </div>
 
             <!-- QUANTITY -->
-            <div class="detail-product__quantity">
+            <div class="detail-product__quantity detail-product__row">
               <div class="detail-product__label">Số lượng</div>
               <div class="detail-product__quantity--wrap">
-                <span class="detail-product__quantity-btn--down">−</span>
-                <span class="detail-product__number">1</span>
+
+
                 <span class="detail-product__quantity-btn--up">+</span>
+                <span class="detail-product__number">1</span>
+                <span class="detail-product__quantity-btn--down">-</span>
               </div>
             </div>
 
@@ -78,6 +88,7 @@
               </button>
             </div>
           </div>
+
         </div>
       </div>
     </article>
@@ -85,12 +96,13 @@
     <section class="product-description">
       <div class="container">
         <h3 class="product-description__title">Chi tiết sản phẩm</h3>
+        <div class="product-description__divider"></div>
         <p class="product-description__text"><i>
             Khám phá bộ sưu tập quần áo, giày dép và phụ kiện với thiết kế hiện đại, dễ phối và phù hợp nhiều phong cách
             khác nhau. Sản phẩm được chọn lọc kỹ lưỡng, chú trọng chất lượng và sự thoải mái khi sử dụng hằng ngày. Dù
             bạn theo đuổi phong cách năng động, thanh lịch hay cá tính, chúng tôi luôn có những lựa chọn phù hợp dành
             cho bạn.
-        </p>
+          </i></p>
       </div>
     </section>
 
@@ -107,7 +119,7 @@
     </section>
   </main>
   <!-- <div id="toast" class="toast-message">Đã thêm vào giỏ thành công!</div> -->
-  <footer id="footer"></footer>
+  <footer class ="footer"></footer>
   <script type="module" src="asset/js/productDetail.js"></script>
   <script type="module" src="asset/js/script.js"></script>
 </body>
