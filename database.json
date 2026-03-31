@@ -312,7 +312,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 18,
-    "image": "asset/image/image-item/giay2.jpeg",
+      "image": "asset/image/image-item/giay-chay-bo.jpg",
       "colors": [
         "Đen Trắng",
         "Cam"
@@ -339,7 +339,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 55,
-     "image": "asset/image/image-item/giay-dandai-dep.jpg",
+      "image": "asset/image/image-item/giay-sandal-dep.jpg",
       "colors": [
         "Đen"
       ],
@@ -366,7 +366,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 100,
-    "image": "asset/image/image-item/mu.jpg",
+      "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Đen"
       ],
@@ -390,7 +390,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 251,
-      "image": "asset/image/image-item/balo1.jpg",
+      "image": "asset/image/image-item/balo13.jpeg",
       "colors": [
         "Xám đen"
       ],
@@ -414,7 +414,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 62,
-      "image": "asset/image/image-item/ao2.jpg",
+      "image": "asset/image/image-item/ao-thun.jpg",
       "colors": [
         "Đen",
         "Trắng"
@@ -442,7 +442,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 38,
-      "image": "https://loremflickr.com/400/400/flannel?lock=17",
+      "image": "asset/image/image-item/ao-so-mi.jpg",
       "colors": [
         "Đỏ đen",
         "Xanh đen"
@@ -469,7 +469,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 47,
-      "image": "https://loremflickr.com/400/400/poloshirt?lock=18",
+      "image": "asset/image/image-item/ao-polo.jpg",
       "colors": [
         "Xám",
         "Be"
@@ -496,7 +496,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 10,
-      "image": "https://loremflickr.com/400/400/leather-jacket?lock=19",
+      "image": "asset/image/image-item/ao7.jpeg",
       "colors": [
         "Đen"
       ],
@@ -522,7 +522,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 53,
-      "image": "https://loremflickr.com/400/400/longsleeve?lock=20",
+      "image": "asset/image/image-item/ao-the-thao.jpg",
       "colors": [
         "Xanh neon",
         "Đen"
@@ -549,7 +549,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 14,
-      "image": "https://loremflickr.com/400/400/rippedjeans?lock=21",
+      "image": "asset/image/image-item/quan-jean.jpg",
       "colors": [
         "Xanh mài"
       ],
@@ -576,7 +576,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 44,
-      "image": "https://loremflickr.com/400/400/chinopants?lock=22",
+      "image": "asset/image/image-item/quan-kaki.jpg",
       "colors": [
         "Xanh than"
       ],
@@ -602,7 +602,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 76,
-      "image": "https://loremflickr.com/400/400/gymshorts?lock=23",
+      "image": "asset/image/image-item/quan-short.jpg",
       "colors": [
         "Đen",
         "Xám"
@@ -630,7 +630,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 31,
-      "image": "https://loremflickr.com/400/400/trackpants?lock=24",
+      "image": "asset/image/image-item/quan-the-thao.jpg",
       "colors": [
         "Đen Trắng"
       ],
@@ -656,7 +656,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 21,
-      "image": "https://loremflickr.com/400/400/suedesneakers?lock=25",
+      "image": "asset/image/image-item/giay-sneaker.jpg",
       "colors": [
         "Nâu",
         "Xám"
@@ -683,7 +683,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 19,
-      "image": "https://loremflickr.com/400/400/badmintonshoes?lock=26",
+      "image": "asset/image/image-item/giay-the-thao.jpg",
       "colors": [
         "Trắng Đỏ"
       ],
@@ -710,7 +710,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 9,
-      "image": "https://loremflickr.com/400/400/marathonshoes?lock=27",
+      "image": "asset/image/image-item/giay-chay-bo.jpg",
       "colors": [
         "Cam",
         "Xanh lá"
@@ -737,7 +737,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 82,
-      "image": "https://loremflickr.com/400/400/slides?lock=28",
+      "image": "asset/image/image-item/giay-sandal-dep.jpg",
       "colors": [
         "Đen",
         "Be"
@@ -765,7 +765,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 40,
-      "image": "https://loremflickr.com/400/400/buckethat?lock=29",
+      "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Đen",
         "Vàng"
@@ -790,7 +790,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 36,
-      "image": "https://loremflickr.com/400/400/minibackpack?lock=30",
+      "image": "asset/image/image-item/balo.jpg",
       "colors": [
         "Xanh dương",
         "Hồng"
@@ -815,7 +815,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 58,
-      "image": "https://loremflickr.com/400/400/oversizetee?lock=31",
+      "image": "asset/image/image-item/ao-thun.jpg",
       "colors": [
         "Đen",
         "Trắng",
@@ -843,7 +843,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 29,
-      "image": "https://loremflickr.com/400/400/denimshirt?lock=32",
+      "image": "asset/image/image-item/ao-so-mi.jpg",
       "colors": [
         "Xanh jean"
       ],
@@ -869,7 +869,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 41,
-      "image": "https://loremflickr.com/400/400/polo-shirt?lock=33",
+      "image": "asset/image/image-item/ao-polo.jpg",
       "colors": [
         "Trắng phối đen"
       ],
@@ -895,7 +895,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 65,
-      "image": "https://loremflickr.com/400/400/hoodie?lock=34",
+      "image": "asset/image/image-item/ao-khoac.jpg",
       "colors": [
         "Xám",
         "Vàng"
@@ -921,7 +921,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 93,
-      "image": "https://loremflickr.com/400/400/tanktop?lock=35",
+      "image": "asset/image/image-item/ao1.jpeg",
       "colors": [
         "Đen",
         "Đỏ"
@@ -948,7 +948,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 48,
-      "image": "https://loremflickr.com/400/400/blackjeans?lock=36",
+      "image": "asset/image/image-item/quan1.jpeg",
       "colors": [
         "Đen"
       ],
@@ -975,7 +975,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 27,
-      "image": "https://loremflickr.com/400/400/cargopants?lock=37",
+      "image": "asset/image/image-item/quan2.jpeg",
       "colors": [
         "Rêu",
         "Đen"
@@ -1002,7 +1002,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 52,
-      "image": "https://loremflickr.com/400/400/jeanshorts?lock=38",
+      "image": "asset/image/image-item/quan3.jpeg",
       "colors": [
         "Xanh mài"
       ],
@@ -1028,7 +1028,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 39,
-      "image": "https://loremflickr.com/400/400/leggings?lock=39",
+      "image": "asset/image/image-item/quan4.jpeg",
       "colors": [
         "Đen"
       ],
@@ -1054,7 +1054,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 11,
-      "image": "https://loremflickr.com/400/400/reflectiveshoes?lock=40",
+      "image": "asset/image/image-item/giay1.jpeg",
       "colors": [
         "Xám bạc"
       ],
@@ -1080,7 +1080,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 23,
-      "image": "https://loremflickr.com/400/400/tennisshoes?lock=41",
+      "image": "asset/image/image-item/giay2.jpeg",
       "colors": [
         "Trắng Xanh"
       ],
@@ -1106,7 +1106,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 17,
-      "image": "https://loremflickr.com/400/400/trailshoes?lock=42",
+      "image": "asset/image/image-item/giay3.jpeg",
       "colors": [
         "Nâu xanh"
       ],
@@ -1132,7 +1132,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 44,
-      "image": "https://loremflickr.com/400/400/leather-sandals?lock=43",
+      "image": "asset/image/image-item/giay4.jpeg",
       "colors": [
         "Nâu Đen"
       ],
@@ -1158,7 +1158,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 120,
-      "image": "https://loremflickr.com/400/400/beanie?lock=44",
+      "image": "asset/image/image-item/balo1.jpeg",
       "colors": [
         "Xám",
         "Đen",
@@ -1184,7 +1184,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 33,
-      "image": "https://loremflickr.com/400/400/smart-backpack?lock=45",
+      "image": "asset/image/image-item/balo2.jpeg",
       "colors": [
         "Đen"
       ],
@@ -1208,7 +1208,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 59,
-      "image": "https://loremflickr.com/400/400/henley?lock=46",
+      "image": "asset/image/image-item/ao2.jpeg",
       "colors": [
         "Trắng",
         "Xám"
@@ -1235,7 +1235,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 42,
-      "image": "https://loremflickr.com/400/400/mandarin-shirt?lock=47",
+      "image": "asset/image/image-item/ao3.jpeg",
       "colors": [
         "Trắng",
         "Xanh lơ"
@@ -1262,7 +1262,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 35,
-      "image": "https://loremflickr.com/400/400/embroidered-polo?lock=48",
+      "image": "asset/image/image-item/ao4.jpeg",
       "colors": [
         "Đen",
         "Trắng"
@@ -1289,7 +1289,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 18,
-      "image": "https://loremflickr.com/400/400/trenchcoat?lock=49",
+      "image": "asset/image/image-item/ao5.jpeg",
       "colors": [
         "Be",
         "Đen"
@@ -1315,7 +1315,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 43,
-      "image": "https://loremflickr.com/400/400/trackjacket?lock=50",
+      "image": "asset/image/image-item/ao6.jpeg",
       "colors": [
         "Đen",
         "Navy"
@@ -1342,7 +1342,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 72,
-      "image": "https://loremflickr.com/400/400/tshirt-white?lock=51",
+      "image": "asset/image/image-item/ao7.jpeg",
       "colors": [
         "Trắng",
         "Đen"
@@ -1370,7 +1370,7 @@
       "is_new": false,
       "is_sale": false,
       "quantity": 31,
-      "image": "https://loremflickr.com/400/400/linenshirt?lock=52",
+      "image": "asset/image/image-item/ao8.jpeg",
       "colors": [
         "Xanh lơ",
         "Kem"
@@ -1397,7 +1397,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 26,
-      "image": "https://loremflickr.com/400/400/golfpolo?lock=53",
+      "image": "asset/image/image-item/ao9.jpeg",
       "colors": [
         "Đỏ",
         "Xanh Navy"
@@ -1425,7 +1425,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 14,
-      "image": "https://loremflickr.com/400/400/parka?lock=54",
+      "image": "asset/image/image-item/ao10.jpeg",
       "colors": [
         "Đen",
         "Xanh Rêu"
@@ -1451,7 +1451,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 88,
-      "image": "https://loremflickr.com/400/400/compression-shirt?lock=55",
+      "image": "asset/image/image-item/ao11.jpeg",
       "colors": [
         "Đen",
         "Xám"
@@ -1478,7 +1478,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 37,
-      "image": "https://loremflickr.com/400/400/baggypants?lock=56",
+      "image": "asset/image/image-item/quan5.jpeg",
       "colors": [
         "Xanh nhạt",
         "Đen"
@@ -1506,7 +1506,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 46,
-      "image": "https://loremflickr.com/400/400/cargojoggers?lock=57",
+      "image": "asset/image/image-item/quan6.jpeg",
       "colors": [
         "Đen",
         "Vàng cát"
@@ -1533,7 +1533,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 95,
-      "image": "https://loremflickr.com/400/400/fleece-shorts?lock=58",
+      "image": "asset/image/image-item/quan7.jpeg",
       "colors": [
         "Xám",
         "Than"
@@ -1560,7 +1560,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 66,
-      "image": "https://loremflickr.com/400/400/gympants?lock=59",
+      "image": "asset/image/image-item/quan8.jpeg",
       "colors": [
         "Đen"
       ],
@@ -1587,7 +1587,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 13,
-      "image": "https://loremflickr.com/400/400/chunkyshoes?lock=60",
+      "image": "asset/image/image-item/giay5.jpeg",
       "colors": [
         "Trắng phối màu"
       ],
@@ -1614,7 +1614,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 21,
-      "image": "https://loremflickr.com/400/400/basketballshoes?lock=61",
+      "image": "asset/image/image-item/giay6.jpeg",
       "colors": [
         "Đen Đỏ",
         "Trắng Xanh"
@@ -1641,7 +1641,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 37,
-      "image": "https://loremflickr.com/400/400/cushionshoes?lock=62",
+      "image": "asset/image/image-item/giay7.jpeg",
       "colors": [
         "Xanh Navy"
       ],
@@ -1667,7 +1667,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 80,
-      "image": "https://loremflickr.com/400/400/flipflops?lock=63",
+      "image": "asset/image/image-item/giay8.jpeg",
       "colors": [
         "Đen",
         "Dương"
@@ -1695,7 +1695,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 42,
-      "image": "https://loremflickr.com/400/400/snapback?lock=64",
+      "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Đen",
         "Đỏ"
@@ -1720,7 +1720,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 29,
-      "image": "https://loremflickr.com/400/400/military-backpack?lock=65",
+      "image": "asset/image/image-item/balo3.jpeg",
       "colors": [
         "Camo"
       ],
@@ -1744,7 +1744,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 55,
-      "image": "https://loremflickr.com/400/400/v-neck?lock=66",
+      "image": "asset/image/image-item/ao12.jpeg",
       "colors": [
         "Đen",
         "Trắng",
@@ -1772,7 +1772,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 31,
-      "image": "https://loremflickr.com/400/400/striped-shirt?lock=67",
+      "image": "asset/image/image-item/ao13.jpeg",
       "colors": [
         "Sọc xanh trắng"
       ],
@@ -1798,7 +1798,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 48,
-      "image": "https://loremflickr.com/400/400/pique-polo?lock=68",
+      "image": "asset/image/image-item/ao14.jpeg",
       "colors": [
         "Vàng",
         "Xanh than"
@@ -1825,7 +1825,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 12,
-      "image": "https://loremflickr.com/400/400/overcoat?lock=69",
+      "image": "asset/image/image-item/ao15.jpeg",
       "colors": [
         "Nâu",
         "Xám"
@@ -1851,7 +1851,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 25,
-      "image": "https://loremflickr.com/400/400/gymjacket?lock=70",
+      "image": "asset/image/image-item/ao18.jpg",
       "colors": [
         "Hồng",
         "Tím",
@@ -1879,7 +1879,7 @@
       "is_new": false,
       "is_sale": false,
       "quantity": 43,
-      "image": "https://loremflickr.com/400/400/darkjeans?lock=71",
+      "image": "asset/image/image-item/quan9.jpeg",
       "colors": [
         "Xanh đen"
       ],
@@ -1906,7 +1906,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 56,
-      "image": "https://loremflickr.com/400/400/olive-kaki?lock=72",
+      "image": "asset/image/image-item/quan10.jpeg",
       "colors": [
         "Xanh rêu"
       ],
@@ -1932,7 +1932,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 62,
-      "image": "https://loremflickr.com/400/400/denimshorts?lock=73",
+      "image": "asset/image/image-item/quan11.jpeg",
       "colors": [
         "Xanh mài"
       ],
@@ -1958,7 +1958,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 81,
-      "image": "https://loremflickr.com/400/400/sweatpants?lock=74",
+      "image": "asset/image/image-item/quan12.jpeg",
       "colors": [
         "Xám",
         "Than"
@@ -1985,7 +1985,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 29,
-      "image": "https://loremflickr.com/400/400/plimsolls?lock=75",
+      "image": "asset/image/image-item/giay9.jpeg",
       "colors": [
         "Đen",
         "Trắng"
@@ -2013,7 +2013,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 24,
-      "image": "https://loremflickr.com/400/400/futsalshoes?lock=76",
+      "image": "asset/image/image-item/giay10.jpeg",
       "colors": [
         "Vàng neon"
       ],
@@ -2040,7 +2040,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 15,
-      "image": "https://loremflickr.com/400/400/trailrunning?lock=77",
+      "image": "asset/image/image-item/giay11.jpeg",
       "colors": [
         "Cam Đen"
       ],
@@ -2066,7 +2066,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 90,
-      "image": "https://loremflickr.com/400/400/school-sandals?lock=78",
+      "image": "asset/image/image-item/giay12.jpeg",
       "colors": [
         "Đen"
       ],
@@ -2094,7 +2094,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 55,
-      "image": "https://loremflickr.com/400/400/fishermans-hat?lock=79",
+      "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Vàng rêu",
         "Đen"
@@ -2119,7 +2119,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 38,
-      "image": "https://loremflickr.com/400/400/canvas-backpack?lock=80",
+      "image": "asset/image/image-item/balo4.jpeg",
       "colors": [
         "Trắng kem"
       ],
@@ -2143,7 +2143,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 47,
-      "image": "https://loremflickr.com/400/400/raglanshirt?lock=81",
+      "image": "asset/image/image-item/ao-thun.jpg",
       "colors": [
         "Trắng-Đen",
         "Xám-Navy"
@@ -2171,7 +2171,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 28,
-      "image": "https://loremflickr.com/400/400/pink-shirt?lock=82",
+      "image": "asset/image/image-item/ao-so-mi.jpg",
       "colors": [
         "Hồng nhạt"
       ],
@@ -2197,7 +2197,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 41,
-      "image": "https://loremflickr.com/400/400/logo-polo?lock=83",
+      "image": "asset/image/image-item/ao-polo.jpg",
       "colors": [
         "Đen",
         "Navy"
@@ -2224,7 +2224,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 34,
-      "image": "https://loremflickr.com/400/400/cardigan?lock=84",
+      "image": "asset/image/image-item/ao-khoac.jpg",
       "colors": [
         "Kem",
         "Đen"
@@ -2251,7 +2251,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 77,
-      "image": "https://loremflickr.com/400/400/gymtank?lock=85",
+      "image": "asset/image/image-item/ao-the-thao.jpg",
       "colors": [
         "Xanh mint",
         "Đen"
@@ -2278,7 +2278,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 30,
-      "image": "https://loremflickr.com/400/400/straightjeans?lock=86",
+      "image": "asset/image/image-item/quan-jean.jpg",
       "colors": [
         "Xanh trung"
       ],
@@ -2305,7 +2305,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 22,
-      "image": "https://loremflickr.com/400/400/gray-kaki?lock=87",
+      "image": "asset/image/image-item/quan-kaki.jpg",
       "colors": [
         "Xám chuột"
       ],
@@ -2331,7 +2331,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 64,
-      "image": "https://loremflickr.com/400/400/2in1-shorts?lock=88",
+      "image": "asset/image/image-item/quan-short.jpg",
       "colors": [
         "Đen"
       ],
@@ -2357,7 +2357,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 50,
-      "image": "https://loremflickr.com/400/400/windpants?lock=89",
+      "image": "asset/image/image-item/quan-the-thao.jpg",
       "colors": [
         "Navy"
       ],
@@ -2383,7 +2383,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 33,
-      "image": "https://loremflickr.com/400/400/slipon?lock=90",
+      "image": "asset/image/image-item/giay-sneaker.jpg",
       "colors": [
         "Đen Trắng"
       ],
@@ -2410,7 +2410,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 16,
-      "image": "https://loremflickr.com/400/400/volleyballshoes?lock=91",
+      "image": "asset/image/image-item/giay-the-thao.jpg",
       "colors": [
         "Trắng Xanh"
       ],
@@ -2437,7 +2437,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 59,
-      "image": "https://loremflickr.com/400/400/dailyrun?lock=92",
+      "image": "asset/image/image-item/giay-chay-bo.jpg",
       "colors": [
         "Đen"
       ],
@@ -2463,7 +2463,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 11,
-      "image": "https://loremflickr.com/400/400/mensandals?lock=93",
+      "image": "asset/image/image-item/giay-sandal-dep.jpg",
       "colors": [
         "Nâu bò"
       ],
@@ -2490,7 +2490,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 25,
-      "image": "https://loremflickr.com/400/400/beret?lock=94",
+      "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Đen",
         "Nâu"
@@ -2515,7 +2515,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 110,
-      "image": "https://loremflickr.com/400/400/drawstring-bag?lock=95",
+      "image": "asset/image/image-item/balo.jpg",
       "colors": [
         "Đen",
         "Xanh"
@@ -2540,7 +2540,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 64,
-      "image": "https://loremflickr.com/400/400/polotee?lock=96",
+      "image": "asset/image/image-item/ao1.jpeg",
       "colors": [
         "Trắng",
         "Xám"
@@ -2568,7 +2568,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 22,
-      "image": "https://loremflickr.com/400/400/redflannel?lock=97",
+      "image": "asset/image/image-item/ao2.jpeg",
       "colors": [
         "Kẻ đỏ đen"
       ],
@@ -2594,7 +2594,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 49,
-      "image": "https://loremflickr.com/400/400/tippedpolo?lock=98",
+      "image": "asset/image/image-item/ao3.jpeg",
       "colors": [
         "Than phối trắng"
       ],
@@ -2620,7 +2620,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 8,
-      "image": "https://loremflickr.com/400/400/suedejacket?lock=99",
+      "image": "asset/image/image-item/ao4.jpeg",
       "colors": [
         "Nâu bò"
       ],
@@ -2645,7 +2645,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 33,
-      "image": "https://loremflickr.com/400/400/reflective-jacket?lock=100",
+      "image": "asset/image/image-item/ao5.jpeg",
       "colors": [
         "Xanh neon"
       ],
