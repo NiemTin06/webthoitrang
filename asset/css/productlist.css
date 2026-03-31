@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -433,7 +437,6 @@ button[type=reset]:hover {
   font-size: 2rem;
   font-weight: 700;
   color: #242021;
-  margin-bottom: 30px;
 }
 .product__item {
   display: flex;
@@ -520,6 +523,24 @@ button[type=reset]:hover {
   color: #999;
   text-decoration: line-through;
   font-size: 0.9rem;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+.search input {
+  border-radius: 5px;
+  height: 30px;
+  width: 260px;
+}
+.search button {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px #4CAF50 solid;
+}
+.search button:hover {
+  background-color: white;
+  color: #4CAF50;
 }
 
 /*# sourceMappingURL=productlist.css.map */

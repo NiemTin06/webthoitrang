@@ -4,59 +4,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const step1 = document.getElementById('step1');
     const step2 = document.getElementById('step2');
 
-    // Tạo một biến tạm để "nhớ" email người dùng vừa nhập
+    // Bien tam de luu email nguoi dung dang can khoi tao lai mat khau
     let emailToReset = "";
 
-    // BƯỚC 1: XÁC NHẬN EMAIL
+    // --- BUOC 1: XAC NHAN EMAIL CO TON TAI TRONG HE THONG KHONG ---
     emailForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Ngăn load lại trang
+        e.preventDefault(); // Ngan load lai trang khi bam submit
         
-        // 1. Lấy giá trị email người dùng nhập (Giả sử thẻ input có type="email")
+        // Lay gia tri email tu o input
         const enteredEmail = emailForm.querySelector('input[type="email"]').value.trim();
         
-        // 2. Lấy danh sách tài khoản từ LocalStorage
+        // Lay danh sach tat ca tai khoan tu LocalStorage
         const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
         
-        // 3. Kiểm tra xem email này có tồn tại trong hệ thống không
+        // Kiem tra email nhap vao co khop voi tai khoan nao khong
         const userExists = allUsers.some(user => user.email === enteredEmail);
         
         if (userExists) {
-            // Nếu có: Lưu lại email vào biến tạm và chuyển sang Bước 2
+            // Neu ton tai: Luu email vao bien tam va chuyen sang form nhap mat khau moi
             emailToReset = enteredEmail;
             step1.style.display = 'none';
             step2.style.display = 'block';
         } else {
-            // Nếu không: Báo lỗi
-            alert("Email này chưa được đăng ký trong hệ thống!");
+            // Neu khong: Bao loi cho nguoi dung
+            alert("Email nay chua duoc dang ky trong he thong!");
         }
     });
 
-    // BƯỚC 2: CẬP NHẬT MẬT KHẨU MỚI
+    // --- BUOC 2: CAP NHAT MAT KHAU MOI VAO LOCALSTORAGE ---
     newPasswordForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // 1. Lấy mật khẩu mới người dùng vừa nhập (Giả sử thẻ input có type="password")
+        // Lay mat khau moi tu o input
         const newPassword = newPasswordForm.querySelector('input[type="password"]').value.trim();
         
-        // (Tùy chọn) Nếu bạn có ô Nhập lại mật khẩu, bạn có thể kiểm tra khớp mật khẩu ở đây
-        
-        // 2. Lấy lại danh sách user từ LocalStorage
+        // Lay lai danh sach user moi nhat tu LocalStorage
         let allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
         
-        // 3. Tìm user có email khớp với emailToReset và cập nhật mật khẩu
+        // Tim user co email trung khop va cap nhat mat khau moi
         allUsers = allUsers.map(user => {
             if (user.email === emailToReset) {
-                user.password = newPassword; // Đổi thành mật khẩu mới
+                user.password = newPassword; // Ghi de mat khau cu
             }
             return user;
         });
         
-        // 4. Lưu danh sách đã được cập nhật trở lại LocalStorage
+        // Luu lai mang danh sach user da cap nhat vao LocalStorage
         localStorage.setItem('allUsers', JSON.stringify(allUsers));
         
-        alert('Đổi mật khẩu thành công! Vui lòng đăng nhập lại với mật khẩu mới.');
+        alert('Doi mat khau thanh cong! Vui long dang nhap lai voi mat khau moi.');
         
-        // Chuyển về trang đăng nhập (thường file đăng nhập là login.html)
+        // Chuyen huong nguoi dung ve trang dang nhap
         window.location.href = 'login.html'; 
     });
 });

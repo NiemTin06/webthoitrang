@@ -9,13 +9,18 @@
 /* Container chiếm toàn bộ màn hình */
 .container {
   display: flex;
-  height: 100vh; /* Chiều cao 100% màn hình */
-  width: 100vw; /* Chiều rộng 100% màn hình */
+  height: 100vh;
+  width: 100vw;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 /* Nửa bên trái (Nền đen) */
 .left-panel {
-  flex: 4; /* Chiếm 4 phần */
+  flex: 4;
   background-color: #050505;
   color: #ffffff;
   display: flex;
@@ -23,35 +28,52 @@
   justify-content: center;
   padding: 10%;
 }
-
 .left-panel h1 {
   font-size: 3rem;
   margin-bottom: 15px;
   font-weight: 600;
 }
-
 .left-panel p {
   font-size: 1.1rem;
   color: #cccccc;
   line-height: 1.5;
   max-width: 400px;
 }
+@media (max-width: 768px) {
+  .left-panel {
+    flex: none;
+    height: 30vh;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 /* Nửa bên phải (Nền trắng, chứa form) */
 .right-panel {
-  flex: 6; /* Chiếm 6 phần */
+  flex: 6;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
 }
-
-.form-wrapper {
-  width: 100%;
-  max-width: 450px; /* Giới hạn chiều rộng của form cho đẹp */
+@media (max-width: 768px) {
+  .right-panel {
+    flex: 1;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
 }
 
+/* Khu vực chứa Form */
+.form-wrapper {
+  width: 100%;
+  max-width: 450px;
+  /* Nhóm ô nhập liệu */
+  /* Thêm style cho class báo lỗi (được dùng trong JavaScript) */
+  /* Nút Đăng ký */
+  /* Chữ điều hướng đăng nhập */
+}
 .form-wrapper h2 {
   font-size: 2rem;
   color: #333;
@@ -59,28 +81,26 @@
   font-weight: 600;
   text-align: center;
 }
-
-/* Nhóm ô nhập liệu */
-.input-group {
+.form-wrapper .input-group {
   margin-bottom: 20px;
 }
-
-.input-group input {
+.form-wrapper .input-group input {
   width: 100%;
   padding: 15px 20px;
   border: 1px solid #e0e0e0;
-  border-radius: 30px; /* Bo tròn giống hình */
+  border-radius: 30px;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
 }
-
-.input-group input:focus {
-  border-color: #333; /* Đổi màu viền khi click vào */
+.form-wrapper .input-group input:focus {
+  border-color: #333;
 }
-
-/* Nút Đăng ký */
-.btn-submit {
+.form-wrapper .input-error {
+  border: 2px solid red !important;
+  background-color: #ffe6e6 !important;
+}
+.form-wrapper .btn-submit {
   width: 100%;
   padding: 15px;
   background-color: #1a1a1a;
@@ -93,41 +113,22 @@
   margin-top: 10px;
   transition: background-color 0.3s ease;
 }
-
-.btn-submit:hover {
+.form-wrapper .btn-submit:hover {
   background-color: #333333;
 }
-
-/* Chữ điều hướng đăng nhập */
-.login-link {
+.form-wrapper .login-link {
   text-align: center;
   margin-top: 25px;
   font-size: 0.9rem;
   color: #666;
 }
-
-.login-link a {
-  color: black; /* Màu tím dịu giống link trong ảnh */
+.form-wrapper .login-link a {
+  color: black;
   text-decoration: none;
   font-weight: 500;
 }
-
-/* Reponsive: Chuyển dọc khi ở màn hình điện thoại */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .left-panel {
-    flex: none;
-    height: 30vh;
-    align-items: center;
-    text-align: center;
-  }
-  .right-panel {
-    flex: 1;
-    align-items: flex-start;
-    padding-top: 50px;
-  }
+.form-wrapper .login-link a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=signup.css.map */

@@ -284,7 +284,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 30,
-      "image": "https://loremflickr.com/400/400/footballshoes?lock=11",
+      "image": "asset/image/image-item/giay1.jpeg",
       "colors": [
         "Neon",
         "Xanh dương"
@@ -312,7 +312,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 18,
-      "image": "https://loremflickr.com/400/400/runningshoes?lock=12",
+    "image": "asset/image/image-item/giay2.jpeg",
       "colors": [
         "Đen Trắng",
         "Cam"
@@ -339,7 +339,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 55,
-      "image": "https://loremflickr.com/400/400/sandals?lock=13",
+     "image": "asset/image/image-item/giay-dandai-dep.jpg",
       "colors": [
         "Đen"
       ],
@@ -366,7 +366,7 @@
       "is_new": false,
       "is_sale": true,
       "quantity": 100,
-      "image": "https://loremflickr.com/400/400/cap?lock=14",
+    "image": "asset/image/image-item/mu.jpg",
       "colors": [
         "Đen"
       ],
@@ -390,7 +390,7 @@
       "is_new": true,
       "is_sale": false,
       "quantity": 251,
-      "image": "https://loremflickr.com/400/400/backpack?lock=15",
+      "image": "asset/image/image-item/balo1.jpg",
       "colors": [
         "Xám đen"
       ],
@@ -414,7 +414,7 @@
       "is_new": true,
       "is_sale": true,
       "quantity": 62,
-      "image": "https://loremflickr.com/400/400/graphic-tee?lock=16",
+      "image": "asset/image/image-item/ao2.jpg",
       "colors": [
         "Đen",
         "Trắng"

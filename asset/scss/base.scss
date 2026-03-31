@@ -8,6 +8,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 $bg-color-1: #ffffff;
 $bg-color-2: #242021;
 $text-color: #333;

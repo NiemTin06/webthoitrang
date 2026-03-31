@@ -1,284 +1,16 @@
-// export const initStorage = () => {
-//   if (!localStorage.getItem("cart")) {
-//     localStorage.setItem("cart", JSON.stringify([]));
-//   }
-
-//   if (!localStorage.getItem("purchaseHistory")) {
-//     localStorage.setItem("purchaseHistory", JSON.stringify([]));
-//   }
-
-//   if (!localStorage.getItem("discount")) {
-//     const discount = [
-//         {
-//             code: "muasamthara",
-//             discount: 36000,
-//             require: 67000,
-//             desc: "Giảm 36 ngàn đồng cho đơn giá trị trên 67 ngàn đồng"
-//         }
-
-//     ]
-
-//     localStorage.setItem("discount", JSON.stringify(discount));
-//   }
-// };
-
-// export const getCart = () => {
-//     const cart = localStorage.getItem("cart");
-//     if (!cart) return [];
-//     try {
-//         const parsedCart = JSON.parse(cart);
-//         const validCart = parsedCart.filter(item => item && item.id && item.id !== "undefined");
-//         if (validCart.length !== parsedCart.length) {
-//             localStorage.setItem("cart", JSON.stringify(validCart));
-//         }
-//         return validCart;
-//     } catch (e) {
-//         return [];
-//     }
-// }
-// export const getPurchaseHistory = () => {
-//     const list = localStorage.getItem("purchaseHistory");
-//     return list ? JSON.parse(list) : [];
-// }
-// export const saveCart = (cart) => {
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// }
-// export const deleteCart = (cartItem, cart) => {
-//     const id = cartItem.dataset.id;
-//     const color = cartItem.dataset.color;
-//     const size = cartItem.dataset.size;
-//     const newCart = cart.filter(item =>
-//         String(item.id) !== String(id) ||
-//         String(item.color) !== String(color) ||
-//         String(item.size) !== String(size)
-//     );
-//     saveCart(newCart);
-// }
-// export const getTotalPrice = (cart) => {
-//     let total = 0;
-//     cart.forEach(item => {
-//         if (item.checked){
-//             total += item.price * item.quantity;
-//         }
-//     });
-//     return total;
-// }
-// export const addToCart = (product, quantity, cart) => {
-//     const exitingProduct = cart.find(item => 
-//         String(item.id) === String(product.id) && 
-//         String(item.color) === String(product.color) && 
-//         String(item.size) === String(product.size)
-//     );
-//     if (exitingProduct) {
-//         exitingProduct.quantity += quantity;
-//         exitingProduct.checked = product.checked;
-//     } else {
-//         cart.push({
-//             ...product,
-//             quantity: quantity
-//         });
-//     }
-//     saveCart(cart);
-// }
-// export const updateChecked = (cartItem, isChecked) => {
-//     const cart = getCart();
-//     const id = cartItem.dataset.id;
-//     const color = cartItem.dataset.color;
-//     const size = cartItem.dataset.size;
-
-//     const product = cart.find(item =>
-//         String(item.id) === String(id) &&
-//         String(item.color) === String(color) &&
-//         String(item.size) === String(size)
-//     );
-
-//     if (product) {
-//         product.checked = isChecked; // Cập nhật true hoặc false
-//     }
-//     saveCart(cart); // Lưu lại vào LocalStorage
-// }
-// const cartList = document.querySelector(".cart__list");
-
-// const totalPrice = document.querySelector(".checkout__price--before")
-// const lastTotalPrice = document.querySelector(".checkout__price--after")
-// const buyItem = document.querySelector(".checkout__pay");
-
-// const checkEmptyCartState = () => {
-//     const cart = getCart();
-//     if (!cart || cart.length === 0) {
-//         if (cartList) cartList.innerHTML = "<div style='text-align: center; font-size: 1.2rem; padding: 40px 20px; color: #555; background: #e2e2e2; border-radius: 20px; font-weight: 500;'>Giỏ hàng của bạn đang trống.</div>";
-//         const checkout = document.querySelector(".checkout");
-//         const cartAll = document.querySelector(".cart__all");
-//         if (checkout) checkout.style.display = "block";
-//         if (cartAll) cartAll.style.display = "none";
-//     }
-// }
-
-// const updateTotal = () => {
-//     const cart = getCart();
-//     const total = getTotalPrice(cart);
-//     if (total != null && lastTotalPrice && totalPrice){
-//         totalPrice.innerHTML = `${total.toLocaleString()}đ`;
-//         lastTotalPrice.innerHTML = `${total.toLocaleString()}đ`;
-//     }
-// }
-// updateTotal();
-
-// const cartAllCheckbox = document.querySelector(".cart__all input[type='checkbox']");
-// if (cartAllCheckbox) {
-//     cartAllCheckbox.addEventListener("change", (e) => {
-//         const cart = getCart();
-//         const isChecked = e.target.checked;
-//         cart.forEach(item => item.checked = isChecked);
-//         saveCart(cart);
-//         const itemCheckboxes = document.querySelectorAll(".cart__checkbox");
-//         itemCheckboxes.forEach(cb => cb.checked = isChecked);
-//         updateTotal();
-//     });
-// }
-
-// if (cartList) {
-//     cartList.addEventListener("change", (e) => {
-//         const checkbox = e.target.classList.contains("cart__checkbox");
-//         if (checkbox) {
-//             const cartItem = e.target.closest(".cart__item");
-//             const isChecked = e.target.checked;
-//             updateChecked(cartItem, isChecked);
-//             updateTotal();
-            
-//             if (cartAllCheckbox) {
-//                 const allCheckboxes = document.querySelectorAll(".cart__checkbox");
-//                 const allChecked = allCheckboxes.length > 0 && Array.from(allCheckboxes).every(cb => cb.checked);
-//                 cartAllCheckbox.checked = allChecked;
-//             }
-//         }
-//     })
-//     cartList.addEventListener("click", (e) => {
-//         const cartItem = e.target.closest(".cart__item");
-//         const cart = getCart();
-//         const id = cartItem.dataset.id;
-//         const quantityProduct = cartItem.querySelector(".cart__number");
-//         if (e.target.classList.contains("cart__quantity-btn--up")) {
-//             let quantity = Number(quantityProduct.innerHTML) + 1;
-//             quantityProduct.innerHTML = quantity;
-//             const color = cartItem.dataset.color;
-//             const size = cartItem.dataset.size;
-//             const product = cart.find(item =>
-//                 String(item.id) === String(id) &&
-//                 String(item.color) === String(color) &&
-//                 String(item.size) === String(size)
-//             );
-//             if (product) {
-//                 product.quantity = quantity;
-//             }
-//             saveCart(cart);
-//             updateTotal();
-//         }
-//         if (e.target.classList.contains("cart__quantity-btn--down")) {
-//             let quantity = Number(quantityProduct.innerHTML);
-//             if (quantity == 1) {
-//                 const confirmDelete = confirm("Bạn có muốn xóa sản phẩm này không");
-//                 if (confirmDelete) {
-//                     deleteCart(cartItem, cart);
-//                     cartItem.remove();
-//                     checkEmptyCartState();
-//                     updateTotal();
-//                 }
-//             } else if (quantity > 1) {
-//                 quantity -= 1;
-//                 quantityProduct.innerHTML = quantity;
-//                 const color = cartItem.dataset.color;
-//                 const size = cartItem.dataset.size;
-//                 const product = cart.find(item =>
-//                     String(item.id) === String(id) &&
-//                     String(item.color) === String(color) &&
-//                     String(item.size) === String(size)
-//                 );
-//                 if (product) {
-//                     product.quantity = quantity;
-//                 }
-//                 saveCart(cart);
-//                 updateTotal();
-//             }
-//         }
-//         if (e.target.closest(".cart__deletebutton")) {
-//             const confirmDelete = confirm("Bạn có muốn xóa sản phẩm này không");
-//             if (confirmDelete) {
-//                 deleteCart(cartItem, cart);
-//                 cartItem.remove();
-//                 checkEmptyCartState();
-//                 updateTotal();
-//             }
-//         }
-//     })
-// }
-// if (buyItem) {
-//     buyItem.addEventListener("click", () => {
-//         const cart = getCart();
-//         const purchaseHistory = getPurchaseHistory();
-//         const productList = cart.filter(item => item.checked == true);
-//         productList.forEach((item) =>{
-//             purchaseHistory.push(
-//                 {
-//                 ...item,
-//                 quantity: item.quantity,
-//                 method: document.querySelector('input[name="payment"]:checked')?.value,
-//                 time: new Date(),
-//                 totalPrice:  item.quantity * item.price
-//                 }       
-//             )
-//         })
-//          localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
-//          window.location.href = "../../thanks.html"
-//     })
-// }
-
-// //Add vocher vao 
-// const vocher = document.querySelector(".checkout__voucher button");
-// if (vocher){
-//     vocher.addEventListener("click", () => {
-//         const detailPercent = document.querySelector(".checkout__discount--number");
-//         const detailDiscount = document.querySelector(".checkout__detailDiscount");
-//         const current = document.querySelector(".checkout__price--after");
-//         // const before = document.querySelector(".checkout__price--before");
-//         const code = document.querySelector(".checkout__voucher input").value;
-//         const discountList = JSON.parse(localStorage.getItem("discount")) || [];
-//         let found = false;
-//         const cart = getCart();
-//         const totalAmount = getTotalPrice(cart);
-//         discountList.forEach((item) => {
-//             if (item.code === code) {
-//                 found = true;
-//                 if (totalAmount > Number(item.require)){
-//                     detailDiscount.innerHTML= item.desc;
-//                     detailPercent.innerHTML = `${item.discount.toLocaleString()}đ`;
-//                     const finalAmount = totalAmount - Number(item.discount);
-//                     current.innerHTML = `${finalAmount.toLocaleString()}đ`;
-//                 } else {
-//                     alert(`Đơn hàng phải trên ${item.require.toLocaleString()}đ mới dùng được mã này.`);
-//                 }
-//             }
-//         });
-
-//         if (!found) {
-//             alert("Mã giảm giá không hợp lệ");
-//             detailDiscount.innerHTML= "";
-//             detailPercent.innerHTML = `0đ`;
-//             current.innerHTML = `${totalAmount.toLocaleString()}đ`;
-//         }
-//     });
-// }
-
+// --- KHOI TAO DU LIEU TRONG LOCALSTORAGE ---
 export const initStorage = () => {
+  // Tao gio hang rong neu chua co
   if (!localStorage.getItem("cart")) {
     localStorage.setItem("cart", JSON.stringify([]));
   }
 
+  // Tao lich su mua hang neu chua co
   if (!localStorage.getItem("purchaseHistory")) {
     localStorage.setItem("purchaseHistory", JSON.stringify([]));
   }
 
-  // Khởi tạo hoặc cập nhật mã giảm giá
+  // Khoi tao danh sach ma giam gia (Voucher)
   let discountList = JSON.parse(localStorage.getItem("discount")) || [];
   
   const defaultDiscounts = [
@@ -286,17 +18,17 @@ export const initStorage = () => {
         code: "muasamthara",
         discount: 36000,
         require: 67000,
-        desc: "Giảm 36 ngàn đồng cho đơn giá trị trên 67 ngàn đồng"
+        desc: "Giam 36 ngan dong cho don gia tri tren 67 ngan dong"
     },
     {
         code: "thanhhoa36",
         discount: 36000,
         require: 67000,
-        desc: "Giảm 36 ngàn đồng cho người Thanh Hóa khi món đồ có giá trị trên 67 ngàn đồng"
+        desc: "Giam 36 ngan dong cho nguoi Thanh Hoa khi don tren 67 ngan dong"
     }
   ];
 
-  // Thêm các mã mặc định nếu chưa có
+  // Them ma mac dinh vao neu ma do chua ton tai
   defaultDiscounts.forEach(defaultItem => {
     const exists = discountList.some(item => item.code === defaultItem.code);
     if (!exists) {
@@ -305,14 +37,17 @@ export const initStorage = () => {
   });
 
   localStorage.setItem("discount", JSON.stringify(discountList));
-
 };
 
+// --- CAC HAM TIEN ICH QUAN LY GIO HANG ---
+
+// Lay danh sach san pham tu gio hang
 export const getCart = () => {
     const cart = localStorage.getItem("cart");
     if (!cart) return [];
     try {
         const parsedCart = JSON.parse(cart);
+        // Loc bo cac san pham loi (khong co id)
         const validCart = parsedCart.filter(item => item && item.id && item.id !== "undefined");
         if (validCart.length !== parsedCart.length) {
             localStorage.setItem("cart", JSON.stringify(validCart));
@@ -322,13 +57,19 @@ export const getCart = () => {
         return [];
     }
 }
+
+// Lay lich su mua hang
 export const getPurchaseHistory = () => {
     const list = localStorage.getItem("purchaseHistory");
     return list ? JSON.parse(list) : [];
 }
+
+// Luu gio hang vao localStorage
 export const saveCart = (cart) => {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+// Xoa san pham khoi gio hang dua tren ID, mau sac va kich thuoc
 export const deleteCart = (cartItem, cart) => {
     const id = cartItem.dataset.id;
     const color = cartItem.dataset.color;
@@ -340,6 +81,8 @@ export const deleteCart = (cartItem, cart) => {
     );
     saveCart(newCart);
 }
+
+// Tinh tong tien cac san pham dang duoc tich chon (checked)
 export const getTotalPrice = (cart) => {
     let total = 0;
     cart.forEach(item => {
@@ -349,6 +92,8 @@ export const getTotalPrice = (cart) => {
     });
     return total;
 }
+
+// Them san pham moi vao gio hoac tang so luong neu da co
 export const addToCart = (product, quantity, cart) => {
     const exitingProduct = cart.find(item => 
         String(item.id) === String(product.id) && 
@@ -359,13 +104,12 @@ export const addToCart = (product, quantity, cart) => {
         exitingProduct.quantity += quantity;
         exitingProduct.checked = product.checked;
     } else {
-        cart.push({
-            ...product,
-            quantity: quantity
-        });
+        cart.push({ ...product, quantity: quantity });
     }
     saveCart(cart);
 }
+
+// Cap nhat trang thai checkbox cua san pham
 export const updateChecked = (cartItem, isChecked) => {
     const cart = getCart();
     const id = cartItem.dataset.id;
@@ -379,20 +123,23 @@ export const updateChecked = (cartItem, isChecked) => {
     );
 
     if (product) {
-        product.checked = isChecked; // Cập nhật true hoặc false
+        product.checked = isChecked;
     }
-    saveCart(cart); // Lưu lại vào LocalStorage
+    saveCart(cart);
 }
-const cartList = document.querySelector(".cart__list");
 
-const totalPrice = document.querySelector(".checkout__price--before")
-const lastTotalPrice = document.querySelector(".checkout__price--after")
+// --- LOGIC HIEN THI TREN GIAO DIEN (UI) ---
+
+const cartList = document.querySelector(".cart__list");
+const totalPrice = document.querySelector(".checkout__price--before");
+const lastTotalPrice = document.querySelector(".checkout__price--after");
 const buyItem = document.querySelector(".checkout__pay");
 
+// Kiem tra gio hang trong de hien thi thong bao
 const checkEmptyCartState = () => {
     const cart = getCart();
     if (!cart || cart.length === 0) {
-        if (cartList) cartList.innerHTML = "<div style='text-align: center; font-size: 1.2rem; padding: 40px 20px; color: #555; background: #e2e2e2; border-radius: 20px; font-weight: 500;'>Giỏ hàng của bạn đang trống.</div>";
+        if (cartList) cartList.innerHTML = "<div class='empty-msg'>Gio hang cua ban dang trong.</div>";
         const checkout = document.querySelector(".checkout");
         const cartAll = document.querySelector(".cart__all");
         if (checkout) checkout.style.display = "block";
@@ -400,16 +147,18 @@ const checkEmptyCartState = () => {
     }
 }
 
+// Cap nhat tong tien hien thi tren giao dien
 const updateTotal = () => {
     const cart = getCart();
     const total = getTotalPrice(cart);
     if (total != null && lastTotalPrice && totalPrice){
-        totalPrice.innerHTML = `${total.toLocaleString()}đ`;
-        lastTotalPrice.innerHTML = `${total.toLocaleString()}đ`;
+        totalPrice.innerHTML = `${total.toLocaleString()}d`;
+        lastTotalPrice.innerHTML = `${total.toLocaleString()}d`;
     }
 }
 updateTotal();
 
+// Su kien click vao checkbox "Chon tat ca"
 const cartAllCheckbox = document.querySelector(".cart__all input[type='checkbox']");
 if (cartAllCheckbox) {
     cartAllCheckbox.addEventListener("change", (e) => {
@@ -423,53 +172,49 @@ if (cartAllCheckbox) {
     });
 }
 
+// Cac su kien trong danh sach gio hang (thay doi checkbox, tang giam so luong, xoa)
 if (cartList) {
+    // Thay doi checkbox tung san pham
     cartList.addEventListener("change", (e) => {
-        const checkbox = e.target.classList.contains("cart__checkbox");
-        if (checkbox) {
+        if (e.target.classList.contains("cart__checkbox")) {
             const cartItem = e.target.closest(".cart__item");
             if (!cartItem) return;
-
-            const isChecked = e.target.checked;
-            updateChecked(cartItem, isChecked);
+            updateChecked(cartItem, e.target.checked);
             updateTotal();
 
+            // Tu dong check/uncheck nut "Chon tat ca"
             if (cartAllCheckbox) {
                 const allCheckboxes = document.querySelectorAll(".cart__checkbox");
                 const allChecked = allCheckboxes.length > 0 && Array.from(allCheckboxes).every(cb => cb.checked);
                 cartAllCheckbox.checked = allChecked;
             }
         }
-    })
+    });
+
+    // Xu ly click tang/giam so luong va xoa san pham
     cartList.addEventListener("click", (e) => {
         const cartItem = e.target.closest(".cart__item");
-        if (!cartItem) return; // FIX: Ngăn crash khi click vùng trống
+        if (!cartItem) return;
 
         const cart = getCart();
         const id = cartItem.dataset.id;
         const quantityProduct = cartItem.querySelector(".cart__number");
 
+        // Nut tang so luong
         if (e.target.classList.contains("cart__quantity-btn--up")) {
             let quantity = Number(quantityProduct.innerHTML) + 1;
             quantityProduct.innerHTML = quantity;
-            const color = cartItem.dataset.color;
-            const size = cartItem.dataset.size;
-            const product = cart.find(item =>
-                String(item.id) === String(id) &&
-                String(item.color) === String(color) &&
-                String(item.size) === String(size)
-            );
-            if (product) {
-                product.quantity = quantity;
-            }
+            const product = cart.find(item => String(item.id) === String(id));
+            if (product) product.quantity = quantity;
             saveCart(cart);
             updateTotal();
         }
+
+        // Nut giam so luong
         if (e.target.classList.contains("cart__quantity-btn--down")) {
             let quantity = Number(quantityProduct.innerHTML);
             if (quantity == 1) {
-                const confirmDelete = confirm("Bạn có muốn xóa sản phẩm này không");
-                if (confirmDelete) {
+                if (confirm("Ban co muon xoa san pham nay khong?")) {
                     deleteCart(cartItem, cart);
                     cartItem.remove();
                     checkEmptyCartState();
@@ -478,69 +223,62 @@ if (cartList) {
             } else if (quantity > 1) {
                 quantity -= 1;
                 quantityProduct.innerHTML = quantity;
-                const color = cartItem.dataset.color;
-                const size = cartItem.dataset.size;
-                const product = cart.find(item =>
-                    String(item.id) === String(id) &&
-                    String(item.color) === String(color) &&
-                    String(item.size) === String(size)
-                );
-                if (product) {
-                    product.quantity = quantity;
-                }
+                const product = cart.find(item => String(item.id) === String(id));
+                if (product) product.quantity = quantity;
                 saveCart(cart);
                 updateTotal();
             }
         }
-        if (e.target.closest(".cart__delete-icon")) { // FIX: Dùng class đồng bộ với SCSS
-            const confirmDelete = confirm("Bạn có muốn xóa sản phẩm này không");
-            if (confirmDelete) {
+
+        // Nut xoa san pham
+        if (e.target.closest(".cart__delete-icon")) {
+            if (confirm("Ban co muon xoa san pham nay khong?")) {
                 deleteCart(cartItem, cart);
                 cartItem.remove();
                 checkEmptyCartState();
                 updateTotal();
             }
         }
-    })
+    });
 }
+
+// --- XU LY THANH TOAN ---
 if (buyItem) {
     buyItem.addEventListener("click", () => {
         const cart = getCart();
         const purchaseHistory = getPurchaseHistory();
         const productList = cart.filter(item => item.checked == true);
 
-        // FIX: Thông báo khi giỏ hàng trống hoặc chưa chọn sản phẩm
         if (productList.length === 0) {
-            alert("Giỏ hàng trống xin hãy chọn sản phẩm vào giỏ hàng nhé");
+            alert("Gio hang trong, xin hay chon san pham vao gio hang nhe");
             return;
         }
 
+        // Luu cac san pham da chon vao lich su mua hang
         productList.forEach((item) =>{
-            purchaseHistory.push(
-                {
+            purchaseHistory.push({
                 ...item,
-                quantity: item.quantity,
                 method: document.querySelector('input[name="payment"]:checked')?.value,
                 time: new Date(),
-                totalPrice:  item.quantity * item.price
-                }       
-            )
-        })
-         localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
-         window.location.href = "../../thanks.html"
-    })
+                totalPrice: item.quantity * item.price
+            });
+        });
+        
+        localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory));
+        window.location.href = "../../thanks.html";
+    });
 }
 
-//Add vocher vao 
+// --- XU LY MA GIAM GIA (VOUCHER) ---
 const vocher = document.querySelector(".checkout__voucher button");
 if (vocher){
     vocher.addEventListener("click", () => {
         const detailPercent = document.querySelector(".checkout__discount--number");
         const detailDiscount = document.querySelector(".checkout__detailDiscount");
         const current = document.querySelector(".checkout__price--after");
-
         const code = document.querySelector(".checkout__voucher input").value;
         const discountList = JSON.parse(localStorage.getItem("discount")) || [];
+        
         let found = false;
         const cart = getCart();
         const totalAmount = getTotalPrice(cart);
@@ -550,22 +288,22 @@ if (vocher){
                 found = true;
                 if (totalAmount > Number(item.require)){
                     detailDiscount.textContent = item.desc;
-                    detailDiscount.classList.add("active"); // HIỆN KHUNG VÀNG
-                    detailPercent.innerHTML = `${item.discount.toLocaleString()}đ`;
+                    detailDiscount.classList.add("active"); // Hien khung vang
+                    detailPercent.innerHTML = `${item.discount.toLocaleString()}d`;
                     const finalAmount = totalAmount - Number(item.discount);
-                    current.innerHTML = `${finalAmount.toLocaleString()}đ`;
+                    current.innerHTML = `${finalAmount.toLocaleString()}d`;
                 } else {
-                    alert(`Đơn hàng phải trên ${item.require.toLocaleString()}đ mới dùng được mã này.`);
+                    alert(`Don hang phai tren ${item.require.toLocaleString()}d moi dung duoc ma nay.`);
                 }
             }
         });
 
         if (!found) {
-            alert("Mã giảm giá không hợp lệ");
+            alert("Ma giam gia khong hop le");
             detailDiscount.textContent = "";
-            detailDiscount.classList.remove("active"); // ẨN KHUNG VÀNG
-            detailPercent.innerHTML = `0đ`;
-            current.innerHTML = `${totalAmount.toLocaleString()}đ`;
+            detailDiscount.classList.remove("active");
+            detailPercent.innerHTML = `0d`;
+            current.innerHTML = `${totalAmount.toLocaleString()}d`;
         }
     });
 }

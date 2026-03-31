@@ -23,8 +23,7 @@
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: $bg-color-2;
-    margin-bottom: 30px;
+    color: $bg-color-2;;
   }
 
   &__item {
@@ -131,4 +130,23 @@
       font-size: 0.9rem;
     }
   }
+}
+
+.search{
+  margin-bottom: 20px;
+  input{
+    border-radius: 5px;
+    height: 30px;
+    width: 260px;
+  }
+   button{
+        background-color: $summit-color;
+        color: white;
+        border: 2px $summit-color solid;
+
+        &:hover{
+          background-color: white;
+          color: $summit-color;
+        }
+      }
 }

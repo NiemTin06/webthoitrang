@@ -1,33 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // =========================================================
-    // 1. TÍNH NĂNG KIỂM TRA MẬT KHẨU REAL-TIME
+    // 1. TINH NANG KIEM TRA MAT KHAU REAL-TIME (KHI DANG GO)
     // =========================================================
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const passwordError = document.getElementById('passwordError');
 
-    // Hàm kiểm tra mật khẩu
+    // Ham kiem tra xem hai o mat khau co trung khop khong
     function validatePassword() {
-        // Nếu ô xác nhận mật khẩu đang trống thì ẩn báo lỗi đi
+        // Neu o xac nhan dang trong thi xoa canh bao
         if (confirmPasswordInput.value === '') {
             confirmPasswordInput.classList.remove('input-error');
             passwordError.style.display = 'none';
             return;
         }
 
-        // Nếu mật khẩu không khớp
+        // So sanh gia tri cua hai o input
         if (passwordInput.value !== confirmPasswordInput.value) {
-            confirmPasswordInput.classList.add('input-error'); // Đổi viền thành đỏ
-            passwordError.style.display = 'block'; // Hiện chữ cảnh báo
+            // Neu khong khop: Them class bao do va hien thi dong thong bao
+            confirmPasswordInput.classList.add('input-error'); 
+            passwordError.style.display = 'block'; 
         } else {
-            // Nếu khớp thì xóa đỏ, ẩn cảnh báo
+            // Neu khop: Xoa bo cac canh bao
             confirmPasswordInput.classList.remove('input-error');
             passwordError.style.display = 'none';
         }
     }
 
-    // Bắt sự kiện 'input' (khi người dùng gõ từng ký tự)
+    // Lang nghe su kien 'input' de kiem tra ngay lap tuc khi nguoi dung go phim
     if (passwordInput && confirmPasswordInput) {
         passwordInput.addEventListener('input', validatePassword);
         confirmPasswordInput.addEventListener('input', validatePassword);
@@ -35,43 +36,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =========================================================
-    // 2. XỬ LÝ LƯU DỮ LIỆU KHI NHẤN "CREATE ACCOUNT"
+    // 2. XU LY LUU DU LIEU KHI NHAN "CREATE ACCOUNT" (SUBMIT FORM)
     // =========================================================
     const signupForm = document.querySelector('form');
     
     if (signupForm) {
         signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Ngan chan load lai trang
 
-            // 1. Lấy giá trị từ Form
+            // 1. Lay gia tri tu cac o nhap lieu trong Form
             const fullName = signupForm.querySelector('input[placeholder="Full Name"]').value.trim();
             const username = signupForm.querySelector('input[placeholder="Username"]').value.trim();
             const email = signupForm.querySelector('input[placeholder="Email Address"]').value.trim();
-            
-            // Tận dụng luôn biến lấy theo ID ở trên cho ngắn gọn
             const password = passwordInput.value;
             const confirmPassword = confirmPasswordInput.value;
             
-            // Lấy giá trị của ô Role đang được chọn
+            // Lay gia tri cua Role (Admin hoac User) dang duoc tich chon
             const role = signupForm.querySelector('input[name="role"]:checked').value;
 
-            // 2. Kiểm tra lại lần chót xem mật khẩu khớp nhau chưa
+            // 2. Kiem tra lan cuoi xem mat khau da khop chua truoc khi luu
             if (password !== confirmPassword) {
-                alert("Mật khẩu xác nhận không khớp! Vui lòng kiểm tra lại.");
+                alert("Mat khau xac nhan khong khop! Vui long kiem tra lai.");
                 return;
             }
 
-            // 3. Lấy danh sách người dùng hiện có từ LocalStorage
+            // 3. Lay danh sach nguoi dung hien co tu LocalStorage
             let users = JSON.parse(localStorage.getItem('allUsers')) || [];
 
-            // 4. Kiểm tra xem Username hoặc Email đã tồn tại chưa (Tránh trùng lặp)
+            // 4. Kiem tra xem Username hoac Email nay da ton tai trong he thong chua
             const isExisted = users.some(user => user.username === username || user.email === email);
             if (isExisted) {
-                alert("Tên đăng nhập hoặc Email này đã được sử dụng!");
+                alert("Ten dang nhap hoac Email nay da duoc su dung!");
                 return;
             }
 
-            // 5. Thêm người dùng mới vào mảng
+            // 5. Tao doi tuong nguoi dung moi
             const newUser = {
                 fullName: fullName,
                 username: username,
@@ -80,21 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 role: role 
             };
             
+            // Them vao mang danh sach
             users.push(newUser);
 
-            // 6. Lưu mảng mới trở lại LocalStorage
+            // 6. Cap nhat mang moi tro lai LocalStorage
             localStorage.setItem('allUsers', JSON.stringify(users));
 
-            alert("Đăng ký thành công! Hiện có " + users.length + " tài khoản trong hệ thống.");
+            alert("Dang ky thanh cong! Hien co " + users.length + " tai khoan trong he thong.");
             
-            // Reset form sau khi đăng ký xong
+            // Reset form va xoa cac class bao loi giao dien
             signupForm.reset();
-            
-            // Ẩn viền đỏ (nếu có) sau khi reset
             confirmPasswordInput.classList.remove('input-error');
             passwordError.style.display = 'none';
 
-            // Chuyển sang trang đăng nhập
+            // Chuyen huong sang trang dang nhap sau khi thanh cong
             window.location.href = "login.html";
         });
     }
