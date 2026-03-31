@@ -44,7 +44,7 @@ export const getAPI = () => {
   if (params.subCategory) query.push(`sub_category=${params.subCategory}`);
   
   query.push(`_page=${params.page || 1}`);
-  query.push(`_per_page=${params.limit || 12}`);
+  query.push(`_limit=${params.limit || 12}`);
 
 
 
